@@ -1,0 +1,219 @@
+<!--
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Author: Sampath Reddy (sampath.vinta@gmail.com)
+Company: AirZign
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Enter the meta tags here -->
+<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META content="Shiksha Sankalp" name=title>
+<META http-equiv="keywords" content="Shiksha, Sansthan ">
+<META name="description" content=" Please write the description here">
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW"> 
+<META NAME="DC.Title" CONTENT="Shiksha Sankalp Index">
+<META NAME="DC.Creator" CONTENT="AirZign">
+<META NAME="DC.Creator.Address" CONTENT="email id here">
+<META NAME="DC.Subject.keyword" CONTENT=" ">
+<META NAME="DC.Subject.Description" CONTENT=" ">
+<META NAME="DC.Type" CONTENT="webpage">
+<!-- Close the meta tags here -->
+
+<!-- Stylesheet should be added here -->
+<link rel="stylesheet" href="css/general_inner.css" />
+<!-- Stylesheets should be ended here -->
+<!-- Google web font used -->
+<!--<link  href="http://fonts.googleapis.com/css?family=Josefin+Sans:100,100italic,300,300italic,400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" >-->
+<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+<!-- The Site title is added here -->
+<title>Shiksha Sankalp</title>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery_easing.js" type="text/javascript"></script>
+<script src="js/slider.js" type="text/javascript"></script> 
+
+<script type="text/javascript">
+	$(window).bind("load", function() {
+	$("div#mygalone").slideView()
+});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	$("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
+
+	$("ul.topnav li span").click(function() { //When trigger is clicked...
+
+		//Following events are applied to the subnav itself (moving subnav up and down)
+		$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
+
+		$(this).parent().hover(function() {
+		}, function(){
+			$(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+		});
+
+		//Following events are applied to the trigger (Hover events for the trigger)
+		}).hover(function() {
+			$(this).addClass("subhover"); //On hover over, add class "subhover"
+		}, function(){	//On Hover Out
+			$(this).removeClass("subhover"); //On hover out, remove class "subhover"
+	});
+
+});
+</script>
+
+<!-- Site title should be ended here -->
+
+</head>
+
+<body class="shadowBackground">
+
+<div id="container">
+	<div id="header">
+    	<div id="header_top">
+        	<div id="header_top_logo">USERNAME &nbsp; <input type="text" class="width" /> &nbsp; &nbsp; PASSWORD &nbsp;<input type="text" class="width" />
+            	<input type="image" src="images/login.jpg" align="top" /><br /><br /><p align="right"><img src="images/subscribe.png" /></p>
+            </div>
+            <div id="header_top_login"></div>
+        </div>
+        <div id="header_menu">
+        	
+			<ul class="topnav" id="menu">
+				<li class="menu_item"><a href="">About Us</a>
+					<ul class="subnav">
+						<li><a href="index.html">About Shiksha Sankalp</a></li>
+						<li><a href="vision.html">Vision / Mission / Core Values</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="history.html">History</a></li>
+						<li><a href="MoAs.html">MoAs</a></li>
+					</ul>
+				</li>
+				<li class="menu_item">
+					<a href="resources.html">Resources</a>
+					<ul class="subnav">
+						<li><a href="data_education.html">Data on Education</a></li>
+						<li><a href="economic_theory.html">Links to economic theory</a></li>
+						<li><a href="success_stories.html">Success stories</a></li>
+						<li><a href="govt_initiatives">Government Initiatives</a></li>
+						<li><a href="sugg_readings.html">Suggested readings</a></li>
+						<li><a href="newsletters.html">Newsletters</a></li>
+					</ul>
+				</li>
+				<li class="menu_item">
+					<a href="modules.html">Modules</a>
+					
+				</li>
+				<li class="menu_item"><a href="accountability.html">Accountability</a>
+					<ul class="subnav">
+						<li><a href="agg_statistics.html">Aggregate Statistics</a></li>
+						<li><a href="module_statistics.html">Module Statistics</a></li>
+						<li><a href="annual_report.html">Annual report</a></li>
+						<li><a href="summary_financials.html">Summary financials</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a href="FAQ.html">FAQ's</a></li>
+				<li class="menu_item"><a href="join_us.html">Join Us</a></li>
+				
+			</ul>
+        </div>
+    </div>
+   
+     
+   
+  <div id="content">
+  		<div id="main_content">
+        	<!-- the content goes here -->
+           <p> 
+<h2><b>About Shiksha Sankalp</b></h2><br />
+
+
+<!-- The content for FAQ's -->
+      
+      <h2>What is Shiksha Sankalp?</h2>
+
+		<p>Shiksha Sankalp is an endeavour to educate even the poorest child in India. We help to bring about the change using innovative 'performance based cash incentives'. It is aimed at facilitating the development of our human resource for sustained econmic growth of the country between now and 2050.</p>
+
+
+
+
+	<h3>Legal Status</h3>
+	
+
+<p>We are registered in India and the USA.</p>
+
+<p><u>Legal status in India </u></p>
+
+<p>In India, Shiksha Sankalp Foundation (SSF) has been registered as a Trust. It is being registered with Income Tax Department under section 12A and would also apply for tax-exemption for donors under section 80G of the Income Tax Act. Further, it is also applying for FCRA clearance for receiving donor funds from abroad.</p>
+
+<p><u>Legal status in USA</u></p>
+
+<p>In the USA, a separate organization called Shiksha Sankalp Incorporated (SSI) has been formed and tax exempt status under section 501 C(3) obtained. SSI’s mandate is to promote school education in all developing countries. SSI’s mandate is to promote school education in all developing countries. However, initially it is focused on India where it coordinates efforts with SSF.
+The SSF and the SSI are independent organizations and their cooperation is governed by a legal agreement for sharing of resources (including intellectual property), transfer of funds and implementation of programs. Each organization is free to partner with other NGOs for obtaining funds as well as for implementation of programs.<p>
+<!--	  
+	  <body class="c7"><p class="c2"><span class="c1 c6">*(Editing in process)*</span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">In recent years, we have been spending a lot on primary education. We have launched Sarva Shiksha Abhiyaan, we are bulidng more schools, hiring more teachers and doing so much to augment the supply. But the problem might lie somewhere else. We need to ask different questions and see things from different perspective.</span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">Education is the only real solution to poverty. Poor understand that. Yet, in spite of primary education being free, they don&#39;t feel like sending their children to school.</span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">Here is the problem :</span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><img src="images/image04.png" width="626" height="343" align="middle"></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c8"><span class="c1"> &nbsp; &nbsp;</span><img height="338" src="images/image00.png" width="570"></p><p class="c9"><span class="c4"> &nbsp;</span></p><p class="c5"><span class="c4">Child labour, poor quality of education, and illiteracy of the parents are some of the reasons why so many children </span></p><p class="c5"><span class="c4">are still not going to schools. Simply said, even free education isn&rsquo;t a good investment for the poor in short term. What </span></p><p class="c5"><span class="c4">we need to address the situation is a new way of thinking. </span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><img height="392" src="images/image02.png" width="605"></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1"> &nbsp; </span></p><p class="c2"><span class="c1">So the challenge is to create the demand for primary education for poor. For that we need to address two aspects : Covering opportunity costs so that families, which already live hand to mouth, do not crumble under financial burden as children shift to schools; and ensuring that quality education is imparted so that education remains meaningful and valuable for the family. </span></p><p class="c2"><span class="c1">Shiksha Sankalp is working on a model that targets both these aspects together. It is working with poor families to make education a reality for their children. </span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">So here is what we plan to do : </span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><img height="449" src="images/image03.png" width="662"></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">The solution is here in this simple model : Provide scholarships to children to continue education. So if a child is learning, she will be financially assisted by Shiksha Sankalp to continue her education. This scheme provides incentives and facilitates not just school education, but quality education. Once a child brings income to his family, the family can invest more into child&rsquo;s education. </span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><img height="314" src="images/image06.png" width="594"></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">To ensure quality, Shiksha Sankalp conducts independent test called &lsquo;Annual Standardized Academic Performance Tests&rsquo; (ASAP). These are specially designed tests to measure the impact education has created. Performance in the ASAP test is used to determine the amount to be paid to the family. At the same time, Shiksha Sankalp keeps tracks of student&rsquo;s performance and regularity in school. It provides guidance to families on how they can enhance learning through greater attention to studies, better books, tuition, make-up classes, peer-to-peer learning and by demanding better teaching at school. </span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">And that is where you come in. As you donate and sponsor a child&rsquo;s education through Shiksha Sankalp, you do so many good things :</span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">1. </span><img height="482" src="images/image01.png" width="618"></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><img height="427" src="images/image05.png" width="634"></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">As a donor you can be assured of the impact you are creating. You will be able to track your donations to the last penny by logging onto Shiksha Sankalp website and see how your money is being used. You can even keep a track of the academic performance of the children you are supporting and see how they improve over time with your assistance. At our end, we will ensure that every information is correctly verified and organized. All documents will be shared with donors and other stake holders so that 100% transparency is maintained. </span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2"><span class="c1">So come, let us together change things and create a bright and beautiful future. </span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p><p class="c2 c3"><span class="c1"></span></p></body></html> -->
+	  
+	  
+	  
+	  
+	  
+  
+        </div>
+        
+        
+        <div id="extra_content">
+    	<div id="content_news" class="content_item">
+        	<h1><img src="images/news.jpg" /></h1>
+            <br />
+            <div class="news_item">
+            	<div class="news_item_img"><img src="images/item.jpg" width="80px" /></div>
+                <div class="news_item_matter">Shiksha sankalp launched in seelampur</div>
+            </div>
+            <div style="clear:both"><br /></div>
+            <div class="news_item">
+            	<div class="news_item_img"><img src="images/item.jpg" width="70%" /></div>
+                <div class="news_item_matter">Shiksha sankalp launched in seelampur</div>
+                <div style="clear:both"></div>
+            </div>
+            <p align="right">More Stories ....</p>
+            
+        </div>
+        <div id="content_impact" class="content_item">
+        	<h1><img src="images/impact.jpg" /></h1>
+            <br />
+            <div class="news_item">
+            	<div class="news_item_img"><img src="images/item.jpg" width="80px" />
+                	<small>Nandita, 11 years</small>
+                </div>
+                <div class="news_item_matter">6 months ago, 11 year old
+Nandita and her parents 
+could have only dreamt 
+about her education, due to
+poor financial condition of 
+the family. But today, 
+Shiksha Sankalp is helping 
+her dremas come true. </div>
+<div style="clear:both"></div>
+            </div><br />
+            <p align="right">More Stories ....</p>
+        </div>
+        <div id="content_video" class="content_item_last" class="center">
+        	<h1><img src="images/video2.jpg" /></h1><br />
+            An Impact story to say how shiksha sankalp is making a difference<br /><br />
+         <span class="center"> <img src="images/video.jpg" align="absmiddle" /></span>
+      </div>
+    </div>
+    </div>
+    <div class="clear_all">&nbsp;</div>
+   
+</div>
+ <div id="footer">
+    	<div id="footer_left"><img src="images/book.jpg" width="100" /></div>
+        <div id="footer_right"> Feedback &nbsp; &nbsp; Sitemap &nbsp; &nbsp; Disclaimer &nbsp; &nbsp;</div>
+    </div>
+
+</body>
+</html>

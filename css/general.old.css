@@ -1,0 +1,421 @@
+@charset "utf-8";
+/* CSS Document */
+ /*The reset CSS starts here*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { 
+	border:0;
+}
+
+/* The reset CSS ends here */
+
+
+/* Common CSS starts here */
+body {
+	font-family:"Trebuchet MS", Helvetica LT Std Light, Sans-Serif, Arial;
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	Letter-spacing: 0em;
+	word-spacing: 0em;
+	line-height: 1.2;
+	font-size:17px; /*13 for Trebuchet MS*/
+}
+
+h1 {
+	font-family:"Trebuchet MS", Helvetica LT Std Light, Sans-Serif, Arial;
+	font-size:22px;
+}
+
+body.shadowBackground {
+    /*background: url("../images/bgshadow.png") no-repeat scroll center top #FFFFFF;*/
+	
+}
+/* Common CSS ends here */
+
+/* Specific CSS starts here */
+
+/* Div related CSS */
+#container {
+	margin:0 auto;
+	border: solid #fff 10px;
+	border-top: none;
+	width:985px;
+	padding-left:25px;
+	background-image:url(../images/background-shadow.png);
+}
+
+#header {
+	height:166px;
+	background-image:url(../images/ssheader.png);
+	background-repeat:no-repeat;
+	width:960px;
+}
+
+#header_top {
+	height:126px;
+	
+}
+
+#header_left
+{
+	float:left;
+	width:300px;
+	height:131px;
+}
+
+#header_right
+{
+ float:right;
+}
+
+#header_top_logo
+{
+	float:right;
+	padding:5px 5px 0px 0px;
+	color:white;
+	font-size:11px;
+}
+
+#header_menu {
+	margin:0px 0px 5px 0px;
+	float:right;
+	font-family:"Trebuchet MS", Helvetica LT Std Light, Sans-Serif, Arial;
+}
+
+#menu {
+	list-style-type:none;
+	display:inline;
+	width:100%;
+	/*margin-top:40px;*/
+	color:white;
+}
+
+.menu_item {
+	float:left;
+	padding: 0px 10px;	
+z-index: 100;	
+}
+
+#slide {
+	height:308px;
+	width:960px;
+	margin-top:9px;
+    margin-bottom:5px;
+}
+
+#slides_container {
+	height:305px;
+}
+
+#quote {
+	height:133px;
+	background-color:#649637;
+}
+
+#quote:hover {
+	background-color:#496d2a;
+}	
+#content
+{
+	margin-top:18px;
+	float:left;
+}
+#content p
+{
+	font-family: "Trebuchet MS", Helvetica LT Std Light, Sans-Serif, Arial;
+	margin-right:5px;
+}
+#content p:hover
+{
+	text-decoration:underline;
+}
+#main_content
+{
+	width:730px;
+}
+
+
+#bottom-border {
+	width:1010px;
+	height:15px;
+	margin:-10px auto 0;
+}
+
+#bottom-border-left {
+	width:15px;
+	height:15px;
+	float:left;
+	background-image:url(../images/background-shadow-bottom-left.png);
+}
+
+#bottom-border-mid {
+	width:980px;
+	height:15px;
+	float:left;
+	background-image:url(../images/background-shadow-bottom-mid.png);
+}
+
+#bottom-border-right {
+	width:15px;
+	height:15px;
+	float:left;
+	background-image:url(../images/background-shadow-bottom-right.png);
+}
+
+
+#footer
+{
+	height:30px;
+	width:960px;
+	margin:0 auto;
+	margin-top:2px;
+    margin-bottom:5px;
+}
+#footer_left
+{
+	margin-left:15px;
+	float:left;
+}
+#footer_right
+{
+	float:right;
+    margin-top:2px;
+}
+
+#content_video span img{
+	margin-left:98px;
+}
+
+#donate{
+    background-image:url(../images/donate_07.jpg);
+    height:59px;
+    width:146px;
+    float:right;
+    margin-right:50px;
+}
+
+#donate:hover{
+    background-position: 0 -59px;
+}
+
+#donate:active{
+    background-position: 0 -118px;
+}
+/*Div related css ends*/
+
+
+/* class relate common CSS */
+.clear_all
+{
+	clear:both;
+}
+
+.content_item {
+	width:300px;
+	float:left;
+	border-right: solid 2px #7c7e7a;
+	margin-left:10px;
+	color:#2c2e80;
+	height:240px;
+}
+.content_item h1{
+	color:#0b0d3a;
+}
+.content_item_last{
+	width:300px;
+	float:left;
+	margin-left:10px;
+	color:#2c2e80;
+	height:240px;
+	color:#0b0d3a;
+	font-size:15px;
+}
+.content_item_last h1{
+	color:#0b0d3a;
+}
+.news_item
+{
+	padding:5px;
+}
+	
+
+.news_item_img
+{
+	float:left;
+	width:75px;
+}
+.news_item_img img
+{
+	width:90px;
+	margin-bottom:9px;
+}
+.news_item_matter
+{
+
+	/*font-size:13px; 11px for trebu*/
+	/*width:195px;
+	float:right;
+	color:#0b0d3a;
+	line-height:1.4em;*/
+	font-size:14px; /*11px for trebu*/
+	width:170px;
+	float:left;
+	color:#0c45a5;
+	line-height:1.4em;
+	margin-left:30px;
+	text-align:justify;
+}
+.width
+{
+	width:102px;
+	height:12px;
+}
+.center
+{
+	text-align:center;
+}
+.other_pages p
+{
+	text-align:left;
+}
+.other_pages img
+{
+	margin:0 auto;
+	width:inherit;
+
+}
+/**/
+
+
+/*Menu*/
+ul.topnav {
+	list-style: none;
+	font: Arial;
+	padding: 0 0px;
+	margin: 0;
+	float: left;
+	width: 920px;
+	background: #222;
+	font-size: 12 px;
+	background: url(../images/topnav_bg.gif) repeat-x;
+}
+ul.topnav li {
+	float: left;
+	font-size:12 px;
+	margin: 0;
+	padding: 0 15px 0 0;
+	position: relative; /*--Declare X and Y axis base for sub navigation--*/
+}
+ul.topnav li a{
+	padding: 10px 5px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	float: left;
+}
+ul.topnav li a:hover{
+	/* background: url(../images/topnav_hover.gif) no-repeat center top; */
+}
+ul.topnav li span { /*--Drop down trigger styles--*/
+	width: 17px;
+	height: 35px;
+	float: left;
+	background: url(../images/subnav_btn.gif) no-repeat center top;
+}
+ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;} /*--Hover effect for trigger--*/
+ul.topnav li ul.subnav {
+	list-style: none;
+	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+	left: 0; top: 35px;
+	background: #333;
+	margin: 0; padding: 0;
+	display: none;
+	float: left;
+	font-size:12px;
+	width: 170px;
+	border: 1px solid #111;
+}
+ul.topnav li ul.subnav li{
+	margin: 0; padding: 0;
+	border-top: 1px solid #252525; /*--Create bevel effect--*/
+	border-bottom: 1px solid #444; /*--Create bevel effect--*/
+	clear: both;
+	width: 170px;
+}
+html ul.topnav li ul.subnav li a {
+	float: left;
+	width: 145px;
+	background: #333 url(dropdown_linkbg.gif) no-repeat 10px center;
+	padding-left: 20px;
+}
+html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
+	background: #222 url(dropdown_linkbg.gif) no-repeat 10px center;
+}
+
+
+
+/* Menu ends here */
+/*Specific CSS ends here */
+/* /\* New Menu bar *\/ */
+
+/* * 									{ margin: 0; padding: 0; } */
+/* body								{ font: 14px Helvetica, Sans-Serif; }  */
+/* #page-wrap							{ width: 800px; margin: 25px auto; }  */
+/* a									{ text-decoration: none; } */
+/* ul									{ list-style: none; } */
+/* p                                   { margin: 15px 0; } */
+
+/* /\*	LEVEL ONE *\/ */
+/* ul.dropdown                         { position: relative; } */
+/* ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background:none;} */
+/* ul.dropdown a:hover		            { color: #000; } */
+/* ul.dropdown a:active                { color: white; } */
+/* ul.dropdown li a                    { display: block; padding: 4px 8px; border-right: 1px solid #333; */
+/* 	 								  color: white; } */
+/* ul.dropdown li:last-child a         { border-right: none; } /\* Doesn't work in IE *\/ */
+/* ul.dropdown li.hover, */
+/* ul.dropdown li:hover                { background: #222; color: black; position: relative; } */
+/* ul.dropdown li.hover a              { color: white; } */
+
+
+/* /\* LEVEL TWO *\/ */
+/* /\* ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; } *\/ */
+/* ul.dropdown ul 						{ width: 220px; display:none; position: absolute; top: 100%; left: 0; } */
+/* ul.dropdown ul li 					{ font-weight: normal; background: #333; color: #000;  */
+/* 									  border-bottom: 1px solid #ccc; float: none; } */
+/*                                     /\* IE 6 & 7 Needs Inline Block *\/ */
+/* ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; }  */
+
+/* /\* LEVEL THREE *\/ */
+/* ul.dropdown ul ul 					{ left: 100%; top: 0; } */
+/* /\* ul.dropdown li:hover > ul 			{ visibility: visible; } *\/ */
+/* ul.dropdown li:hover > ul 			{ display:none; } */
+/* /\* Menu bar ends *\/ */

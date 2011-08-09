@@ -1,0 +1,196 @@
+<!--
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Author: Sampath Reddy (sampath.vinta@gmail.com)
+Company: AirZign
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Enter the meta tags here -->
+<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META content="Shiksha Sankalp" name=title>
+<META http-equiv="keywords" content="Shiksha, Sansthan ">
+<META name="description" content=" Please write the description here">
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW"> 
+<META NAME="DC.Title" CONTENT="Shiksha Sankalp Index">
+<META NAME="DC.Creator" CONTENT="AirZign">
+<META NAME="DC.Creator.Address" CONTENT="email id here">
+<META NAME="DC.Subject.keyword" CONTENT=" ">
+<META NAME="DC.Subject.Description" CONTENT=" ">
+<META NAME="DC.Type" CONTENT="webpage">
+<!-- Close the meta tags here -->
+
+<!-- Stylesheet should be added here -->
+<link rel="stylesheet" href="css/general_inner.css" />
+<!-- Stylesheets should be ended here -->
+<!-- Google web font used -->
+<!--<link  href="http://fonts.googleapis.com/css?family=Josefin+Sans:100,100italic,300,300italic,400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" >-->
+<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+<!-- The Site title is added here -->
+<title>Shiksha Sankalp</title>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery_easing.js" type="text/javascript"></script>
+<script src="js/slider.js" type="text/javascript"></script> 
+
+<script type="text/javascript">
+	$(window).bind("load", function() {
+	$("div#mygalone").slideView()
+});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	$("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
+
+	$("ul.topnav li span").click(function() { //When trigger is clicked...
+
+		//Following events are applied to the subnav itself (moving subnav up and down)
+		$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
+
+		$(this).parent().hover(function() {
+		}, function(){
+			$(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+		});
+
+		//Following events are applied to the trigger (Hover events for the trigger)
+		}).hover(function() {
+			$(this).addClass("subhover"); //On hover over, add class "subhover"
+		}, function(){	//On Hover Out
+			$(this).removeClass("subhover"); //On hover out, remove class "subhover"
+	});
+
+});
+</script>
+
+
+<!-- Site title should be ended here -->
+
+</head>
+
+<body class="shadowBackground">
+
+<div id="container">
+	<div id="header">
+    	<div id="header_top">
+        	<div id="header_top_logo">USERNAME &nbsp; <input type="text" class="width" /> &nbsp; &nbsp; PASSWORD &nbsp;<input type="text" class="width" />
+            	<input type="image" src="images/login.jpg" align="top" /><br /><br /><p align="right"><img src="images/subscribe.png" /></p>
+            </div>
+            <div id="header_top_login"></div>
+        </div>
+        <div id="header_menu">
+        	
+			<ul class="topnav" id="menu">
+				<li class="menu_item"><a href="">About Us</a>
+					<ul class="subnav">
+						<li><a href="index.html">About Shiksha Sankalp</a></li>
+						<li><a href="vision.html">Vision / Mission / Core Values</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="history.html">History</a></li>
+						<li><a href="MoAs.html">MoAs</a></li>
+					</ul>
+				</li>
+				<li class="menu_item">
+					<a href="resources.html">Resources</a>
+					<ul class="subnav">
+						<li><a href="data_education.html">Data on Education</a></li>
+						<li><a href="economic_theory.html">Links to economic theory</a></li>
+						<li><a href="success_stories.html">Success stories</a></li>
+						<li><a href="govt_initiatives">Government Initiatives</a></li>
+						<li><a href="sugg_readings.html">Suggested readings</a></li>
+						<li><a href="newsletters.html">Newsletters</a></li>
+					</ul>
+				</li>
+				<li class="menu_item">
+					<a href="modules.html">Modules</a>
+					
+				</li>
+				<li class="menu_item"><a href="accountability.html">Accountability</a>
+					<ul class="subnav">
+						<li><a href="agg_statistics.html">Aggregate Statistics</a></li>
+						<li><a href="module_statistics.html">Module Statistics</a></li>
+						<li><a href="annual_report.html">Annual report</a></li>
+						<li><a href="summary_financials.html">Summary financials</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a href="FAQ.html">FAQ's</a></li>
+				<li class="menu_item"><a href="join_us.html">Join Us</a></li>
+				
+			</ul>
+        </div>
+    </div>
+   
+    
+  <div id="content">
+  		<div id="main_content">
+        	<!-- the content goes here -->
+           <p> 
+<h3><b>What is Shiksha Sankalp ?</b></h3><br />
+
+Shiksha Sankalp is a resolve to ensure that every Indian child achieves age-appropriate level of academic knowledge and skills. The project is geared towards developing human capital for the demographic opportunity for accelerated economic growth of India between now and 2050. 
+
+Shiksha Sankalp is a Non-Governmental Organization – a Society (being) formed under the Societies Registration Act, 1860. We are currently in the process of registering the Society with Government of National Capital Territory of Delhi.  The Society is being formed with the specific objective of fostering rapid expansion of school education and reduction of poverty in India by incentivizing academic performance of students from economically weak families.
+
+Organisational structure – governing council and panel of independent experts 
+<!-- the content ends here -->
+            
+            </p>
+  
+        </div>
+        
+        
+        <div id="extra_content">
+    	<div id="content_news" class="content_item">
+        	<h1><img src="images/news.jpg" /></h1>
+            <br />
+            <div class="news_item">
+            	<div class="news_item_img"><img src="images/item.jpg" width="80px" /></div>
+                <div class="news_item_matter">Shiksha sankalp launched in seelampur</div>
+            </div>
+            <div style="clear:both"><br /></div>
+            <div class="news_item">
+            	<div class="news_item_img"><img src="images/item.jpg" width="70%" /></div>
+                <div class="news_item_matter">Shiksha sankalp launched in seelampur</div>
+                <div style="clear:both"></div>
+            </div>
+            <p align="right">More Stories ....</p>
+            
+        </div>
+        <div id="content_impact" class="content_item">
+        	<h1><img src="images/impact.jpg" /></h1>
+            <br />
+            <div class="news_item">
+            	<div class="news_item_img"><img src="images/item.jpg" width="80px" />
+                	<small>Nandita, 11 years</small>
+                </div>
+                <div class="news_item_matter">6 months ago, 11 year old
+Nandita and her parents 
+could have only dreamt 
+about her education, due to
+poor financial condition of 
+the family. But today, 
+Shiksha Sankalp is helping 
+her dremas come true. </div>
+<div style="clear:both"></div>
+            </div><br />
+            <p align="right">More Stories ....</p>
+        </div>
+        <div id="content_video" class="content_item_last" class="center">
+        	<h1><img src="images/video2.jpg" /></h1><br />
+            An Impact story to say how shiksha sankalp is making a difference<br /><br />
+         <span class="center"> <img src="images/video.jpg" align="absmiddle" /></span>
+      </div>
+    </div>
+    </div>
+    <div class="clear_all">&nbsp;</div>
+   
+</div>
+ <div id="footer">
+    	<div id="footer_left"><img src="images/book.jpg" width="100" /></div>
+        <div id="footer_right"> Feedback &nbsp; &nbsp; Sitemap &nbsp; &nbsp; Disclaimer &nbsp; &nbsp;</div>
+    </div>
+
+</body>
+</html>

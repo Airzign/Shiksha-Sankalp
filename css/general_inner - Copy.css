@@ -1,0 +1,420 @@
+@charset "utf-8";
+/* CSS Document */
+ /*The reset CSS starts here*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { 
+	border:0;
+}
+
+/* The reset CSS ends here */
+
+
+/* Common CSS starts here */
+body {
+	font-family:HelveticaNeueLTCom-ThCn, Helvetica, Arial,"Trebuchet MS", sans-serif;
+	font-style: normal;
+	text-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	Letter-spacing: 0em;
+	word-spacing: 0em;
+	line-height: 1.2;
+	font-size:17px; /*13 for Trebuchet MS*/
+}
+
+h1 {
+	font-family:HelveticaNeueLTCom-ThCn,Arial, Helvetica, sans-serif;
+	font-size:22px;
+}
+
+body.shadowBackground {
+    /*background: url("../images/bgshadow.png") no-repeat scroll center top #FFFFFF;*/
+	
+}
+/* Common CSS ends here */
+
+/* Specific CSS starts here */
+
+/* Div related CSS */
+
+#container {
+	width:960px;
+	margin:0 auto;
+	border: solid #fff 10px;
+	-moz-box-shadow: #ccc 0px 1px 20px;
+	
+	/*background-color:#000;*/
+}
+
+#header {
+	height:166px;
+	background-image:url(../images/Header.png);
+	background-repeat:no-repeat;
+}
+
+#header_top {
+	height:123px;
+	
+}
+#header_top_logo
+{
+	text-align:right;
+	padding:5px 5px 0px 0px;
+	color:white;
+	font-size:11px;
+}
+
+#header_menu {
+	margin:0px 0px 5px 0px;
+	font-family:'Amaranth',"Trebuchet MS", Arial;
+	float:right;
+}
+
+#menu {
+	list-style-type:none;
+	display:inline;
+	width:100%;
+	margin-top:0px;
+	color:white;
+}
+
+.menu_item {
+	float:left;
+	padding: 0px 10px;
+	z-index: 100;		
+}
+
+#slide {
+	height:429px;
+	width:960px;
+	background-image:url(images/slide.jpg);
+}
+
+#quote {
+	height:133px;
+	background-color:#649637;
+}
+
+#quote:hover {
+	background-color:#496d2a;
+}	
+#content
+{
+	padding-top:30px;
+	float:left;
+	/*moz-box-shadow: #ccc 0px 1px 20px;*/
+}
+#main_content
+{
+	width:670px;
+	float:left;
+
+}
+#main_content p
+{
+	width:640px;
+	text-align:justify;
+	padding:5px;
+	font-size:14px;
+
+}
+#main_content h3
+
+{
+	margin-top:20px;
+	font-size:17px;
+	font-weight:bold;
+}
+
+#main_content h2
+{
+	font-size:20px;
+	font-weight:bold;
+	font:"Arial Black", Gadget, sans-serif;
+}
+#extra_content
+{
+	float:left;
+	width:285px;
+	border-left: solid #eee 1px;
+	
+}
+#extra_content h1
+{
+	color:#30a1d5;
+}
+#footer
+{
+	height:30px;
+	width:960px;
+	margin:0 auto;
+	margin-top:20px
+}
+#footer_left
+{
+	margin-left:15px;
+	float:left;
+}
+#footer_right
+{
+	float:right;
+}
+
+#content_video span img{
+	margin-left:98px;
+}
+/*Div related css ends*/
+
+/* class relate common CSS */
+.clear_all
+{
+	clear:both;
+}
+
+.content_item {
+	width:280px;
+	border-bottom:solid #ddd 1px;
+	margin-bottom:10px;
+	padding-left:10px;
+	color:#2c2e80;
+
+}
+.content_item h1{
+	color:#0b0d3a;
+}
+.content_item_last{
+	width:270px;
+	padding-left:10px;
+	color:#2c2e80;
+	height:240px;
+	color:#0b0d3a;
+	font-size:15px;
+}
+.content_item_last h1{
+	color:#0b0d3a;
+}
+.news_item
+{
+	padding:5px;
+}
+	
+
+.news_item_img
+{
+	float:left;
+	width:75px;
+}
+.news_item_img img
+{
+	width:70px;
+	margin-bottom:9px;
+}
+.news_item_matter
+{
+	font-size:13px; /*11px for trebu*/
+	width:185px;
+	float:left;
+	color:#0c45a5;
+	line-height:1.4em;
+	margin-left:10px;
+}
+.news_item_matter small
+{
+	color:#aaa;
+}
+.width
+{
+	width:102px;
+	height:12px;
+}
+.center
+{
+	text-align:center;
+}
+.other_pages p
+{
+	text-align:left;
+}
+.other_pages img
+{
+	margin:0 auto;
+	width:inherit;
+
+}
+/**/
+/*Slider specific*/
+
+/*Slider specific*/
+.svw {width: 50px; height: 20px; background: #fff;}
+.svw ul {position: relative; left: -999em;}
+
+/*core classes*/
+.stripViewer { 
+position: relative;
+overflow: hidden; 
+ 
+margin: 0 0 1px 0;
+}
+.stripViewer ul { /* this is your UL of images */
+margin: 0;
+padding: 0;
+position: relative;
+left: 0;
+top: 0;
+width: 1%;
+list-style-type: none;
+}
+.stripViewer ul li { 
+float:left;
+
+}
+.stripTransmitter {
+overflow: auto;
+width: 1%;
+margin-top:-320px;
+margin-left:10px;
+}
+.stripTransmitter ul {
+margin: 0;
+padding: 0;
+position: relative;
+list-style-type: none;
+
+}
+.stripTransmitter ul li{
+width: 20px;
+float:left;
+margin: 0 1px 1px 0;
+width:20px;
+height:20px;
+background-image:url(../images/white_dot.png);
+background-repeat:no-repeat;
+}
+
+.stripTransmitter a{
+font: bold 10px Verdana, Arial;
+text-align: center;
+line-height: 22px;
+color: #fff;
+text-decoration: none;
+display: block;
+}
+.stripTransmitter a:hover, a.current{
+
+}
+
+/*tooltips formatting*/
+.tooltip
+{
+padding: 0.5em;
+background: #fff;
+color: #000;
+border: 5px solid #dedede;
+}
+
+.current
+{
+	background-image:url(../images/green_dot.png);
+	background-repeat:no-repeat;
+}
+/*End slider*/
+
+/*Menu*/
+ul.topnav {
+	list-style: none;
+	font: Arial;
+	padding: 0 0px;
+	margin: 0;
+	float: left;
+	width: 920px;
+	background: #222;
+	font-size: 12 px;
+	background: url(../images/topnav_bg.gif) repeat-x;
+}
+.left
+{
+	width:300px;
+}
+ul.topnav li {
+	float: left;
+	font-size:16 px;
+	margin: 0;
+	padding: 0 15px 0 0;
+	position: relative; /*--Declare X and Y axis base for sub navigation--*/
+}
+ul.topnav li a{
+	padding: 10px 5px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	float: left;
+}
+ul.topnav li a:hover{
+	background: url(../images/topnav_hover.gif) no-repeat center top;
+}
+ul.topnav li span { /*--Drop down trigger styles--*/
+	width: 17px;
+	height: 35px;
+	float: left;
+	background: url(../images/subnav_btn.gif) no-repeat center top;
+}
+ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;} /*--Hover effect for trigger--*/
+ul.topnav li ul.subnav {
+	list-style: none;
+	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+	left: 0; top: 35px;
+	background: #333;
+	margin: 0; padding: 0;
+	display: none;
+	float: left;
+	width: 170px;
+	border: 1px solid #111;
+}
+ul.topnav li ul.subnav li{
+	margin: 0; padding: 0;
+	border-top: 1px solid #252525; /*--Create bevel effect--*/
+	border-bottom: 1px solid #444; /*--Create bevel effect--*/
+	clear: both;
+	width: 170px;
+}
+html ul.topnav li ul.subnav li a {
+	float: left;
+	width: 145px;
+	background: #333 url(dropdown_linkbg.gif) no-repeat 10px center;
+	padding-left: 20px;
+}
+html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
+	background: #222 url(dropdown_linkbg.gif) no-repeat 10px center;
+}
+
+
+
+/* Menu ends here */
+/*Specific CSS ends here */
