@@ -5,7 +5,7 @@ include "admin/config.php";
 <div id="slide">
 <div id="example">
 	<div id="slides">
-	<div class="slides_container">
+	<div class="slides_container" height="305px">
 	<img src="images/slider/1_03.jpg" alt="Slide 1" class="slider_image"/>
 	<img src="images/slider/2_03.jpg" alt="Slide 2" class="slider_image"/>
 	<img src="images/slider/3_03.jpg" alt="Slide 3" class="slider_image"/>
