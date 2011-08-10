@@ -178,7 +178,7 @@ a
 /*	width:640px; */
 	text-align:justify;
 	padding:5px;
-	font-size:14px;
+	font-size:17px;
 
 }
 #main_content h3
@@ -197,9 +197,11 @@ a
 }
 #extra_content
 {
+	margin-top:10px;
+	padding-top:10px;
 	float:left;
 	width:285px;
-	border-left: solid #eee 1px;
+	border-left: solid #649637 1px;
 }
 #extra_content h1
 {
@@ -268,11 +270,11 @@ p{
 
 .content_item {
 	width:280px;
-	border-bottom:solid #ddd 1px;
+	border-bottom:solid #649637 1px;
 	margin-bottom:10px;
 	padding-left:10px;
 	color:#2c2e80;
-
+	
 }
 .content_item h1{
 	color:#0b0d3a;
@@ -287,6 +289,37 @@ p{
 }
 .content_item_last h1{
 	color:#0b0d3a;
+}
+.innertitle {
+	height:44px;
+	width:100%;
+	background-color:#649637;
+	font-size:51px;
+	color:#FFFFFF;
+	padding-bottom:1px;
+	margin-bottom:30px;
+	line-height:36px;
+}
+.innertitleshortened {
+	height:36px;
+	width:100%;
+	background-color:#649637;
+	font-size:40px;
+	color:#FFFFFF;
+	padding-bottom:1px;
+	margin-bottom:30px;
+	line-height:28px;
+}
+.innersubheading {
+	font-size:17px;
+	font-weight:bold;
+	color:#649637;
+	line-height:30px;
+}
+.innertext {
+	font-size:17px;
+	color:#9A9A9A;
+	line-height:26px;
 }
 .news_item
 {
@@ -315,13 +348,14 @@ p{
 	width:75px;
 	margin-right:10px;
 }
+
 .news_item_matter
 {
-	font-size:13px; 
+	font-size:15px; 
 	width:185px;
 	float:left;
-	color:#0c45a5;
-	line-height:1.4em;
+	color:#999999;
+	line-height:18px;
 	margin-left:10px;
 }
 .news_item_matter_big {
@@ -426,9 +460,10 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 
 /*css for faq page*/
 .answer{
-    font-style:italic;
-    font-size:14px;
-    line-height:150%;
+    font-size:17px;
+    line-height:26px;
+	color:#9a9a9a;
+	padding:10px 0px 0px 38px;
 }
 
 /* Css for research paper page and for similar results page*/

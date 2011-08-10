@@ -6,7 +6,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h3><b>History</b></h3><br />
+<div class="innertitle">History</div>
 
 The Shiksha Sankalp project was conceptualized in early 2009 by a group of friends who wanted to contribute to addressing the challenge of universal school education in India. The friends committed themselves to try out some innovative ideas to address the challenge. They wanted to develop approaches which if piloted successfully would prove to be sustainable, scalable and replicable by design.  
 <br /><br />

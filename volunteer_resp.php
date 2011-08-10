@@ -6,6 +6,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
+<div class="innertitle">Volunteer Responsibilities</div>
 <h2><b>How can volunteers participate in the program? </b></h2><br />
 
 

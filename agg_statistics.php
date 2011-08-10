@@ -6,7 +6,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h3><b>What is Shiksha Sankalp ?</b></h3><br />
+<div class="innertitle">What is Shiksha Sankalp ?</div>
 
 Shiksha Sankalp is a resolve to ensure that every Indian child achieves age-appropriate level of academic knowledge and skills. The project is geared towards developing human capital for the demographic opportunity for accelerated economic growth of India between now and 2050. 
 

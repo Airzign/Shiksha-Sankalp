@@ -7,7 +7,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h3><b>What is Shiksha Sankalp ?</b></h3><br />
+<div class="innertitle">What is Shiksha Sankalp ?</div>
 
 <div id="bodyarea" style="width:400px">
 <!-- BEGIN bodycontent DO NOT REMOVE COMMENT PT -->

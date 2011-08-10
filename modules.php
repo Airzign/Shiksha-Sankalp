@@ -6,7 +6,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h3><b> Rewards model</b></h3><br />
+<div class="innertitle">Rewards model</div>
 
 What are the key steps in the Learning Rewards model?
 <br /><br />

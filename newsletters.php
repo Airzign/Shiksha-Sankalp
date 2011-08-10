@@ -6,7 +6,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h2><b>Newsletters and Legal Documents</b></h2><br />
+<div class="innertitleshortened">Newsletters and Legal Documents</div>
 
 
 <!-- The content for Similar Projects -->

@@ -7,7 +7,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h2><b>Donor Responsibilities:</b></h2><br />
+<div class="innertitle">Donor Responsibilities</div>
 
 
 <!-- The content for Donor Responsibilities -->

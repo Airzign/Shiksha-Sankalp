@@ -4,7 +4,7 @@ include "admin/config.php";
 ?>
   <div id="content">
   		<div id="main_content">
-            <h2><em>Relevant Research Papers, Studies</em></h2>
+            <div class="innertitleshortened">Relevant Research Papers, Studies</div>
             <div class="research">
             <ul>
                 <li><a href="Adbreport.pdf">ADB economics and research department report</a></li>

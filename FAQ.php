@@ -9,7 +9,8 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h2><b>FAQ's</b></h2><br />
+<!--<h2><b>FAQ's</b></h2><br />-->
+<div class="innertitle">Frequently Asked Questions</div>
 
 
 <!-- The content for FAQ's -->

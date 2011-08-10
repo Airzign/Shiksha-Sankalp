@@ -6,7 +6,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h2><b>Success Stories in Other Nations</b></h2><br />
+<div class="innertitleshortened">Success Stories in Other Nations</div>
 
 
 <!-- The content for Similar Projects -->

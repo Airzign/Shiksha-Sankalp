@@ -1,9 +1,9 @@
 $(document).ready(function(){
 		//just some regular style sheets. change them as you see fit
-		var styling =".question{font-size:14px; font-weight:bold; cursor:pointer;}" +
+		var styling =".question{font-size:14px; font-weight:bold; cursor:pointer;line-height:30px;font-size:21px;}" +
 					  ".answer{display:block;}" +
-					  ".opened{color:#009966;}" +
-					  ".closed{color:#006699;}";		
+					  ".opened{color:#649637;}" +
+					  ".closed{color:#649637;}";		
 		//attach style to the page
 		var style = document.createElement("style");
         style.type = "text/css";

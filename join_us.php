@@ -6,7 +6,7 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h3><b>Join Us</b></h3><br />
+<div class="innertitle">Join Us</div>
 
 <p>1. <b>Donors</b> - Your contributions will provide direct cash incentives to economically weak families, based on demonstrated academic performance of their school going children. Shiksha Sankalp is committed to be a vehicle for delivering your assistance to eligible beneficiaries with highest standards of transparency and performance accountability. 
 Click <a href="donate.php">here</a> to Donate</p>
