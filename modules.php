@@ -8,9 +8,9 @@ include "admin/config.php";
            <p> 
 <div class="innertitle">Rewards model</div>
 
-What are the key steps in the Learning Rewards model?
+<div class="innersubheading">What are the key steps in the Learning Rewards model?</div>
 <br /><br />
-
+<div class="innertext">
 1
 	Survey of Proposed Target Areas
 Prospective Partner NGOs carry out survey of Proposed Target Areas using format provided by SS. This includes gathering information about families, schools, banks and other NGOs.
@@ -70,6 +70,7 @@ Partner NGO staff and SS staff/volunteers periodically visit the target area and
 15
 	Annual Financial Reporting and Impact Assessment
 Partner NGO provides annual financial reports and impact assessment studies to SS.
+</div>
 <!-- the content ends here -->
             
             </p>

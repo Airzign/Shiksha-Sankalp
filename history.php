@@ -7,7 +7,7 @@ include "admin/config.php";
         	<!-- the content goes here -->
            <p> 
 <div class="innertitle">History</div>
-
+<div class="innertext">
 The Shiksha Sankalp project was conceptualized in early 2009 by a group of friends who wanted to contribute to addressing the challenge of universal school education in India. The friends committed themselves to try out some innovative ideas to address the challenge. They wanted to develop approaches which if piloted successfully would prove to be sustainable, scalable and replicable by design.  
 <br /><br />
 The friends tapped into various sector experts including development economists from the World Bank, academicians from Harvard University, several practicing NGO experts and various education experts. Based on the discussions with these people, the friends devised the Shiksha Sankalp model.  
@@ -24,7 +24,7 @@ The friends realized that the proof of the pudding was in the eating. So, they d
 <br /><br />
 The group of friends now looks forward to support from Indians all over the world in realizing the dream of a universally educated India.
 <!-- the content ends here -->
-            
+</div>
             </p>
   
         </div>

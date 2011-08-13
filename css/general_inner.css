@@ -368,6 +368,17 @@ p{
 .news_segment {
 	font-size:14px;
 }
+.left {
+	font-size:17px;
+	color:#9A9A9A;
+	line-height:26px;
+}
+.statsnumber {
+	font-size:17px;
+	color:#777777;
+	line-height:26px;
+
+}
 .width
 {
 	width:102px;
@@ -474,6 +485,9 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 
 .research a{
     text-decoration:none;
+	font-size:17px;
+	color:#9A9A9A;
+	line-height:26px;
 }
 
 .research a:hover{

@@ -6,12 +6,10 @@ include "admin/config.php";
   		<div id="main_content">
         	<!-- the content goes here -->
            <p> 
-<h3><b>links, economic papers , analysis , expert talk</b></h3><br />
-
-
-
+<div class="innersubheading">links, economic papers , analysis , expert talk</div><br />
+<a href="http://online.wsj.com/article/SB124695317824004689.html" class="innertext" style="text-decoration:none;color:#006699;">
 http://online.wsj.com/article/SB124695317824004689.html
-
+</a>
 <!-- the content ends here -->
             
             </p>

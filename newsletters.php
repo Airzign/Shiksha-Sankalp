@@ -10,16 +10,17 @@ include "admin/config.php";
 
 
 <!-- The content for Similar Projects -->
-<h3> Links related to : </h3>
+<div class="innersubheading"> Links related to : </div>
 <ul>
-    <li class="research"><h3> Newsletters: </h3>
+    <li class="research"><div class="innersubheading"> Newsletters: </div>
         <ul>
             <li class="research"><a href="files/newsletters/Newsletter August 2010.docx">August 2010</a></li>
             <li class="research"><a href="files/newsletters/Newsletter June 2010.docx">June 2010</a></li>
             <li class="research"><a href="files/newsletters/Newsletter April 2010.docx">April 2010</a></li>
         </ul>
     </li>
-    <li class="research"><h3>Legal Documents:</a></h3>
+<br/>
+    <li class="research"><div class="innersubheading">Legal Documents:</div>
     <ul>
         <li class="research"><a href="files/newsletters/Attachment 501c3 application.doc">501c3 application</a></li>
         <li class="research"><a href="files/newsletters/Bylaws of Non Profit.doc">Shiksha Sankalp Bylaws</a></li>

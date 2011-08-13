@@ -19,7 +19,7 @@ $entry_display = <<<ENTRY_DISPLAY
 	<img src="images/news/$image" />
 </div>
 
-<h2><b>$heading</b></h2><br />
+<h2 class="innersubheading"><b>$heading</b></h2><br />
 
 
 
