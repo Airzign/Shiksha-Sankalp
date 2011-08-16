@@ -5,6 +5,14 @@
 <title>Login Form</title>
 <link href="loginmodule.css" rel="stylesheet" type="text/css" />
 </head>
+<?php
+	 if(array_key_exists('error',$_GET)) {
+		echo '<h4 align="center" class="err">Login Failed</h4>';
+	 }
+	 if(array_key_Exists('logout',$_GET)) {
+		 echo '<h4 align="center" class="err">You have been logged out.</h4>';
+	 }
+?>
 <body>
 <p>&nbsp;</p>
 <form id="loginForm" name="loginForm" method="post" action="login-exec.php">

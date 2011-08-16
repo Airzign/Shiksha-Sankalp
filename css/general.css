@@ -244,7 +244,7 @@ z-index: 100;
 	border-right: solid 2px #7c7e7a;
 	margin-left:10px;
 	color:#2c2e80;
-	height:240px;
+	height:325px;
 }
 .content_item h1{
 	color:#0b0d3a;
@@ -270,11 +270,12 @@ z-index: 100;
 .news_item_img
 {
 	float:left;
-	width:75px;
+	width:53px;
+	height:31px;
 }
 .news_item_img img
 {
-	width:90px;
+	/* width:60px; */
 	margin-bottom:9px;
 }
 .news_item_matter

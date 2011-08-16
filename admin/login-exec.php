@@ -38,7 +38,7 @@
 	if($errflag) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: login-form.php");
+		header("location: login-form.php?error=true");
 		exit();
 	}
 	
@@ -60,7 +60,7 @@
 			exit();
 		}else {
 			//Login failed
-			header("location: login-failed.php");
+			header("location: login-form.php?error=true");
 			exit();
 		}
 	}else {

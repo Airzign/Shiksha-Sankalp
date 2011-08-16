@@ -39,7 +39,7 @@ ENTRY_DISPLAY;
 	}
 	echo $entry_display;
 	?>           <br />
-            <a href="news.php"><p align="right">More Stories ....</p></a>
+            <a href="news.php"><p align="right">More News ....</p></a>
             
         </div>
         <div id="content_impact" class="content_item">

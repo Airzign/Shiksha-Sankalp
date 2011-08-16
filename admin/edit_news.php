@@ -11,7 +11,7 @@ require_once('auth.php');
 	<body>
 	<h1> News Admin </h1>
 <?php
-	require_once('config.php');
+require_once('config.php');
 $d=$new_heading=$id=null;
 $entry_display="";
 if(array_key_exists("d",$_GET)) {
@@ -76,7 +76,7 @@ ENTRY_DISPLAY;
 		if ((($_FILES["smallimg"]["type"] == "image/gif")
 			 || ($_FILES["smallimg"]["type"] == "image/jpeg")
 			 || ($_FILES["smallimg"]["type"] == "image/pjpeg"))
-			&& ($_FILES["smallimg"]["size"] < 20000))
+			&& ($_FILES["smallimg"]["size"] < SMALL_IMG_FILE_SIZE))
 		{
 			if ($_FILES["smallimg"]["error"] > 0)
 			{
@@ -103,14 +103,18 @@ ENTRY_DISPLAY;
 		}
 		else
 		{
-			if($_FILES["smallimg"]["name"] != null)
+			if($_FILES["smallimg"]["size"] >= SMALL_IMG_FILE_SIZE) {
+				echo 'Small image file size too large.';
+			}
+			else if($_FILES["smallimg"]["name"] != null)
 				echo "Invalid file";
 		}
 			//largeimg
 		if ((($_FILES["largeimg"]["type"] == "image/gif")
 			 || ($_FILES["largeimg"]["type"] == "image/jpeg")
+			 || ($_FILES["largeimg"]["type"] == "image/png")
 			 || ($_FILES["largeimg"]["type"] == "image/pjpeg"))
-			&& ($_FILES["largeimg"]["size"] < 20000))
+			&& ($_FILES["largeimg"]["size"] < LARGE_IMG_FILE_SIZE))
 		{
 			if ($_FILES["largeimg"]["error"] > 0)
 			{
@@ -131,13 +135,15 @@ ENTRY_DISPLAY;
 				{
 					move_uploaded_file($_FILES["largeimg"]["tmp_name"],
 									   "../images/news/" . $_FILES["largeimg"]["name"]);
-					echo "Stored in: " . "../images/news/" . $_FILES["largeimg"]["name"];
+					echo "Stored in: " . "../images/news/" . $_FILES["largeimg"]["name"]."<br/>";
 				}
 			}
 		}
 		else
 		{
-			if($_FILES["largeimg"]["name"]!=null)
+			if($_FILES["largeimg"]["size"] >= LARGE_IMG_FILE_SIZE)
+				echo 'Large image file size too large.';
+			else if($_FILES["largeimg"]["name"]!=null)
 				echo "Invalid file";
 		}
 
