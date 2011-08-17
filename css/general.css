@@ -32,6 +32,9 @@ q:before,q:after {
 abbr,acronym { 
 	border:0;
 }
+a{
+	text-decoration:none;
+}
 
 /* The reset CSS ends here */
 
@@ -256,14 +259,22 @@ z-index: 100;
 	color:#2c2e80;
 	height:240px;
 	color:#0b0d3a;
-	font-size:15px;
+	font-size:17px;
 }
 .content_item_last h1{
 	color:#0b0d3a;
 }
 .news_item
 {
+	height:50px;
 	padding:5px;
+}
+	
+.news_item:hover
+{
+	height:50px;
+	padding:5px;
+	background-color:#e8f7db;
 }
 	
 
