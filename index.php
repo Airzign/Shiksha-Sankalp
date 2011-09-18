@@ -1,6 +1,6 @@
 <?php
-include "header.php";
-include "admin/config.php";
+  include "header.php";
+  include "admin/config.php";
 ?>
 <div id="slide">
   <div id="example">
@@ -18,7 +18,6 @@ include "admin/config.php";
 	  </div>
 	</div>
   </div>
-
   <style>
 	#mygalone {
 	  height: 390px;
