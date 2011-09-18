@@ -150,6 +150,7 @@ z-index: 100;
 {
 	margin-top:18px;
 	float:left;
+	overflow:hidden;
 }
 #content p
 {
@@ -247,7 +248,8 @@ z-index: 100;
 	border-right: solid 2px #7c7e7a;
 	margin-left:10px;
 	color:#2c2e80;
-	height:325px;
+	margin-bottom:-2000px;
+	padding-bottom:2000px;
 }
 .content_item h1{
 	color:#0b0d3a;
