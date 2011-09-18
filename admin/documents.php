@@ -97,8 +97,8 @@
 	  <input type="text" name="title" id="id_title"/>
 	  <label for="id_file">File</label>
 	  <input type="file" name="doc" id="id_file"/>
-	  Document Type
-	  <select name="doc_type">
+	  <label for="id_doc_type">Document Type</label>
+	  <select name="doc_type" name="id_doc_type">
 		<option value="0">Newsletter</option>
 		<option value="1">Legal Document</option>
 	  </select>
