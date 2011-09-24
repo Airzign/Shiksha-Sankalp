@@ -87,49 +87,116 @@
 			</div>
 			<div id="header_top_login"></div>
 		  </div>
-		  <div id="header_menu">
-			<ul class="topnav" id="menu">
-			  <li class="menu_item">
-				<a href="about.php">About Us</a>
-				<ul class="subnav">
-				  <li><a href="about.php">About Shiksha Sankalp</a></li>
-				  <li><a href="vision.php">Vision</a></li>
-				  <li><a href="team.php">Team</a></li>
-				  <li><a href="history.php">History</a></li>
-				  <li><a href="moas.pdf">MoAs</a></li>
-				</ul>
-			  </li>
-			  <li class="menu_item">
-				<a href="#">Resources</a>
-				<ul class="subnav">
-				  <li><a href="data_education.php">Data on Education</a></li>
-				  <li><a href="relevant_research.php">Relevant Research</a></li>
-				  <li><a href="similar_projects.php">Similar Projects</a></li>
-				  <li><a href="newsletters.php">Newsletters & Legal Documents</a></li>
-				</ul>
-			  </li>
-			  <li class="menu_item">
-				<a href="modules.php">Modules</a>
-			  </li>
-			  <li class="menu_item">
-				<a href="accountability.php">Accountability</a>
-				<ul class="subnav">
-				  <li><a href="agg_statistics.php">Aggregate Statistics</a></li>
-				  <li><a href="module_statistics.php">Module Statistics</a></li>
-				  <li><a href="annual_report.php">Annual report</a></li>
-				  <li><a href="summary_financials.php">Summary financials</a></li>
-				</ul>
-			  </li>
-			  <li class="menu_item">
-				<a href="FAQ.php">FAQ's</a>
-			  </li>
-			  <li class="menu_item"><a href="join_us.php">Join Us</a>
-				<ul class="subnav">
-				  <li><a href="donor_resp.php">Donor Responsibilities</a></li>
-				  <li><a href="volunteer_resp.php">Volunteer Responsibilities</a></li>
-				</ul>
-			  </li>
-			</ul>
-		  </div>
+		  <div class="nav">
+				<ul id="navigation">
+			   		
+			   		<li class="">
+						<a href="#">
+							<span class="menu-left"></span>
+							<span class="menu-mid">About Us</span>
+							<span class="menu-right"></span>
+						</a>
+	            	   	<div class="sub">
+			   				<ul>
+			   					<li>
+									<a href="#">About Shiksha Sankalp</a>
+								</li>
+			   					<li>
+									<a href="#">Vision</a>
+								</li>
+			   					<li>
+									<a href="#">Team</a>
+								</li>
+			   					<li>
+									<a href="#">History</a>
+								</li>
+                                <li>
+									<a href="#">MoAs</a>
+								</li>
+			   				</ul>
+			   				<div class="btm-bg"></div>
+			   			</div>
+					</li>
+			   		<li class="">
+						<a href="#">
+							<span class="menu-left"></span>
+							<span class="menu-mid">Resources</span>
+							<span class="menu-right"></span>
+						</a>
+			   			<div class="sub">
+			   				<ul>
+			   					<li>
+									<a href="#">Data on Education</a>
+									</li>
+			   					<li>
+									<a href="#">Relevant Research</a>
+								</li>
+			   					<li>
+									<a href="#">Similar Projects</a>
+								</li>
+                                <li>
+									<a href="#">Newsletter &amp;<br />Legal Documents</a>
+								</li>
+			   				</ul>
+			   				<div class="btm-bg"></div>
+			   			</div>
+			   		</li>
+			   		<li class="">
+						<a href="#">
+							<span class="menu-left"></span>
+							<span class="menu-mid">Modules</span>
+							<span class="menu-right"></span>
+						</a></li>
+			   		<li class="">
+						<a href="#">
+							<span class="menu-left"></span>
+							<span class="menu-mid">Accountability</span>
+							<span class="menu-right"></span>
+						</a>
+	            	   	<div class="sub">
+			   				<ul>
+			   					<li>
+									<a href="#">Aggregate Statistics</a>
+								</li>
+			   					<li>
+									<a href="#">Module Statistics</a>
+								</li>
+			   					<li>
+									<a href="#">Annual Report</a>
+								</li>
+                                <li>
+									<a href="#">Summary Financials</a>
+								</li>
+			   				</ul>
+			   				<div class="btm-bg"></div>
+			   			</div>
+					</li>
+			   		<li class="">
+						<a href="#">
+							<span class="menu-left"></span>
+							<span class="menu-mid">FAQ's</span>
+							<span class="menu-right"></span>
+						</a></li>
+			   		<li class="last">
+						<a href="">
+							<span class="menu-left"></span>
+							<span class="menu-mid">Join Us</span>
+							<span class="menu-right"></span>
+						</a>
+                        <div class="sub">
+			   				<ul>
+			   					<li>
+									<a href="#">Donor Responsibilities</a>
+								</li>
+			   					<li>
+									<a href="#">Volunteer Responsibilities</a>
+								</li>
+                                </ul>
+                                <div class="btm-bg"></div>
+                                </div>
+			   		</li>
+			   	</ul>
+			</div>
+			<div class="nav-right"></div>
 		</div>
 	  </div>
