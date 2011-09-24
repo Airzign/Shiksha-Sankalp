@@ -1,42 +1,47 @@
 <?php
-include "headerinner.php";
-include "admin/config.php";
+   include "headerinner.php";
+   include "admin/config.php";
+   /* get the newsletters */
+   $newsletters=mysql_query("select * from documents where doc_type=0");
+   if($newsletters==false) {
+	   echo "An error occured.Error : SKRSS1";
+	   return;
+   }
+   /* get the legal documents */
+   $legal_documents=mysql_query("select * from documents where doc_type=1");
+   if($legal_documents==false) {
+	   echo "An error occured.Error : SKRSS2";
+	   return;
+   }
 ?>
-  <div id="content">
-  		<div id="main_content">
-        	<!-- the content goes here -->
-           <p> 
-<div class="innertitleshortened">Newsletters and Legal Documents</div>
-
-
-<!-- The content for Similar Projects -->
-<div class="innersubheading"> Links related to : </div>
-<ul>
-    <li class="research"><div class="innersubheading"> Newsletters: </div>
-        <ul>
-            <li class="research"><a href="files/newsletters/Newsletter August 2010.docx">August 2010</a></li>
-            <li class="research"><a href="files/newsletters/Newsletter June 2010.docx">June 2010</a></li>
-            <li class="research"><a href="files/newsletters/Newsletter April 2010.docx">April 2010</a></li>
-        </ul>
-    </li>
-<br/>
-    <li class="research"><div class="innersubheading">Legal Documents:</div>
-    <ul>
-        <li class="research"><a href="files/newsletters/Attachment 501c3 application.doc">501c3 application</a></li>
-        <li class="research"><a href="files/newsletters/Bylaws of Non Profit.doc">Shiksha Sankalp Bylaws</a></li>
-        <li class="research"><a href="files/newsletters/Grant Rules.doc">Grant Rules</a></li>
-    </ul>
-    </li>
-<!-- the content ends here -->
-            
-            </p>
-  
-        </div>
-        
-        
-        <div id="extra_content">
-		<?php
-		include "dynamic.php";
-		echo "</div>";
-		include "footer.php";
-		?>
+<div id="content">
+  <div id="main_content">
+    <p> 
+	  <div class="innertitleshortened">Newsletters and Legal Documents</div>
+	  <div class="innersubheading"> Links related to : </div>
+	  <ul>
+		<li class="research"><div class="innersubheading"> Newsletters: </div>
+          <ul>
+	        <?php while($row=mysql_fetch_assoc($newsletters)) {?>
+            <li class="research"><a href="files/newsletters/<?php echo $row['filename'] ?>"><?php echo $row['title'] ?></a></li>
+			<?php } ?>
+          </ul>
+		</li>
+		<br/>
+		<li class="research"><div class="innersubheading">Legal Documents:</div>
+		  <ul>
+	        <?php while($row=mysql_fetch_assoc($legal_documents)) {?>
+            <li class="research"><a href="files/newsletters/<?php echo $row['filename'] ?>"><?php echo $row['title'] ?></a></li>
+			<?php } ?>
+		  </ul>
+		</li>
+      </ul>
+    </p>
+  </div>
+  <div id="extra_content">
+	<?php
+	   include "dynamic.php";
+	   echo "</div>";
+	   include "footer.php";
+	?>
+	
