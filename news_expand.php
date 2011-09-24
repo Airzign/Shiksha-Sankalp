@@ -10,7 +10,7 @@
 		$description = nl2br(stripslashes($a['description']));
 		$image = stripslashes($a['largeimgurl']);
 		$timestamp = stripslashes($a['tm']);
-		$entry_display = <<<ENTRY_DISPLAY
+$entry_display = <<<ENTRY_DISPLAY
 			<div id="content">
 			  <div id="main_content">
 				<div id="image_template">
@@ -22,10 +22,10 @@
 				<br />
 				<p class="answer">$description</p>
 			  </div>
-			ENTRY_DISPLAY;
+ENTRY_DISPLAY;
 	}
 	else {
-		$entry_display .= <<<ENTRY_DISPLAY
+$entry_display .= <<<ENTRY_DISPLAY
 			<div id="content">
 			  <div id="main_content">
 				The page you have requested does not exist.
@@ -33,7 +33,7 @@
 				<br />
 				<br />
 			  </div>
-			ENTRY_DISPLAY;
+ENTRY_DISPLAY;
 	}
     echo $entry_display;
     include "extra_content.php";
