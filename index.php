@@ -8,7 +8,7 @@
 	  <map id="Map" name="Map">
 		<area href="about.php" coords="720,0,958,407" shape="rect">
 	  </map>
-	  <div class="slides_container" height="305px">
+	  <div class="slides_container" style="height:305px">
 		<img src="images/slider/1_03.jpg" alt="Slide 1" class="slider_image" usemap="#Map"/>
 		<img src="images/slider/2_03.jpg" alt="Slide 2" class="slider_image" usemap="#Map"/>
 		<img src="images/slider/3_03.jpg" alt="Slide 3" class="slider_image" usemap="#Map"/>
