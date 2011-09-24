@@ -22,7 +22,7 @@
 				<br />
 				<p class="answer">$description</p>
 			  </div>
-			ENTRY_DISPLAY;
+ENTRY_DISPLAY;
 	}
 	else {
 		$entry_display .= <<<ENTRY_DISPLAY
@@ -33,7 +33,7 @@
 				<br />
 				<br />
 			  </div>
-			ENTRY_DISPLAY;
+ENTRY_DISPLAY;
 	}
     echo $entry_display;
     include "extra_content.php";

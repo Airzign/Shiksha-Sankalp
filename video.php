@@ -29,7 +29,7 @@
 					  </div>
 					</a>
 					<div style="clear:both"></div>
-					ENTRY_DISPLAYk;
+ENTRY_DISPLAYk;
 			}
 		}
         echo $entry_displayk;
