@@ -137,6 +137,7 @@ z-index: 100;
 
 #slides_container {
 	height:305px;
+	background-color: #f0f0f0;
 }
 
 #quote {
