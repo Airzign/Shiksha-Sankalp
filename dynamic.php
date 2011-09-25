@@ -17,6 +17,7 @@
   $entry_display1="";
   $entry_display2="";
   if ( $r !== false && mysql_num_rows($r) > 0 ) {
+	  $entry_display.='<div class="content_wrapper">';
 	while ( $a = mysql_fetch_assoc($r) ) {
 	  $heading = stripslashes($a['heading']);
 	  $id = $a['id'];
@@ -26,7 +27,7 @@
 	  $entry_display.=<<<ENTRY_DISPLAY
 	  <br />
 	  <a href="news_expand.php?id=$id">
-		<div class="news_item">
+		<div class="news_item" onclick="javascript:window.location='news_expand.php?id=$id';">
 		  <div class="news_item_img">
 			<img src="images/news/$smallimg " width="100%" />
 		  </div>
@@ -36,6 +37,7 @@
 	  <div style="clear:both"></div>
 ENTRY_DISPLAY;
 	}
+	$entry_display.="</div>";
   }
   echo $entry_display;
 ?>
@@ -73,16 +75,17 @@ ENTRY_DISPLAY;
   $id_string="(";
   $first_string=true;
   foreach($distinct_ids as $id) {
-	  if(!$first_string) {
-		$id_string .= ',';
-	  }
-	  $first_string=false;
-	  $id_string .= $id;
+	if(!$first_string) {
+	  $id_string .= ',';
+	}
+	$first_string=false;
+	$id_string .= $id;
   }
   $id_string.=')';
   $q = "SELECT * FROM impact where id in $id_string ORDER BY tm DESC";
   $r = mysql_query($q);
   if ( $r !== false && mysql_num_rows($r) > 0 ) {
+	$entry_display1.='<div class="content_wrapper1">';
     while ( $a = mysql_fetch_assoc($r) ) {
 	  $pic_desc = stripslashes($a['pic_desc']);
 	  $small_desc = stripslashes($a['small_desc']);
@@ -100,6 +103,7 @@ ENTRY_DISPLAY;
         <div style="clear:both"></div>
 ENTRY_DISPLAY1;
 	}
+	$entry_display1.='</div>';
   }
   echo $entry_display1;
 ?>
