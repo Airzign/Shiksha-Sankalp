@@ -23,13 +23,13 @@
 	  $id = $a['id'];
       $smallimg = $a['smallimgurl'];
 	  if($smallimg=="" or $smallimg==null)
-		$smallimg="../newsdefault.png";
+		$smallimg="../defaults/news.png";
 	  $entry_display.=<<<ENTRY_DISPLAY
 	  <br />
 	  <a href="news_expand.php?id=$id">
 		<div class="news_item" onclick="javascript:window.location='news_expand.php?id=$id';">
 		  <div class="news_item_img">
-			<img src="images/news/$smallimg " width="100%" />
+			<img src="images/news/$smallimg" width="100%" />
 		  </div>
 		  <div class="news_item_matter">$heading</div>
 		</div>
@@ -90,14 +90,15 @@ ENTRY_DISPLAY;
 	  $pic_desc = stripslashes($a['pic_desc']);
 	  $small_desc = stripslashes($a['small_desc']);
       $smallimg = $a['smallimgurl'];
+	  if($smallimg==null || $smallimg=="")
+		  $smallimg='../defaults/impact.png';
       $id = $a['id'];
 	  $entry_display1 .=<<<ENTRY_DISPLAY1
 		<a href="impact_expand.php?id=$id">		
-          <div class="news_item">
-            <div class="news_item_img"><img src="images/impact/$smallimg " width="100%" />
-			  <small>$pic_desc</small>
+          <div class="impact_item">
+            <div class="impact_item_img"><img src="images/impact/$smallimg " width="100%" />
 			</div>
-            <div class="news_item_matter">$small_desc</div>
+            <div class="impact_item_matter">$small_desc<br /><small>$pic_desc</small></div>
           </div>
         </a>
         <div style="clear:both"></div>
@@ -128,16 +129,16 @@ ENTRY_DISPLAY1;
 	  $link = stripslashes($a['link']);
 	  $smallimg = $a['smallimgurl'];
 	  if($smallimg=="" or $smallimg==null)
-		$smallimg="../videodefault.png";
+		$smallimg="../defaults/video.png";
 	  $entry_display2 .=<<<ENTRY_DISPLAY2
 			$heading
 		    <br />
 			<br />
-			<span class="center">
+			<div align="center">
 			  <a href="$link" rel="prettyPhoto" title="">
-				<img src="images/video/$smallimg" align="absmiddle" />
+				<img src="images/video/$smallimg"/>
 			  </a>
-			</span>
+			</div>
 			<br />
 			<br />
 			<a href="video.php">

@@ -36,6 +36,8 @@ $entry_display .= <<<ENTRY_DISPLAY
 ENTRY_DISPLAY;
 	}
     echo $entry_display;
-    include "extra_content.php";
+echo '<div id="extra_content">';
+    include "dynamic.php";
+echo '</div>';
     include "footer.php";
 ?>

@@ -4,6 +4,7 @@
     $id=mysql_real_escape_string($_GET['id']);
     $q = "SELECT * FROM impact WHERE id=$id";
     $r = mysql_query($q);
+$entry_display='';
     if ( $r !== false && mysql_num_rows($r) > 0 ) {
 		$a = mysql_fetch_assoc($r);
 		$small_desc = stripslashes($a['small_desc']);
@@ -16,7 +17,7 @@
 				<div id="image_template">
 				  <img src="images/news/$image" />
 				</div>
-				<h2>
+				<h2 class="innersubheading">
 				  <b>$small_desc</b>
 				</h2>
 				<br />
@@ -36,6 +37,8 @@ ENTRY_DISPLAY;
 ENTRY_DISPLAY;
 	}
     echo $entry_display;
-    include "extra_content.php";
+    echo '<div id="extra_content">';
+    include "dynamic.php";
+    echo '</div>';
     include "footer.php";
 ?>

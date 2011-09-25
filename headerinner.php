@@ -68,7 +68,7 @@
 	<div id="header_right">
     	<div id="header_top">
         	<div id="header_top_logo">USERNAME &nbsp; <input type="text" class="width" /> &nbsp; &nbsp; PASSWORD &nbsp;<input type="text" class="width" />
-            	<input type="image" src="images/login.jpg" align="top" /><br /><br /><p align="right"><img src="images/subscribe.png" /></p>
+            	<input type="image" src="images/login.png" align="top" width="38px"/><br /><br /><p align="right"><img src="images/subscribe.png" /></p>
             </div>
             <div id="header_top_login"></div>
         </div>
