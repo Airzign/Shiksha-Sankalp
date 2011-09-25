@@ -3,7 +3,7 @@
    include "config.php";
    /* get the action that we have to perform
 	* 0 => Show the page only.
-	* 1 => Update title and doc_type of the entry. Currently this is disabled.
+	* 1 => Update title and doc_type of the entry.
 	* 2 => Delete an entry.
 	* 3 => Add a new entry.
 	*/
@@ -17,14 +17,14 @@
    if(array_key_exists('action',$_POST)) {
 	   $action=$_POST['action'];
    }
-   /* if($action==1) { */
-   /*      $id = $_GET['id']; */
-   /* 	   $new_title=$_GET['title']; */
-   /* 	   $doc_type =$_GET['doc_type']; */
-   /* 	   if(mysql_query("update documents set title='$new_title',doc_type=$doc_type where id=$id")) { */
-   /* 		   $message='The document was updated successfully.'; */
-   /* 	   } */
-   /* } */
+   if($action==1) {
+        $id = $_GET['id'];
+   	   $new_title=$_GET['title'];
+   	   $doc_type =$_GET['doc_type'];
+   	   if(mysql_query("update documents set title='$new_title',doc_type=$doc_type where id=$id")) {
+   	   	   $message='The document was updated successfully.';
+   	   }
+   }
    if($action==2) {
 	   $id = $_GET['id'];
 	   $query=mysql_query('select filename from documents where id='.$id);
@@ -87,9 +87,6 @@
   <body>
 	<h1>Documents Admin </h1>
     <?php echo $message ?>
-    <p class="admin_link">
-      <a href="edit_news.php">Add a New Entry</a>
-    </p>
     <h3>Add a New Entry</h3>
 	<form enctype="multipart/form-data" method="post">
 	  <input type="hidden" value="3" name="action"/>
@@ -104,17 +101,48 @@
 	  </select>
 	  <input type="submit" value="Upload"/>
 	</form>
-	<h3>Delete an existing entry</h3>
-	<form name="deletionform">
-	  <input type="hidden" name="action" value="2"/>
-	  <input type="hidden" name="id" value="0" id="id"/>
-	</form>
-	<?php while($row=mysql_fetch_assoc($documents)) { ?>
-	<p>
-	  <a href="<?php echo $newsletter_dir.$row['filename'] ?>"><?php echo $row['title'] ?></a>
-	  <a href="documents.php?action=2&id=<?php echo $row['id'] ?>">Delete</a>
-	  <input type="button" value="Delete" onclick="confirmDelete('<?php echo $row['title'] ?>',<?php echo $row['id'] ?>);"/>
-	</p>
+	<?php if(mysql_num_rows($documents)>0) {?>
+	  <h3>Delete an existing entry</h3>
+	  <form name="deletionform">
+		<input type="hidden" name="action" value="2"/>
+		<input type="hidden" name="id" value="0" id="id"/>
+	  </form>
+	  <table>
+		<tr>
+		  <th>Document</th>
+		  <th>Type</th>
+		  <th>Title</th>
+		  <th>Update</th>
+		  <th>Delete</th>
+		</tr>
+		<?php while($row=mysql_fetch_assoc($documents)) { ?>
+		  <tr>
+			<td>
+			  <a href="<?php echo $newsletter_dir.$row['filename'] ?>"><?php echo $row['title'] ?></a>
+			</td>
+			<form>
+			<td>
+			  <select name="doc_type">
+				<option value="0" <?php if($row['doc_type']==0) echo 'selected=selected'; ?> >Newsletter</option>
+				<option value="1" <?php if($row['doc_type']==1) echo 'selected=selected'; ?> >Legal Document</option>
+			  </select>
+			</td>
+			<td>
+			  <input type="text" name="title" value="<?php echo $row['title']; ?>"/>
+			</td>
+			<td>
+			  <input type="submit" value="Update"/>
+			</td>
+			<input type="hidden" name="id" value="<?php echo $row['id'];?>"/>
+			<input type="hidden" name="action" value="1"/>
+			</form>
+			<td>
+			  <!--<input type="button" value="Delete" onclick="confirmDelete('<?php echo $row['title']; ?>',<?php echo $row['id'] ?>);"/>-->
+			  <a href="javascript:void();" onclick="javascript:confirmDelete('<?php echo $row['title']; ?>',<?php echo $row['id'] ?>);">Delete</a>
+			</td>
+		  </tr>
+	  <?php } ?>
+	  </table>
 	<?php } ?>
   </body>
 </html>
