@@ -308,10 +308,24 @@ p{
 	margin-bottom:30px;
 	line-height:28px;
 }
+
+.innersubheading_main {
+	font-size:21px;
+	font-weight:bold;
+	color:#649637;
+	line-height:30px;
+}
+
 .innersubheading {
 	font-size:17px;
 	font-weight:bold;
 	color:#649637;
+	line-height:30px;
+}
+.innersubheading_team {
+	font-size:14px;
+	font-weight:bold;
+	color: #666;
 	line-height:30px;
 }
 .innertext {
