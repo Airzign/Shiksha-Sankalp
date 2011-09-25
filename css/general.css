@@ -97,7 +97,7 @@ body.shadowBackground {
 
 #header_right
 {
- float:right;
+
 }
 
 #header_top_logo
@@ -248,11 +248,10 @@ z-index: 100;
 .content_item {
 	width:300px;
 	float:left;
-	border-right: solid 2px #7c7e7a;
+	border-right: solid 1px #CCC;
 	margin-left:10px;
 	color:#2c2e80;
-	margin-bottom:-2000px;
-	padding-bottom:2000px;
+	/* height:325px; */
 }
 .content_item h1{
 	color:#0b0d3a;
@@ -271,8 +270,8 @@ z-index: 100;
 }
 .news_item
 {
-	height:50px;
-	padding:5px;
+	height:45px;
+	width:290px;
 	cursor:pointer;
 }
 	
@@ -329,6 +328,16 @@ z-index: 100;
 	width:inherit;
 
 }
+
+.content_wrapper
+{
+	height:264px;
+}
+
+.content_wrapper1
+{
+	height:244px;
+}
 /**/
 
 
@@ -357,7 +366,7 @@ z-index: 100;
 }
 .nav {
 	background:none;
-	float: left;
+	float: right;
 	z-index:+5;
 }
 .nev-wrapper {

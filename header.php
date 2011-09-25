@@ -91,7 +91,7 @@
 				<ul id="navigation">
 			   		
 			   		<li class="">
-						<a href="#">
+						<a href="about.php">
 							<span class="menu-left"></span>
 							<span class="menu-mid">About Us</span>
 							<span class="menu-right"></span>
@@ -99,19 +99,19 @@
 	            	   	<div class="sub">
 			   				<ul>
 			   					<li>
-									<a href="#">About Shiksha Sankalp</a>
+									<a href="about.php">About Shiksha Sankalp</a>
 								</li>
 			   					<li>
-									<a href="#">Vision</a>
+									<a href="vision.php">Vision</a>
 								</li>
 			   					<li>
-									<a href="#">Team</a>
+									<a href="team.php">Team</a>
 								</li>
 			   					<li>
-									<a href="#">History</a>
+									<a href="history.php">History</a>
 								</li>
                                 <li>
-									<a href="#">MoAs</a>
+									<a href="moas.pdf">MoAs</a>
 								</li>
 			   				</ul>
 			   				<div class="btm-bg"></div>
@@ -126,29 +126,29 @@
 			   			<div class="sub">
 			   				<ul>
 			   					<li>
-									<a href="#">Data on Education</a>
+									<a href="data_education.php">Data on Education</a>
 									</li>
 			   					<li>
-									<a href="#">Relevant Research</a>
+									<a href="relevant_research.php">Relevant Research</a>
 								</li>
 			   					<li>
-									<a href="#">Similar Projects</a>
+									<a href="similar_projects.php">Similar Projects</a>
 								</li>
                                 <li>
-									<a href="#">Newsletter &amp;<br />Legal Documents</a>
+									<a href="newsletters.php">Newsletter &amp;<br />Legal Documents</a>
 								</li>
 			   				</ul>
 			   				<div class="btm-bg"></div>
 			   			</div>
 			   		</li>
 			   		<li class="">
-						<a href="#">
+						<a href="modules.php">
 							<span class="menu-left"></span>
 							<span class="menu-mid">Modules</span>
 							<span class="menu-right"></span>
 						</a></li>
 			   		<li class="">
-						<a href="#">
+						<a href="accountability.php">
 							<span class="menu-left"></span>
 							<span class="menu-mid">Accountability</span>
 							<span class="menu-right"></span>
@@ -156,29 +156,29 @@
 	            	   	<div class="sub">
 			   				<ul>
 			   					<li>
-									<a href="#">Aggregate Statistics</a>
+									<a href="agg_statistics.php">Aggregate Statistics</a>
 								</li>
 			   					<li>
-									<a href="#">Module Statistics</a>
+									<a href="module_statistics.php">Module Statistics</a>
 								</li>
 			   					<li>
-									<a href="#">Annual Report</a>
+									<a href="annual_report.php">Annual Report</a>
 								</li>
                                 <li>
-									<a href="#">Summary Financials</a>
+									<a href="summary_financials.php">Summary Financials</a>
 								</li>
 			   				</ul>
 			   				<div class="btm-bg"></div>
 			   			</div>
 					</li>
 			   		<li class="">
-						<a href="#">
+						<a href="FAQ.php">
 							<span class="menu-left"></span>
 							<span class="menu-mid">FAQ's</span>
 							<span class="menu-right"></span>
 						</a></li>
 			   		<li class="last">
-						<a href="">
+						<a href="join_us.php">
 							<span class="menu-left"></span>
 							<span class="menu-mid">Join Us</span>
 							<span class="menu-right"></span>
@@ -186,10 +186,10 @@
                         <div class="sub">
 			   				<ul>
 			   					<li>
-									<a href="#">Donor Responsibilities</a>
+									<a href="donor_resp.php">Donor Responsibilities</a>
 								</li>
 			   					<li>
-									<a href="#">Volunteer Responsibilities</a>
+									<a href="volunteer_resp.php">Volunteer Responsibilities</a>
 								</li>
                                 </ul>
                                 <div class="btm-bg"></div>
