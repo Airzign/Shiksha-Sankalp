@@ -14,6 +14,7 @@ $entry_display1="";
 $entry_display2="";
 
 if ( $r !== false && mysql_num_rows($r) > 0 ) {
+	$entry_display='<div class="content_wrapper">';
 	while ( $a = mysql_fetch_assoc($r) ) {
 		$heading = stripslashes($a['heading']);
 		$id = $a['id'];
@@ -36,6 +37,7 @@ if ( $r !== false && mysql_num_rows($r) > 0 ) {
 
 ENTRY_DISPLAY;
 	}
+	$entry_display=$entry_display.'</div>';
 	}
 	echo $entry_display;
 	?>           <br />
@@ -50,6 +52,7 @@ $q = "SELECT * FROM impact ORDER BY tm DESC LIMIT $impact_count";
     $r = mysql_query($q);
 
     if ( $r !== false && mysql_num_rows($r) > 0 ) {
+		$entry_display1='<div class="content_wrapper1">';
       while ( $a = mysql_fetch_assoc($r) ) {
 	    $pic_desc = stripslashes($a['pic_desc']);
 	    $small_desc = stripslashes($a['small_desc']);
@@ -71,6 +74,7 @@ $q = "SELECT * FROM impact ORDER BY tm DESC LIMIT $impact_count";
 
 ENTRY_DISPLAY1;
 	}
+	$entry_display1=$entry_display1.'</div>';
 	}
 	echo $entry_display1;
 	?>
