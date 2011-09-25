@@ -24,12 +24,12 @@ if ( $r !== false && mysql_num_rows($r) > 0 ) {
 		$entry_display .=<<<ENTRY_DISPLAY
 			
 			<br />
-            <a href="news_expand.php?id=$id">
-            <div class="news_item">
+            <!--<a href="news_expand.php?id=$id">-->
+            <div class="news_item" onclick="javascript:window.location='news_expand.php?id=$id'">
 			<div class="news_item_img"><img src="images/news/$smallimg " width="100%" /></div>
 			<div class="news_item_matter">$heading</div>
             </div>
-            </a>
+            <!--</a>-->
             <div style="clear:both"></div>
 
             
