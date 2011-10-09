@@ -18,11 +18,20 @@
 	Feedback &nbsp; &nbsp; Sitemap &nbsp; &nbsp; Disclaimer &nbsp; &nbsp; Contact us
   </div>
 </div>
-<script type="text/javascript" charset="utf-8">
+<!--<script type="text/javascript" charset="utf-8">
   $(document).ready(function(){
-    $("a[rel^='prettyPhoto']").prettyPhoto();
   });
-</script>
+</script>-->
+
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	      $("a[rel^='prettyPhoto']").prettyPhoto();
+
+	  
+	  });
+	</script>
+
+
 </div>
 </body>
 </html>
