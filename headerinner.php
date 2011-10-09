@@ -21,23 +21,24 @@
 <!-- Stylesheets should be ended here -->
 <!-- The Site title is added here -->
 <title>Shiksha Sankalp</title>
-<script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/jquery_easing.js" type="text/javascript"></script>
+<script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<!--<script src="js/jquery.js" type="text/javascript"></script>-->
+<!--<script src="js/jquery_easing.js" type="text/javascript"></script>-->
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
 <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>	
-	<script type="text/javascript" language="javascript" src="js/hoverIntent.js"></script>
-	<script type="text/javascript" language="javascript" src="js/jquery.dropdown.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-	<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>	-->
+<!--<script type="text/javascript" language="javascript" src="js/hoverIntent.js"></script>-->
+<!--<script type="text/javascript" language="javascript" src="js/jquery.dropdown.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
+<!--<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>-->
 
 <script type="text/javascript">
-	$(document).ready(function(){
-
-	$("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
-
-	$("ul.topnav li span").click(function() { //When trigger is clicked...
-
+  $(document).ready(function(){
+  
+  $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
+  
+  $("ul.topnav li span").click(function() { //When trigger is clicked...
+  
 		//Following events are applied to the subnav itself (moving subnav up and down)
 		$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
 
