@@ -10,9 +10,12 @@
   </head>
   <body>
 	<h1> Impact Admin </h1>
+	<a href="admin.php">Back to dashboard</a>
+	<br /><br />
 <?php
   require_once('config.php');
   $d=$new_heading=$id=null;
+  $entry_display="";
   if(array_key_exists("d",$_GET)) {
 	$d = mysql_real_escape_string($_GET["d"]); // if 1 delete entry with id  e = id
   }
@@ -27,7 +30,7 @@
 	$r = mysql_query($q);
 	if($r) {
 	  echo "Deleted impact with id = ".$id.'  ';
-	  echo '<a href="impact.php">Back to Impact</a>';
+	  echo '<br /><br /><a href="impact.php">Back to Impact</a>';
 	}
 	else {
 	  echo "Could not delete impact.";
@@ -40,7 +43,7 @@
 	  $a = mysql_fetch_assoc($r);
 	  $pic_desc = stripslashes($a['pic_desc']);
 	  $small_desc = stripslashes($a['small_desc']);
-	  $description = stripslashes($a['description']);
+	  $description = str_replace("<br />","",stripslashes($a['description']));
 	  $timestamp = stripslashes($a['tm']);
 	  $entry_display = <<<ENTRY_DISPLAY
 	<form action="edit_impact.php?e=$id" method="post" enctype="multipart/form-data">	
@@ -95,7 +98,8 @@ ENTRY_DISPLAY;
 	  }
 	}
 	else {
-	  $entry_display = "<br/>Missing/Invalid small image";
+		if($_FILES["smallimg"]["name"]!=null)
+			$entry_display = "<br/>Missing/Invalid small image";
 	}
 		//largeimg
 	if ((($_FILES["largeimg"]["type"] == "image/gif")
@@ -121,7 +125,8 @@ ENTRY_DISPLAY;
 	  }
 	}
 	else {
-		$entry_display.="<br/>Missing/Invalid large image.";
+		if($_FILES["largeimg"]["name"]!=null)
+			$entry_display.="<br/>Missing/Invalid large image.";
 	}
 	$smallimgurl = $_FILES["smallimg"]["name"];
 	$largeimgurl = $_FILES["largeimg"]["name"];

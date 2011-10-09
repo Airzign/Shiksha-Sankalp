@@ -19,10 +19,13 @@ require_once('auth.php');
 	require_once('config.php');
     $entry_display = <<<ADMIN_OPTION
 
-    <p class="admin_link">
+	<div class="admin_link" style="float:left">
       <a href="edit_impact.php">Add a New Entry</a>
-    </p>
-
+    </div>
+    <div style="float:right">
+        <a href="admin.php">Back to dashboard</a>
+    </div>
+    <div style="clear:both"></div>
 ADMIN_OPTION;
 
     $q = "SELECT * FROM impact ORDER BY tm DESC LIMIT 20";
@@ -53,10 +56,13 @@ ENTRY_DISPLAY;
       No entries have been made on this page.
       Please check back soon, or click the
       link below to add an entry!
-		<p class="admin_link">
-      		<a href="edit_impact.php">Add a New Entry</a>
-    	</p>
-
+	<div class="admin_link" style="float:left">
+      <a href="edit_impact.php">Add a New Entry</a>
+    </div>
+    <div style="float:right">
+        <a href="admin.php">Back to dashboard</a>
+    </div>
+    <div style="clear:both"></div>
     </p>
 
 ENTRY_DISPLAY;

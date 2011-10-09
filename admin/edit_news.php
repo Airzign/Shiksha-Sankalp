@@ -1,16 +1,18 @@
 <?php
-require_once('auth.php');
+  require_once('auth.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
+  <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>SS Admin | News</title>
 	<link href="loginmodule.css" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
+  </head>
+  <body>
 	<h1> News Admin </h1>
-<?php
+	<a href="admin.php">Back to dashboard</a>
+	<br /><br />
+	<?php
 require_once('config.php');
 $d=$new_heading=$id=null;
 $entry_display="";
@@ -30,7 +32,7 @@ if($d == 1 && $id != null)
 	if($r)
 	{
 		echo "Deleted news with id = ".$id.'  ';
-		echo '<a href="news.php">Back to News</a>';
+		echo '<br/><br/><a href="news.php">Back to News</a>';
 	}
 	else
 	{
@@ -44,7 +46,7 @@ else if($new_heading == NULL)
 	if ( $r !== false && mysql_num_rows($r) > 0 ) {
 		$a = mysql_fetch_assoc($r);
 		$heading = stripslashes($a['heading']);
-		$description = stripslashes($a['description']);
+		$description = str_replace('<br />',"",stripslashes($a['description']));
 		$timestamp = stripslashes($a['tm']);
 		$entry_display .= <<<ENTRY_DISPLAY
 			<form action="edit_news.php?e=$id" method="post" enctype="multipart/form-data">	
@@ -175,5 +177,6 @@ ENTRY_DISPLAY;
 	}
 echo $entry_display;
 ?>
+
 </body>
 </html>
