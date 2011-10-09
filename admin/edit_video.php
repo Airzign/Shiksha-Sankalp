@@ -29,6 +29,7 @@ require_once('auth.php');
 	{
 		$q = "DELETE FROM video WHERE id=$id";
 		$r = mysql_query($q);
+		$entry_display="";
 		if($r)
 		{
 			echo "Deleted video with id = ".$id.'  ';
@@ -49,7 +50,7 @@ require_once('auth.php');
     	    $description = stripslashes($a['description']);
 			$link = stripslashes($a['link']);
 			$timestamp = stripslashes($a['tm']);
-	        $entry_display .= <<<ENTRY_DISPLAY
+	        $entry_display = <<<ENTRY_DISPLAY
 	<form action="edit_video.php?e=$id" method="post" enctype="multipart/form-data">	
 	<p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="$heading" /></p>
 	<p><label for="id_description">Description:</label> <textarea name="description" id="id_description">$description</textarea></p>
@@ -57,6 +58,7 @@ require_once('auth.php');
 	<p><label for="id_link">Video Link:</label><input id="id_link" type="text" name="link" value="$link" /></p>
 
 	<input type="submit" value="Upload" />
+	<input type="button" value="Cancel" onclick="javascript:window.location='video.php';" />
 	</form>
 
 ENTRY_DISPLAY;
@@ -70,12 +72,13 @@ ENTRY_DISPLAY;
 	<p><label for="id_link">Video Link:</label><input id="id_link" type="text" name="link" /></p>
 
 	<input type="submit" value="Upload" />
+	<input type="button" value="Cancel" onclick="javascript:window.location='video.php';" />
 	</form>
 ENTRY_DISPLAY;
 		}
 	}
 	else {
-
+		$entry_display="<br/><a href='video.php'>Back to Videos</a>";
 		$heading = stripslashes($_POST['heading']);
 		$description = stripslashes($_POST['description']);
 		$link = stripslashes($_POST['link']);
@@ -109,7 +112,9 @@ ENTRY_DISPLAY;
   }
   else
   {
-  echo "Invalid file";
+	  if($_FILES["smallimg"]["name"] != null)
+		  echo "Invalid file";
+
   }
 
   		$smallimgurl = $_FILES["smallimg"]["name"];

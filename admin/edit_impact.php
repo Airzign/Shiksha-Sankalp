@@ -42,7 +42,7 @@
 	  $small_desc = stripslashes($a['small_desc']);
 	  $description = stripslashes($a['description']);
 	  $timestamp = stripslashes($a['tm']);
-	  $entry_display .= <<<ENTRY_DISPLAY
+	  $entry_display = <<<ENTRY_DISPLAY
 	<form action="edit_impact.php?e=$id" method="post" enctype="multipart/form-data">	
 	<p><label for="id_pic_desc">Small Image Caption:</label> <input id="id_pic_desc" type="text" name="pic_desc" value="$pic_desc" /></p>
 	<p><label for="id_small_desc">Short Description:</label> <input id="id_small_desc" type="text" name="small_desc" value="$small_desc" /></p>
@@ -50,6 +50,7 @@
 	<p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" /></p>
 	<p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
 	<input type="submit" value="Upload" />
+	<input type="button" value="Cancel" onclick="javascript:window.location='impact.php';" />
 	</form>
 ENTRY_DISPLAY;
 	}
@@ -62,6 +63,7 @@ ENTRY_DISPLAY;
 	<p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" /></p>
 	<p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
 	<input type="submit" value="Upload" />
+	<input type="button" value="Cancel" onclick="javascript:window.location='impact.php';" />
 	</form>
 ENTRY_DISPLAY;
 	}

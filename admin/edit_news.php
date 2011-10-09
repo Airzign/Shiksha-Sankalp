@@ -53,6 +53,7 @@ else if($new_heading == NULL)
 	<p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" /></p>
 	<p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
 	<input type="submit" value="Upload" />
+	<input type="button" value="Cancel" onclick="javascript:window.location='news.php';" />
 	</form>
 
 ENTRY_DISPLAY;
@@ -65,6 +66,7 @@ ENTRY_DISPLAY;
 	<p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />  Only jpg/gif images allowed, size <2MB</p>
 	<p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
 	<input type="submit" value="Upload" />
+	<input type="button" value="Cancel" onclick="javascript:window.location='news.php';" />
 	</form>
 ENTRY_DISPLAY;
 		}
