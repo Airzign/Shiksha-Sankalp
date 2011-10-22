@@ -18,9 +18,9 @@ $(document).ready(function(){
 		//style all questions as closed
 		$(".question").addClass("closed"); 
 		//make sure first question is styled as open
-	        $(".question:first").removeClass("closed").addClass("opened"); 
+	    //    $(".question:first").removeClass("closed").addClass("opened"); 
 		$(".answer").hide(); //hide answers
-		$(".answer:first").show(); //show first answer
+		//$(".answer:first").show(); //show first answer
 		//question click
 		$(".question").click(function() {
 			$(".answer").slideUp("fast");

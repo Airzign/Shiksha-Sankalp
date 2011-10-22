@@ -75,7 +75,14 @@
         </div>
         <div class="nav">
 				<ul id="navigation">
-			   		
+                    
+                    <li class="">
+						<a href="index.php">
+							<span class="menu-left"></span>
+							<span class="menu-mid">Home</span>
+							<span class="menu-right"></span>
+						</a></li>
+
 			   		<li class="">
 						<a href="about.php">
 							<span class="menu-left"></span>
