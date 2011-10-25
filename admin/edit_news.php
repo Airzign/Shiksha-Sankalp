@@ -13,6 +13,11 @@
 	<a href="admin.php">Back to dashboard</a>
 	<br /><br />
 	<?php
+/*
+ * if $_GET ("d") == 1 delete $id
+ * if $_POST("heading") == NULL display an empty form to add new news
+ * if $_POST("heading") != NULL insert the $_POST into the database
+ */
 require_once('config.php');
 $d=$new_heading=$id=null;
 $entry_display="";
