@@ -16,6 +16,7 @@ require_once('auth.php');
 	<li><a href="impact.php">Impact Admin</a></li>
 	<li><a href="video.php">Video Admin</a></li>
 	<li><a href="documents.php">Documents Admin</a></li>
+	<li><a href="events.php">Events Admin</a></li>
 	<li><a href="logout.php">logout</a></li>
 </ul>
 </body>
