@@ -67,7 +67,9 @@
 			  <br />
 			  <br />
 			  <p align="right">
-				<img src="images/subscribe.png" />
+				<a href="subscribe.php">
+				  <img src="images/subscribe.png" />
+				</a>
 			  </p>
 			</div>
 			<div id="header_top_login"></div>
