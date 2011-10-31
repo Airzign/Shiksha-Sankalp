@@ -23,6 +23,7 @@
 	while ( $a = mysql_fetch_assoc($r) ) {
 	  $heading = stripslashes($a['heading']);
 	  $id = $a['id'];
+	  $description = $a['description'];
       $smallimg = $a['smallimgurl'];
 	  if($smallimg=="" or $smallimg==null)
 		$smallimg="../defaults/news.png";
@@ -32,7 +33,12 @@
 		    <div class="news_item_img">
 			  <img src="images/news/$smallimg" width="100%" />
 		    </div>
-		    <div class="news_item_matter">$heading</div>
+		    <div class="news_item_matter">
+		      $heading
+		      <div class="small">
+		        $description
+		      </div>
+		    </div>
 		  </div>
 		</a>
 ENTRY_DISPLAY;
@@ -95,7 +101,7 @@ ENTRY_DISPLAY;
 		  <a href="impact_expand.php?id=$id">
             <div class="news_item">
               <div class="news_item_img"><img src="images/impact/$smallimg " width="100%" /></div>
-              <div class="news_item_matter">$small_desc<br /><span class="small">$pic_desc</span></div>
+              <div class="news_item_matter">$pic_desc<br /><span class="small">$small_desc</span></div>
             </div>
 		  </a>
         <!--<div style="clear:both"></div>-->
@@ -169,7 +175,7 @@ ENTRY_DISPLAY5;
 			      $event_date
 			    </div>
 			    <div class="event_desc">
-			      $description;
+			      $description
 			    </div>
 			  </div>
 			  <div style="clear:both;height:10px;"></div>

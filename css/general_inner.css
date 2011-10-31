@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
  /*The reset CSS starts here*/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
 	margin:0;
 	padding:0;
 }
@@ -9,7 +9,7 @@ table {
 	border-collapse:collapse;
 	border-spacing:0;
 }
-fieldset,img { 
+fieldset,img {
 	border:0;
 }
 address,caption,cite,code,dfn,em,strong,th,var {
@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6 {
 q:before,q:after {
 	content:'';
 }
-abbr,acronym { 
+abbr,acronym {
 	border:0;
 }
 a {
@@ -61,7 +61,7 @@ h1 {
 body.shadowBackground {
     margin-top:0px;
     /*background: url("../images/bgshadow.png") no-repeat scroll center top #FFFFFF;*/
-	
+
 }
 /* Common CSS ends here */
 
@@ -80,7 +80,7 @@ a
 /* 	border-top: none; */
 /* 	-moz-box-shadow: #ccc 0px 1px 20px; */
 /* 	-webkit-box-shadow: #ccc 0px 1px 20px; */
-	
+
 /* 	/\* IE hack for div border *\/ */
 /* 	background-color: #fff; */
 /* 	zoom: 1; */
@@ -148,8 +148,8 @@ a
 
 .menu_item {
 	float:left;
-	padding: 0px 10px;	
-	z-index: 100;		
+	padding: 0px 10px;
+	z-index: 100;
 }
 
 #slide {
@@ -166,7 +166,7 @@ a
 
 #quote:hover {
 	background-color:#496d2a;
-}	
+}
 #content
 {
 	padding-top:30px;
@@ -327,7 +327,7 @@ p{
 	margin-bottom:10px;
 	padding-left:10px;
 	color:#2c2e80;
-	
+
 }
 .content_item h1{
 	color:#0b0d3a;
@@ -438,13 +438,13 @@ p{
 	cursor:pointer;
 	margin-right:5px;
 }
-	
+
 .news_item:hover
 {
 	height:55px;
 	background-color:#e8f7db;
 }
-	
+
 
 .news_item_img
 {
@@ -459,7 +459,6 @@ p{
 }
 .news_item_matter
 {
-
 	/*font-size:13px; 11px for trebu*/
 	/*width:195px;
 	float:right;
@@ -473,6 +472,10 @@ p{
 	margin-left:10px;
 	text-align:justify;
 }
+.small
+{
+	display:none;
+}
 /********************/
 .impact_item
 {
@@ -481,13 +484,13 @@ p{
 	cursor:pointer;
 	margin-right:5px;
 }
-	
+
 .impact_item:hover
 {
 	height:80px;
 	background-color:#e8f7db;
 }
-	
+
 
 .impact_item_img
 {
@@ -556,7 +559,7 @@ p{
 
 /*Menu*/
 .wrapper1{
-	color: #44433f;	
+	color: #44433f;
 	font: 14px "Futura Medium", "Myriad Pro", "Gill Sans", Helvetica, Verdana, Arial, sans-serif;
 	margin: 0;
 	padding: 4px 0 0;
@@ -754,7 +757,7 @@ a .menu-right {
 }
 .content p {
 	padding: 0 15px;
-	text-align: justify;	
+	text-align: justify;
 }
 .content-bottom {
 	width: 710px;
@@ -768,12 +771,12 @@ a .menu-right {
 }
 
 .sub li a
-{ 
+{
 	text-decoration:none;
 }
 #navigation a{
 	color: #666;}
-	
+
 #navigation a:hover{
 	color:#333;
 }
