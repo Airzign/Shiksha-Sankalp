@@ -16,7 +16,9 @@ address,caption,cite,code,dfn,em,strong,th,var {
 	font-style:normal;
 	font-weight:normal;
 }
-
+ol,ul {
+	list-style:none;
+}
 caption,th {
 	text-align:left;
 }
@@ -29,6 +31,10 @@ q:before,q:after {
 }
 abbr,acronym { 
 	border:0;
+}
+a {
+	text-decoration:none;
+	cursor:pointer;
 }
 
 /* The reset CSS ends here */
@@ -103,7 +109,7 @@ a
 
 #header_top {
 	height:126px;
-	
+	float:right;
 }
 
 #header_left
@@ -166,6 +172,15 @@ a
 	padding-top:30px;
 /*	float:left;
     moz-box-shadow: #ccc 0px 1px 20px;*/
+}
+.expand_link
+{
+	color:#0C45A5;
+	font-size:17px;
+}
+.expand_link:hover
+{
+	color:#05A5C5;
 }
 #main_content
 {
@@ -253,6 +268,44 @@ a
 	float:right;
 }
 
+#content_video
+{
+	color:#0C45A5;
+	padding-left:10px;
+	width:280px;
+	font-size:14px;
+}
+.video_item
+{
+	height:72px;
+	cursor:pointer;
+	padding-left:5px;
+	margin-top:5px;
+}
+.video_item:hover
+{
+	background-color:#E8F7DB;
+}
+.video_heading
+{
+	padding-left:5px;
+	font-weight:bold;
+}
+.video_thumb
+{
+	float:left;
+	width:74px;
+}
+.video_thumb img
+{
+	width:74px;
+}
+.video_desc
+{
+	float:left;
+	margin-left:10px;
+	width:170px;
+}
 #content_video span img{
 	margin-left:98px;
 }

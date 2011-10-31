@@ -35,9 +35,10 @@
 <div style="clear:both;"></div>
 <div id="content">
   <?php
-	 $news_count=4;
+	 $news_count=3;
 	 $impact_count=3;
-	 $video_count=1;
+	 $video_count=2;
+     $event_count=3;
 	 include "dynamic.php";
 	 include "footer.php";
   ?>

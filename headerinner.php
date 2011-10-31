@@ -73,6 +73,7 @@
             </div>
             <div id="header_top_login"></div>
         </div>
+		<div style="clear:both;"></div>
         <div class="nav">
 				<ul id="navigation">
                     
