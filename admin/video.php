@@ -40,12 +40,64 @@
       }
       if($action == 1) {
 		/* Update */
+        /* $id = $_POST['id']; */
+        /* $heading = stripslashes($_POST['heading']); */
+        /* $description = stripslashes($_POST['description']); */
+		/* $link = stripslashes($_POST['link']); */
+        /* if(mysql_query("update video set heading='$heading', link='$link', description='$description' where id = $id")) */
+        /*   $message .= 'The video was updated successfully.'; */
+				/* Update */
+		$id = $_POST['id'];
         $heading = stripslashes($_POST['heading']);
         $description = stripslashes($_POST['description']);
+		$result = mysql_query("select smallimgurl from video where id=$id");
 		$link = stripslashes($_POST['link']);
-        $id = $_POST['id'];
-        if(mysql_query("update video set heading='$heading', link='$link', description='$description' where id = $id"))
-          $message .= 'The video was updated successfully.';
+		$assoc = mysql_fetch_assoc($result);
+		$old_small_img_filename = $assoc['smallimgurl'];
+		$new_small_img_filename = $old_small_img_filename;
+		$update_small_img = True;
+		if(array_key_exists('smallimg',$_FILES) && $_FILES['smallimg']['name'] !== '') {
+		  if($_FILES["smallimg"]["size"] > SMALL_IMG_FILE_SIZE) {
+		    $message .= 'The small image is larger than the maximum allowed size('.SMALL_IMG_FILE_SIZE/(1024*1024).'MB) so was not uploaded.<br/>';
+			$update_small_img = False;
+	      } else {
+			$allowed=false;
+			foreach($allowed_file_types as $type)
+			  if($_FILES['smallimg']['type'] == $type)
+				$allowed=true;
+			if(!$allowed) {
+				$message .= 'The small image file is not a valid image so was not uploaded.<br/>';
+				$update_small_img = False;
+			} else {
+			  if(!file_exists($video_img_dir.$_FILES['smallimg']['name'])) {
+				$small_img_filename=$_FILES['smallimg']['name'];
+			  } else {
+				$fileparts=explode('.',$_FILES['smallimg']['name']);
+				$extension='.'.array_pop($fileparts);
+				$name=implode('.',$fileparts).'_';
+				$filecount=0;
+				while(file_exists($video_img_dir.$name.$filecount.$extension))
+				  $filecount=$filecount+1;
+				$small_img_filename=$name.$filecount.$extension;
+			  }
+			}
+			move_uploaded_file($_FILES['smallimg']['tmp_name'],$video_img_dir.$small_img_filename);
+		  }
+		}
+		if(array_key_exists('delete_old_small_img',$_POST) && isset($_POST['delete_old_small_img']))
+		  if($old_small_img_filename!='') {
+			$new_small_img_filename = '';
+			if(file_exists($video_img_dir.$old_small_img_filename))
+			  unlink($video_img_dir.$old_small_img_filename);
+		  }
+		if(array_key_exists('smallimg',$_FILES) && $_FILES['smallimg']['name']!='' && $update_small_img) {
+		  $new_small_img_filename = $small_img_filename;
+		  if($old_small_img_filename!='')
+			if(file_exists($video_img_dir.$old_small_img_filename))
+			  unlink($video_img_dir.$old_small_img_filename);
+		  }
+        if(mysql_query("update video set heading='$heading',smallimgurl='$new_small_img_filename',link='$link',description='$description' where id = $id"))
+          $message .= 'The Video was updated successfully.';
       }
       if($action == 2) {
 		  /* Deletion */
@@ -115,8 +167,20 @@
 	<form action="video.php" method="post" enctype="multipart/form-data">
 	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>"/></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea></p>
-	  <p>Small Img File:<a href="<?php echo $video_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a></p>
-	  <p><label for="id_link">Video link:</label> <input type="text" name="link" id="id_link" value="<?php echo $row['link']; ?>"/></p>
+	  <?php if($row['smallimgurl']!='') { ?>
+	  <p>Small Img File:
+		<a href="<?php echo $video_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a>
+		<input type="checkbox" name="delete_old_small_img" value="Yes" id="id_delete_old_small_img"/><label for="id_delete_old_small_img">Delete</label>
+		<input type="file" name="smallimg"/>
+	  </p>
+	  <?php } else { ?>
+	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
+	  <?php } ?>
+	  <p>
+		<label for="id_link">Video link:</label>
+		<input type="text" name="link" id="id_link" value="<?php echo $row['link']; ?>"/>
+		<a href="<?php echo $row['link']; ?>">Existing link</a>
+	  </p>
 	  <input type="submit" value="Update" />
 	  <input type="button" value="Cancel" onclick="javascript:window.location='?';" />
 	  <input type="hidden" name="action" value="1"/>
