@@ -132,6 +132,7 @@ z-index: 100;
 	width:960px;
 	margin-top:9px;
     margin-bottom:5px;
+	background-color:#f0f0f0;
 }
 
 #slides_container {
@@ -303,7 +304,6 @@ z-index: 100;
 
 .news_item:hover
 {
-	height:125px;
 	background-color:#e8f7db;
 }
 
@@ -322,13 +322,8 @@ z-index: 100;
 }
 .news_item_matter
 {
-	/*font-size:13px; 11px for trebu*/
-	/*width:195px;
-	float:right;
-	color:#0b0d3a;
-	line-height:1.4em;*/
 	font-size:14px; /*11px for trebu*/
-	width:170px;
+	width:180px;
 	float:left;
 	color:#0c45a5;
 	line-height:1.4em;
@@ -395,7 +390,8 @@ z-index: 100;
 .video_heading
 {
 	margin-bottom:5px;
-	font-size:15px;
+	font-size:14px;
+	font-weight:bold;
 }
 .video_thumb
 {

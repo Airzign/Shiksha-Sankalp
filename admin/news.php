@@ -1,3 +1,4 @@
+
 <?php
   require_once('auth.php');
   require_once('config.php');
@@ -128,7 +129,7 @@
 		/* Blank form */
     ?>
 	<form action="news.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" /></p>
+	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" maxlength="46"/></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"></textarea></p>
 	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
       <p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
@@ -145,7 +146,7 @@
         $row = mysql_fetch_assoc($result);
     ?>
 	<form action="news.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>" /></p>
+	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>" maxlength="46"/></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea></p>
 	  <p>Small Img File:<a href="<?php echo $news_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a></p>
 	  <p>Large Img File:<a href="<?php echo $news_img_dir,$row['largeimgurl']; ?>"><?php echo $row['largeimgurl']; ?></a></p>

@@ -87,7 +87,7 @@
 			  } else {
 				$fileparts=explode('.',$_FILES['smallimg']['name']);
 				$extension='.'.array_pop($fileparts);
-				$name=implode('.',$fileparts).'_'; 
+				$name=implode('.',$fileparts).'_';
 				$filecount=0;
 				while(file_exists($impact_img_dir.$name.$filecount.$extension))
 				  $filecount=$filecount+1;
