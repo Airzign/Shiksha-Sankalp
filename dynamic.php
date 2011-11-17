@@ -93,7 +93,7 @@ ENTRY_DISPLAY;
   if ( $r !== false && mysql_num_rows($r) > 0 ) {
 	$entry_display1.='<div class="content_wrapper">';
     while ( $a = mysql_fetch_assoc($r) ) {
-	  $title = stripslashes($a['title']);
+	  $heading = stripslashes($a['heading']);
 	  $small_desc = stripslashes($a['small_desc']);
       $smallimg = $a['smallimgurl'];
 	  if($smallimg==null || $smallimg=="")
@@ -103,7 +103,7 @@ ENTRY_DISPLAY;
 		  <a href="impact_expand.php?id=$id">
             <div class="news_item">
               <div class="news_item_img"><img src="images/impact/$smallimg " width="100%" /></div>
-              <div class="news_item_matter">$title<br /><span class="small">$small_desc</span></div>
+              <div class="news_item_matter">$heading<br /><span class="small">$small_desc</span></div>
             </div>
 		  </a>
         <!--<div style="clear:both"></div>-->
