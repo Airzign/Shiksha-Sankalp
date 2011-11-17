@@ -1,4 +1,3 @@
-
 <?php
   require_once('auth.php');
   require_once('config.php');
@@ -17,12 +16,7 @@
   </head>
   <body>
 	<h1> News Admin </h1>
-	<div class="admin_link" style="float:left">
-      <a href="?action=4">Add a New Entry</a>
-    </div>
-    <div style="float:right">
-      <a href="admin.php">Back to dashboard</a>
-    </div>
+	<?php include('menu.php'); ?>
     <div style="clear:both"></div>
 	<?php
 	  /*

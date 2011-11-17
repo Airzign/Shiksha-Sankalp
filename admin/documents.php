@@ -86,13 +86,8 @@
   </head>
   <body>
 	<h1>Documents Admin </h1>
+    <?php include('menu.php'); ?>
     <?php echo $message ?>
-	<div style="float:left">
-      <h3>Add a New Entry</h3>
-	</div>
-	<div style="float:right">
-	  <a href="admin.php">Back to dashboard</a>
-	</div>
 	<div style="clear:both"></div>
 	<form enctype="multipart/form-data" method="post">
 	  <input type="hidden" value="3" name="action"/>

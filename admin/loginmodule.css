@@ -36,3 +36,12 @@ th {
     width: 600px;
     height: 400px;
 }
+.menuitem {
+	width:14%;
+	float:left;
+}
+.menu {
+	border-bottom: 1px dashed #E6E8ED;
+	margin-bottom:30px;
+	padding:0px 0px 5px;
+}

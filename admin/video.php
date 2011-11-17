@@ -16,12 +16,7 @@
   </head>
   <body>
 	<h1> Video Admin </h1>
-	<div class="admin_link" style="float:left">
-      <a href="?action=4">Add a New Entry</a>
-    </div>
-    <div style="float:right">
-      <a href="admin.php">Back to dashboard</a>
-    </div>
+	<?php include('menu.php'); ?>
     <div style="clear:both"></div>
 	<?php
 	  /*
@@ -84,7 +79,7 @@
 			  } else {
 				$fileparts=explode('.',$_FILES['smallimg']['name']);
 				$extension='.'.array_pop($fileparts);
-				$name=implode('.',$fileparts).'_'; 
+				$name=implode('.',$fileparts).'_';
 				$filecount=0;
 				while(file_exists($video_img_dir.$name.$filecount.$extension))
 				  $filecount=$filecount+1;
