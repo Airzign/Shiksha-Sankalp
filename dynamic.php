@@ -25,6 +25,8 @@
 	  $id = $a['id'];
 	  $small_desc = $a['small_desc'];
       $smallimg = $a['smallimgurl'];
+	  $exploded_date=explode('-',$a['news_date']);
+	  $news_date = date("M j, Y",mktime(0,0,0,$exploded_date[1],$exploded_date[2],$exploded_date[0]));
 	  if($smallimg=="" or $smallimg==null)
 		$smallimg="../defaults/news.png";
 	  $entry_display.=<<<ENTRY_DISPLAY
@@ -36,7 +38,7 @@
 		    <div class="news_item_matter">
 		      $heading
 		      <div class="small">
-		        $small_desc
+		        $news_date : $small_desc
 		      </div>
 		    </div>
 		  </div>
