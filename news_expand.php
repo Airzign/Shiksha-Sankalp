@@ -10,22 +10,25 @@
 		$description = nl2br(stripslashes($a['description']));
 		$image = stripslashes($a['largeimgurl']);
 		$timestamp = stripslashes($a['tm']);
-$entry_display = <<<ENTRY_DISPLAY
+?>
 			<div id="content">
 			  <div id="main_content">
-				<div id="image_template">
-				  <img src="images/news/$image" />
-				</div>
+			   <?php if($image != '') {?>
+				 <div id="image_template">
+				   <img src="images/news/$image" />
+				 </div>
+               <?php } ?>
 				<h2 class="innersubheading">
-				  <b>$heading</b>
+				   <b><?php echo $heading; ?></b>
 				</h2>
 				<br />
-				<p class="answer">$description</p>
+                <p class="answer"><?php echo $description ; ?></p>
 			  </div>
-ENTRY_DISPLAY;
+			  <div id="extra_content">
+<?php
 	}
 	else {
-$entry_display .= <<<ENTRY_DISPLAY
+?>
 			<div id="content">
 			  <div id="main_content">
 				The page you have requested does not exist.
@@ -33,11 +36,8 @@ $entry_display .= <<<ENTRY_DISPLAY
 				<br />
 				<br />
 			  </div>
-ENTRY_DISPLAY;
-	}
-    echo $entry_display;
-echo '<div id="extra_content">';
+<?php	}
     include "dynamic.php";
-echo '</div>';
+    echo '</div>';
     include "footer.php";
 ?>

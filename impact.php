@@ -16,23 +16,24 @@
 			 while ( $a = mysql_fetch_assoc($r) ) {
 				 $small_desc = stripslashes($a['small_desc']);
 				 $description = substr(nl2br($a['description']),0,100);
-				 $smallimg = $a['smallimgurl'];
+				 $largeimg = $a['largeimgurl'];
 				 $id = $a['id'];
-				 $entry_displayk .=<<<ENTRY_DISPLAYk
-					 <a href="impact_expand.php?id=$id">		
+	   ?>
+					 <a href="impact_expand.php?id=$id">
 					   <div class="news_item_big">
+				   <?php if($largeimg != '') {?>
 						 <div class="news_item_img_big">
-						   <img src="images/impact/$smallimg " width="100%" />
+						   <img src="images/impact/$largeimg " width="100%" />
 						 </div>
-						 <div class="news_item_matter_big">$small_desc</div>
-						 <div>$description</div>
+				   <?php } ?>
+				         <div class="news_item_matter_big"><?php echo $small_desc ;?></div>
+						 <div><?php echo $description;?></div>
 					   </div>
 					 </a>
 					 <div style="clear:both"></div>
-ENTRY_DISPLAYk;
+	  <?php
 			 }
 		 }
-         echo $entry_displayk;
       ?>
 	</div>
   </div>

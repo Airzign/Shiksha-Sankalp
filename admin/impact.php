@@ -45,11 +45,11 @@
       }
       if($action == 1) {
 		/* Update */
-        $pic_desc = stripslashes($_POST['pic_desc']);
+        $title = stripslashes($_POST['title']);
 		$small_desc = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
         $id = $_POST['id'];
-        if(mysql_query("update impact set pic_desc='$pic_desc', small_desc='$small_desc', description='$description' where id = $id"))
+        if(mysql_query("update impact set title='$title', small_desc='$small_desc', description='$description' where id = $id"))
           $message .= 'The impact was updated successfully.';
       }
       if($action == 2) {
@@ -66,7 +66,7 @@
       }
       if($action == 3) {
 		/* Addition */
-        $pic_desc=stripslashes($_POST['pic_desc']);
+        $title=stripslashes($_POST['title']);
 		$small_desc = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
         $small_img_filename = '';
@@ -123,14 +123,14 @@
 			move_uploaded_file($_FILES['largeimg']['tmp_name'],$impact_img_dir.$large_img_filename);
 		  }
 		}
-		if(mysql_query("INSERT INTO impact VALUES (default,'$pic_desc','$small_desc','$description','$small_img_filename','$large_img_filename',default);"))
+		if(mysql_query("INSERT INTO impact VALUES (default,'$title','$small_desc','$description','$small_img_filename','$large_img_filename',default);"))
 			$message .= 'New impact created successfully.';
       }
       if($action == 4) {
 		/* Blank form */
     ?>
 	<form action="impact.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_pic_desc">Small Image Caption:</label> <input id="id_pic_desc" type="text" name="pic_desc" /></p>
+	  <p><label for="id_title">Heading:</label> <input id="id_title" type="text" name="title" /></p>
 	  <p><label for="id_small_desc">Short Description:</label> <input id="id_small_desc" type="text" name="small_desc" /></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"></textarea></p>
 	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
@@ -148,7 +148,7 @@
         $row = mysql_fetch_assoc($result);
     ?>
 	<form action="impact.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_pic_desc">Small Image Caption:</label> <input id="id_pic_desc" type="text" name="pic_desc" value="<?php echo $row['pic_desc']; ?>"/></p>
+	  <p><label for="id_title">Heading:</label> <input id="id_title" type="text" name="title" value="<?php echo $row['title']; ?>"/></p>
 	  <p><label for="id_small_desc">Short Description:</label>
 		<input id="id_small_desc" type="text" name="small_desc" value="<?php echo $row['small_desc']; ?>"/>
 	  </p>
@@ -187,7 +187,7 @@
           while ( $a = mysql_fetch_assoc($r) ) {
             $id = stripslashes($a['id']);
     ?>
-    <h3><?php echo stripslashes($a['pic_desc']); ?></h3>
+    <h3><?php echo stripslashes($a['title']); ?></h3>
     <p>
       <?php echo nl2br(stripslashes($a['description'])); ?>
     </p>

@@ -47,9 +47,10 @@
       if($action == 1) {
 		/* Update */
         $heading = stripslashes($_POST['heading']);
+		$small_desc = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
         $id = $_POST['id'];
-        if(mysql_query("update news set heading='$heading',description='$description' where id = $id"))
+        if(mysql_query("update news set heading='$heading',small_desc='$small_desc',description='$description' where id = $id"))
           $message .= 'The news was updated successfully.';
       }
       if($action == 2) {
@@ -67,6 +68,7 @@
       if($action == 3) {
 		/* Addition */
         $heading=stripslashes($_POST['heading']);
+		$description = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
         $small_img_filename = '';
         $large_img_filename = '';
@@ -122,7 +124,7 @@
 			move_uploaded_file($_FILES['largeimg']['tmp_name'],$news_img_dir.$large_img_filename);
 		  }
 		}
-		if(mysql_query("INSERT INTO news VALUES (default,'$heading','$description','$small_img_filename','$large_img_filename',default);"))
+		if(mysql_query("INSERT INTO news VALUES (default,'$heading','$small_desc','$description','$small_img_filename','$large_img_filename',default);"))
 			$message .= 'New news created successfully.';
       }
       if($action == 4) {
@@ -130,6 +132,7 @@
     ?>
 	<form action="news.php" method="post" enctype="multipart/form-data">
 	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" maxlength="46"/></p>
+	  <p><label for="id_small_desc">Small Description:</label> <input id="id_small_desc" type="text" name="small_desc" maxlength="200"/></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"></textarea></p>
 	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
       <p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
@@ -147,6 +150,7 @@
     ?>
 	<form action="news.php" method="post" enctype="multipart/form-data">
 	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>" maxlength="46"/></p>
+	  <p><label for="id_small_desc">Small Description:</label> <input id="id_small_desc" type="text" name="small_desc" value="<?php echo $row['small_desc']; ?>" maxlength="200"/></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea></p>
 	  <p>Small Img File:<a href="<?php echo $news_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a></p>
 	  <p>Large Img File:<a href="<?php echo $news_img_dir,$row['largeimgurl']; ?>"><?php echo $row['largeimgurl']; ?></a></p>
@@ -184,7 +188,7 @@
     ?>
     <h3><?php echo stripslashes($a['heading']); ?></h3>
     <p>
-      <?php echo nl2br(stripslashes($a['description'])); ?>
+      <?php echo nl2br(stripslashes($a['small_desc'])); ?>
     </p>
 	<p><a href="?action=5&id=<?php echo $id; ?>">Edit</a></p>
 	<p><a href="?action=2&id=<?php echo $id; ?>" onclick="return confirmDelete();">Delete</a></p>
