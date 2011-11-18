@@ -17,6 +17,9 @@
   <body>
 	<h1> News Admin </h1>
 	<?php include('menu.php'); ?>
+	<div class="admin_link">
+	  <a href="?action=4">Add a new entry</a>
+	</div>
     <div style="clear:both"></div>
 	<?php
 	  /*
@@ -40,11 +43,99 @@
       }
       if($action == 1) {
 		/* Update */
+		$id = $_POST['id'];
         $heading = stripslashes($_POST['heading']);
+		$news_date = stripslashes($_POST['news_date']);
 		$small_desc = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
-        $id = $_POST['id'];
-        if(mysql_query("update news set heading='$heading',small_desc='$small_desc',description='$description' where id = $id"))
+		$result = mysql_query("select smallimgurl,largeimgurl from news where id=$id");
+		$assoc = mysql_fetch_assoc($result);
+		$old_small_img_filename = $assoc['smallimgurl'];
+		$old_large_img_filename = $assoc['largeimgurl'];
+		$new_small_img_filename = $old_small_img_filename;
+		$new_large_img_filename = $old_large_img_filename;
+		$update_small_img = True;
+		$update_large_img = True;
+		if(array_key_exists('smallimg',$_FILES) && $_FILES['smallimg']['name'] !== '') {
+		  if($_FILES["smallimg"]["size"] > SMALL_IMG_FILE_SIZE) {
+		    $message .= 'The small image is larger than the maximum allowed size('.SMALL_IMG_FILE_SIZE/(1024*1024).'MB) so was not uploaded.<br/>';
+			$update_small_img = False;
+	      } else {
+			$allowed=false;
+			foreach($allowed_file_types as $type)
+			  if($_FILES['smallimg']['type'] == $type)
+				$allowed=true;
+			if(!$allowed) {
+				$message .= 'The small image file is not a valid image so was not uploaded.<br/>';
+				$update_small_img = False;
+			} else {
+			  if(!file_exists($news_img_dir.$_FILES['smallimg']['name'])) {
+				$small_img_filename=$_FILES['smallimg']['name'];
+			  } else {
+				$fileparts=explode('.',$_FILES['smallimg']['name']);
+				$extension='.'.array_pop($fileparts);
+				$name=implode('.',$fileparts).'_';
+				$filecount=0;
+				while(file_exists($news_img_dir.$name.$filecount.$extension))
+				  $filecount=$filecount+1;
+				$small_img_filename=$name.$filecount.$extension;
+			  }
+			}
+			move_uploaded_file($_FILES['smallimg']['tmp_name'],$news_img_dir.$small_img_filename);
+		  }
+		}
+		if(array_key_exists('largeimg',$_FILES) && $_FILES['largeimg']['name'] !== '') {
+		  if($_FILES["largeimg"]["size"] > LARGE_IMG_FILE_SIZE) {
+		    $message .= 'The large image is larger than the maximum allowed size('.LARGE_IMG_FILE_SIZE/(1024*1024).'MB) so was not uploaded.<br/>';
+			$update_large_img = False;
+	      } else {
+			$allowed=false;
+			foreach($allowed_file_types as $type)
+			  if($_FILES['largeimg']['type'] == $type)
+				$allowed=true;
+			if(!$allowed) {
+				$message .= 'The large image file is not a valid image so was not uploaded..<br/>';
+				$update_large_img = False;
+			} else {
+			  if(!file_exists($news_img_dir.$_FILES['largeimg']['name'])) {
+				$large_img_filename=$_FILES['largeimg']['name'];
+			  } else {
+				$fileparts=explode('.',$_FILES['largeimg']['name']);
+				$extension='.'.array_pop($fileparts);
+				$name=implode('.',$fileparts).'_';
+				$filecount=0;
+				while(file_exists($news_img_dir.$name.$filecount.$extension))
+				  $filecount=$filecount+1;
+				$large_img_filename=$name.$filecount.$extension;
+			  }
+			}
+			move_uploaded_file($_FILES['largeimg']['tmp_name'],$news_img_dir.$large_img_filename);
+		  }
+		}
+		if(array_key_exists('delete_old_small_img',$_POST) && isset($_POST['delete_old_small_img']))
+		  if($old_small_img_filename!='') {
+			$new_small_img_filename = '';
+			if(file_exists($news_img_dir.$old_small_img_filename))
+			  unlink($news_img_dir.$old_small_img_filename);
+		  }
+		if(array_key_exists('smallimg',$_FILES) && $_FILES['smallimg']['name']!='' && $update_small_img) {
+		  $new_small_img_filename = $small_img_filename;
+		  if($old_small_img_filename!='')
+			if(file_exists($news_img_dir.$old_small_img_filename))
+			  unlink($news_img_dir.$old_small_img_filename);
+		  }
+		if(array_key_exists('delete_old_large_img',$_POST) && isset($_POST['delete_old_large_img']))
+		  if($old_large_img_filename!='') {
+			$new_large_img_filename = '';
+			if(file_exists($news_img_dir.$old_large_img_filename))
+			  unlink($news_img_dir.$old_large_img_filename);
+		  }
+		if(array_key_exists('largeimg',$_FILES) && $_FILES['largeimg']['name']!='' && $update_large_img) {
+		  $new_large_img_filename = $large_img_filename;
+		  if($old_large_img_filename!='' && file_exists($news_img_dir.$old_large_img_filename))
+			  unlink($news_img_dir.$old_large_img_filename);
+		  }
+        if(mysql_query("update news set heading='$heading',smallimgurl='$new_small_img_filename',largeimgurl='$new_large_img_filename',news_date='$news_date',small_desc='$small_desc',description='$description' where id = $id"))
           $message .= 'The news was updated successfully.';
       }
       if($action == 2) {
@@ -62,7 +153,8 @@
       if($action == 3) {
 		/* Addition */
         $heading=stripslashes($_POST['heading']);
-		$description = stripslashes($_POST['small_desc']);
+		$news_date = stripslashes($_POST['news_date']);
+		$small_desc = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
         $small_img_filename = '';
         $large_img_filename = '';
@@ -118,7 +210,7 @@
 			move_uploaded_file($_FILES['largeimg']['tmp_name'],$news_img_dir.$large_img_filename);
 		  }
 		}
-		if(mysql_query("INSERT INTO news VALUES (default,'$heading','$small_desc','$description','$small_img_filename','$large_img_filename',default);"))
+		if(mysql_query("INSERT INTO news VALUES (default,'$heading','$news_date','$small_desc','$description','$small_img_filename','$large_img_filename',default);"))
 			$message .= 'New news created successfully.';
       }
       if($action == 4) {
@@ -126,6 +218,7 @@
     ?>
 	<form action="news.php" method="post" enctype="multipart/form-data">
 	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" maxlength="46"/></p>
+	  <p><label for="id_news_date">Date(YYYY-MM-DD):</label> <input id="id_news_date" type="text" name="news_date" maxlength="200"/></p>
 	  <p><label for="id_small_desc">Small Description:</label> <input id="id_small_desc" type="text" name="small_desc" maxlength="200"/></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"></textarea></p>
 	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
@@ -144,10 +237,31 @@
     ?>
 	<form action="news.php" method="post" enctype="multipart/form-data">
 	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>" maxlength="46"/></p>
+      <p><label for="id_news_date">Date(YYYY-MM-DD):</label> <input id="id_news_date" type="text" name="news_date" value="<?php echo $row['news_date']; ?>"/></p>
 	  <p><label for="id_small_desc">Small Description:</label> <input id="id_small_desc" type="text" name="small_desc" value="<?php echo $row['small_desc']; ?>" maxlength="200"/></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea></p>
-	  <p>Small Img File:<a href="<?php echo $news_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a></p>
-	  <p>Large Img File:<a href="<?php echo $news_img_dir,$row['largeimgurl']; ?>"><?php echo $row['largeimgurl']; ?></a></p>
+	  <?php if($row['smallimgurl']!='') { ?>
+	  <p>Small Img File:
+		<a href="<?php echo $news_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a>
+		<input type="checkbox" name="delete_old_small_img" value="Yes" id="id_delete_old_small_img"/><label for="id_delete_old_small_img">Delete</label>
+		<input type="file" name="smallimg"/>
+	  </p>
+	  <?php } else { ?>
+	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
+	  <?php } ?>
+
+	  <?php if($row['largeimgurl']!='') { ?>
+	  <p>Large Img File:
+		<a href="<?php echo $news_img_dir,$row['largeimgurl']; ?>"><?php echo $row['largeimgurl']; ?></a>
+		<input type="checkbox" name="delete_old_large_img" value="Yes" id="id_delete_old_large_img"/><label for="id_delete_old_large_img">Delete</label>
+		<input type="file" name="largeimg"/>
+	  </p>
+	  <?php } else { ?>
+	  <p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" />Only jpg/gif images allowed, size &lt;2MB</p>
+	  <?php } ?>
+
+
+	  <!--<p>Large Img File:<a href="<?php echo $news_img_dir,$row['largeimgurl']; ?>"><?php echo $row['largeimgurl']; ?></a></p>-->
 	  <input type="submit" value="Update" />
 	  <input type="button" value="Cancel" onclick="javascript:window.location='?';" />
 	  <input type="hidden" name="action" value="1"/>

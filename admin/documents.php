@@ -3,7 +3,7 @@
    include "config.php";
    /* get the action that we have to perform
 	* 0 => Show the page only.
-	* 1 => Update title and doc_type of the entry.
+	* 1 => Update the entry.
 	* 2 => Delete an entry.
 	* 3 => Add a new entry.
 	*/
@@ -18,10 +18,36 @@
 	   $action=$_POST['action'];
    }
    if($action==1) {
-        $id = $_GET['id'];
-   	   $new_title=$_GET['title'];
-   	   $doc_type =$_GET['doc_type'];
-   	   if(mysql_query("update documents set title='$new_title',doc_type=$doc_type where id=$id")) {
+       $id = $_POST['id'];
+   	   $new_title=$_POST['title'];
+   	   $doc_type =$_POST['doc_type'];
+	   $result = mysql_query("select filename from documents where id = '$id'");
+	   $assoc = mysql_fetch_assoc($result);
+	   $old_filename = $assoc['filename'];
+	   $new_filename = $old_filename;
+	   if($_FILES['doc']['name']!='') {
+	   if($_FILES['doc']['error']>0) {
+		   $message='There was an error in uploading the file.Error code:'.$_FILES['doc']['error'].'.Local error code:SKRSS3<br/>';
+	   } else {
+		   if(!file_exists($newsletter_dir.$_FILES['doc']['name'])) {
+			   $filename=$_FILES['doc']['name'];
+		   } else {
+			   $fileparts=explode('.',$_FILES['doc']['name']);
+			   $extension='.'.array_pop($fileparts);
+			   $name=implode('.',$fileparts).'_';
+			   $filecount=0;
+			   while(file_exists($newsletter_dir.$name.$filecount.$extension))
+					 $filecount=$filecount+1;
+			   $filename=$name.$filecount.$extension;
+		   }
+		   move_uploaded_file($_FILES['doc']['tmp_name'],$newsletter_dir.$filename);
+		   $new_filename = $filename;
+		   if(file_exists($newsletter_dir.$old_filename))
+			   unlink($newsletter_dir.$old_filename);
+	   }
+	   }
+
+   	   if(mysql_query("update documents set title='$new_title',doc_type=$doc_type,filename='$new_filename' where id=$id")) {
    	   	   $message='The document was updated successfully.';
    	   }
    }
@@ -111,6 +137,7 @@
 	  <table>
 		<tr>
 		  <th>Document</th>
+		  <th>Replace Document with</th>
 		  <th>Type</th>
 		  <th>Title</th>
 		  <th>Update</th>
@@ -121,7 +148,10 @@
 			<td>
 			  <a href="<?php echo $newsletter_dir.$row['filename'] ?>"><?php echo $row['title'] ?></a>
 			</td>
-			<form>
+			<form enctype="multipart/form-data" method="POST">
+			<td>
+			  <input type="file" name="doc"/>
+			</td>
 			<td>
 			  <select name="doc_type">
 				<option value="0" <?php if($row['doc_type']==0) echo 'selected=selected'; ?> >Newsletter</option>
