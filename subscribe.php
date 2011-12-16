@@ -24,13 +24,13 @@
         	<!-- the content goes here -->
 <?php
 	if($action == 0)
-	{ 
+	{
 ?>
 		<div class="innertitle">Subscribe Newsletter</div>
 
 		<p>Shiksha Sankalp sends out a monthly newsletter to all it's members and interested subscribers. To subscribe to the newsletters please provide your name and email address in the form below:</p>
 
-		<form action="subscribe.php?action=1" method="post" enctype="multipart/form-data">	
+		<form action="subscribe.php?action=1" method="post" enctype="multipart/form-data">
 		<p><label for="id_name">Name:</label> <input id="id_name" type="text" name="Name"/></p>
 		<p><label for="id_email">Email Id:</label> <input id="id_email" type="text" name="Email" /></p>
 		<input type="submit" value="Subscribe" />
@@ -40,7 +40,7 @@
 
 		<p>To unsubscribe at any time, please enter your email Id and click below.</p>
 
-		<form action="subscribe.php?action=2" method="post" enctype="multipart/form-data">	
+		<form action="subscribe.php?action=2" method="post" enctype="multipart/form-data">
 			<p><label for="id_unsubscribeEmail">Email Id:</label> <input id="id_unsubscribeEmail" type="text" name="unsubscribeEmail" /></p>
 			<input type="submit" value="Unsubscribe" />
 		</form>
@@ -50,11 +50,11 @@
 	}
 	if($action == 1)
 	{
-		if(empty($_POST['Name'])) 
+		if(empty($_POST['Name']))
 		{
 			$message .= "Please enter your name. ";
 		}
-		if(empty($_POST['Email'])) 
+		if(empty($_POST['Email']))
 		{
 			$message .= "Please enter your name. ";
 		}
@@ -65,8 +65,8 @@
 				$message .= "Email Address entered is not valid. ";
 			}
 		}
-	
-		if(strlen($message) != 0)	
+
+		if(strlen($message) != 0)
 		{
 			echo "Errors: ".$message;
     	}
@@ -79,11 +79,11 @@
 			{
 				//mysql_close($con);
 				echo "You have already subscribed";
-			} 
+			}
 			else
 			{
 				$sql="INSERT INTO shiksha_sankalpdb.NewsletterSubscribers (subscriberName, emailAddress) VALUES ('$_POST[Name]','$_POST[Email]')";
-				$res = myunsubscribeEmailsql_query($sql) or die ("Query failed: " . mysql_error() . " Actual query: " . $query);		
+				$res = mysql_query($sql) or die ("Query failed: " . mysql_error() . " Actual query: " . $query);
 				//mysql_close($con);
 				$to = $_POST['Email'];
 				$subject = "Newsletter subscription confirmation";
@@ -121,12 +121,12 @@
 		}
 		else
 		{
-			$selectquery="select * from shiksha_sankalpdb.NewsletterSubscribers where emailAddress = \"" . $_POST['unsubscribeEmail'] . "\"";  
+			$selectquery="select * from shiksha_sankalpdb.NewsletterSubscribers where emailAddress = \"" . $_POST['unsubscribeEmail'] . "\"";
 			$result = mysql_db_query("shiksha_sankalpdb", $selectquery) or die("Failed Query of " . $selectquery);  //do the query
 			$thisrow = mysql_fetch_row($result);
 			if ($thisrow)  //if the results of the query are not null
 			{
-				$deletequery="DELETE FROM shiksha_sankalpdb.NewsletterSubscribers where emailAddress = \"" . $_POST['unsubscribeEmail'] . "\"";  
+				$deletequery="DELETE FROM shiksha_sankalpdb.NewsletterSubscribers where emailAddress = \"" . $_POST['unsubscribeEmail'] . "\"";
 				mysql_query($deletequery) or die ("Query failed: " . mysql_error() . " Actual query: " . $query);
 				//mysql_close($con);
 				echo "You have been unsubscribed, Thank You!";
@@ -141,11 +141,11 @@
 ?>
 
 <!-- the content ends here -->
-            
-      
+
+
         </div>
-        
-        
+
+
         <div id="extra_content">
 		<?php
 		include "dynamic.php";
