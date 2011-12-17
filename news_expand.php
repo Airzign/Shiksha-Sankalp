@@ -15,7 +15,7 @@
 			  <div id="main_content">
 			   <?php if($image != '') {?>
 				 <div id="image_template">
-				   <img src="images/news/$image" />
+				   <img src="images/news/<?php echo $image; ?>" />
 				 </div>
                <?php } ?>
 				<h2 class="innersubheading">

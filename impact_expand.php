@@ -4,26 +4,28 @@
     $id=mysql_real_escape_string($_GET['id']);
     $q = "SELECT * FROM impact WHERE id=$id";
     $r = mysql_query($q);
-$entry_display='';
+    $entry_display='';
     if ( $r !== false && mysql_num_rows($r) > 0 ) {
 		$a = mysql_fetch_assoc($r);
 		$small_desc = stripslashes($a['small_desc']);
 		$description = nl2br(stripslashes($a['description']));
 		$image = stripslashes($a['largeimgurl']);
 		$timestamp = stripslashes($a['tm']);
-		$entry_display .= <<<ENTRY_DISPLAY
+?>
 			<div id="content">
 			  <div id="main_content">
-				<div id="image_template">
-				  <img src="images/news/$image" />
-				</div>
+		        <?php if($image != '') {?>
+				  <div id="image_template">
+				    <img src="images/impact/<?php echo $image; ?>" />
+				  </div>
+		        <?php } ?>
 				<h2 class="innersubheading">
-				  <b>$small_desc</b>
+				  <b><?php echo $small_desc; ?></b>
 				</h2>
 				<br />
-				<p class="answer">$description</p>
+				  <p class="answer"><?php echo $description; ?></p>
 			  </div>
-ENTRY_DISPLAY;
+<?php
 	}
 	else {
 		$entry_display .= <<<ENTRY_DISPLAY
