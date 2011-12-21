@@ -15,20 +15,22 @@
         if ( $r !== false && mysql_num_rows($r) > 0 ) {
 			while ( $a = mysql_fetch_assoc($r) ) {
 				$heading = stripslashes($a['heading']);
-				$description = substr(nl2br($a['description']),0,200);
+				$description = substr(nl2br($a['description']),0,300);
 				$smallimg = $a['smallimgurl'];
 				$link = $a['link'];
 				$entry_displayk .=<<<ENTRY_DISPLAYk
-					<a href="$link" rel="prettyPhoto" title="">
-					  <div class="news_item_big">
-						<div class="news_item_img_big">
-						  <img src="images/video/$smallimg " width="100%" />
-						</div>
-						<div class="news_item_matter_big">$heading</div>
-						<div>$description</div>
+				  <div class="news_item_list" title="$heading" href="$link" rel="prettyPhoto">
+					<a>
+					  <div class="news_item_list_inner">
+						<img src="images/video/$smallimg" style="float:left;" />
+				        <div>
+						  <div class="bold_heading">$heading</div>
+						  <div class="small">$description</div>
+					      <div style="clear:both"></div>
+				        </div>
 					  </div>
 					</a>
-					<div style="clear:both"></div>
+				  </div>
 ENTRY_DISPLAYk;
 			}
 		}

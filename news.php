@@ -21,16 +21,16 @@ $entry_displayk="";
 		$id = $a['id'];
 		$entry_displayk .=<<<ENTRY_DISPLAYk
 		  <div class="news_item_list">
-		   <a href="news_expand.php?id=$id">
-            <div class="news_item_list_inner">
-		      <img src="images/news/$smallimg " style="float:left;"/>
+		    <a href="news_expand.php?id=$id">
+              <div class="news_item_list_inner">
+		        <img src="images/news/$smallimg " style="float:left;"/>
 		        <div>
-		        <div class="bold_heading">$heading</div>
-				<div class="small">$description</div>
- 		        <div class="small news_item_list_largedesc">$large_desc</div>
-		        <div style="clear:both"></div>
+		          <div class="bold_heading">$heading</div>
+				  <div class="small">$description</div>
+ 		          <div class="small news_item_list_largedesc">$large_desc</div>
+		          <div style="clear:both"></div>
 		        </div>
-            </div>
+              </div>
 			</a>
 		  </div>
 ENTRY_DISPLAYk;

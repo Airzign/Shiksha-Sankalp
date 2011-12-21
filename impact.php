@@ -14,23 +14,25 @@
 		 $r = mysql_query($q);
 		 if ( $r !== false && mysql_num_rows($r) > 0 ) {
 			 while ( $a = mysql_fetch_assoc($r) ) {
+			     $heading = $a['heading'];
 				 $small_desc = stripslashes($a['small_desc']);
-				 $description = substr(nl2br($a['description']),0,100);
-				 $largeimg = $a['largeimgurl'];
+				 $description = substr(nl2br($a['description']),0,300);
+				 $smallimg = $a['smallimgurl'];
 				 $id = $a['id'];
 	   ?>
-					 <a href="impact_expand.php?id=$id">
-					   <div class="news_item_big">
-				   <?php if($largeimg != '') {?>
-						 <div class="news_item_img_big">
-						   <img src="images/impact/$largeimg " width="100%" />
-						 </div>
-				   <?php } ?>
-				         <div class="news_item_matter_big"><?php echo $small_desc ;?></div>
-						 <div><?php echo $description;?></div>
-					   </div>
-					 </a>
-					 <div style="clear:both"></div>
+	   <div class="news_item_list">
+		 <a href="impact_expand.php?id=<?php echo $id; ?>">
+		   <div class="news_item_list_inner">
+		     <img src="images/impact/<?php echo $smallimg; ?>" style="float:left" />
+		     <div>
+	           <div class="bold_heading"><?php echo $heading ;?></div>
+			   <div class="small"><?php echo $small_desc; ?></div>
+			   <div class="small news_item_list_largedesc"><?php echo $description;?></div>
+		       <div style="clear:both"></div>
+			 </div>
+		   </div>
+		 </a>
+	   </div>
 	  <?php
 			 }
 		 }
