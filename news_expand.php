@@ -13,14 +13,14 @@
 ?>
 			<div id="content">
 			  <div id="main_content">
-			   <?php if($image != '') {?>
-				 <div id="image_template">
-				   <img src="images/news/<?php echo $image; ?>" />
-				 </div>
-               <?php } ?>
 				<h2 class="innersubheading">
 				   <b><?php echo $heading; ?></b>
 				</h2>
+			   <?php if($image != '') {?>
+				 <div id="image_template">
+				   <img src="images/news/<?php echo $image; ?>" style="width:630px;"/>
+				 </div>
+               <?php } ?>
 				<br />
                 <p class="answer"><?php echo $description ; ?></p>
 			  </div>
