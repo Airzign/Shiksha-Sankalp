@@ -423,6 +423,27 @@ p{
 	margin-left:10px;
 	text-align:justify;
 }
+.news_item_list
+{
+	margin:5px 10px;
+}
+.news_item_list:hover
+{
+	background-color:#e8f7db;
+}
+.news_item_list a div img
+{
+	margin-right:10px;
+}
+.news_item_list_inner
+{
+	padding:10px 10px;
+	color:#0C45A5;
+}
+.bold_heading
+{
+	font-weight:bold;
+}
 .small
 {
 	font-size:12px;

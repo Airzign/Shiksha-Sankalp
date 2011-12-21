@@ -15,18 +15,25 @@ $entry_displayk="";
     if ( $r !== false && mysql_num_rows($r) > 0 ) {
       while ( $a = mysql_fetch_assoc($r) ) {
         $heading = stripslashes($a['heading']);
-		$description = substr(nl2br($a['description']),0,100);
+		$description = nl2br($a['small_desc']);
+		$large_desc = substr(nl2br($a['description']),0,300);
         $smallimg = $a['smallimgurl'];
 		$id = $a['id'];
 		$entry_displayk .=<<<ENTRY_DISPLAYk
-		<a href="news_expand.php?id=$id">		
-            <div class="news_item_big">
-            	<div class="news_item_img_big"><img src="images/news/$smallimg " width="100%" /></div>
-                <div class="news_item_matter_big">$heading</div>
-				<div>$description</div>
+		  <div class="news_item_list">
+		   <a href="news_expand.php?id=$id">
+            <div class="news_item_list_inner">
+		      <img src="images/news/$smallimg " style="float:left;"/>
+		        <div>
+		        <div class="bold_heading">$heading</div>
+				<div class="small">$description</div>
+		        <hr/>
+ 		        <div class="small">$large_desc</div>
+		        <div style="clear:both"></div>
+		        </div>
             </div>
 			</a>
-            <div style="clear:both"></div>
+		  </div>
 ENTRY_DISPLAYk;
 	}
 	}
