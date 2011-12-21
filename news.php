@@ -27,8 +27,7 @@ $entry_displayk="";
 		        <div>
 		        <div class="bold_heading">$heading</div>
 				<div class="small">$description</div>
-		        <hr/>
- 		        <div class="small">$large_desc</div>
+ 		        <div class="small news_item_list_largedesc">$large_desc</div>
 		        <div style="clear:both"></div>
 		        </div>
             </div>
