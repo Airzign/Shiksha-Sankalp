@@ -1,3 +1,18 @@
+<?php
+if(!isset($news_count))
+  $news_count=2;
+if(!isset($impact_count))
+  $impact_count=2;
+if(!isset($video_count))
+  $video_count=1;
+if(!isset($event_count))
+  $event_count=0;
+$entry_display ="";
+$entry_display1="";
+$entry_display2="";
+if($news_count != 0)
+{
+?>
 <div id="content_news" class="content_item">
   <h1>
 	<a href="news.php">
@@ -5,19 +20,8 @@
 	</a>
   </h1>
 <?php
-  if(!isset($news_count))
-	$news_count=2;
-  if(!isset($impact_count))
-	$impact_count=2;
-  if(!isset($video_count))
-    $video_count=1;
-  if(!isset($event_count))
-    $event_count=0;
   $q = "SELECT * FROM news ORDER BY tm DESC LIMIT $news_count";
   $r = mysql_query($q);
-  $entry_display ="";
-  $entry_display1="";
-  $entry_display2="";
   if ( $r !== false && mysql_num_rows($r) > 0 ) {
 	  $entry_display.='<div class="content_wrapper">';
 	while ( $a = mysql_fetch_assoc($r) ) {
@@ -53,6 +57,10 @@ ENTRY_DISPLAY;
 	<p align="right" class="expand_link">More News ....</p>
   </a>
 </div>
+<?php }
+if($impact_count != 0)
+{
+?>
 <div id="content_impact" class="content_item">
   <h1>
 	<a href="impact.php">
@@ -117,6 +125,7 @@ ENTRY_DISPLAY1;
 	<p align="right" class="expand_link">More Stories ....</p>
   </a>
 </div>
+<?php } ?>
 <div id="content_video">
   <h1>
 	<a href="video.php">
