@@ -17,6 +17,10 @@
   <body>
 	<h1> Impact Admin </h1>
 	<?php include('menu.php'); ?>
+	<div class="admin_link">
+	  <a href="?action=4">Add a new entry</a>
+	</div>
+
     <div style="clear:both"></div>
 	<?php
 	  /*
@@ -44,6 +48,7 @@
         $heading = stripslashes($_POST['heading']);
 		$small_desc = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
+		$large_img_desc = stripslashes($_POST['large_img_desc']);
 		$result = mysql_query("select smallimgurl,largeimgurl from impact where id=$id");
 		$assoc = mysql_fetch_assoc($result);
 		$old_small_img_filename = $assoc['smallimgurl'];
@@ -131,7 +136,7 @@
 		  if($old_large_img_filename!='' && file_exists($impact_img_dir.$old_large_img_filename))
 			  unlink($impact_img_dir.$old_large_img_filename);
 		  }
-        if(mysql_query("update impact set heading='$heading',smallimgurl='$new_small_img_filename',largeimgurl='$new_large_img_filename',small_desc='$small_desc',description='$description' where id = $id"))
+        if(mysql_query("update impact set heading='$heading',smallimgurl='$new_small_img_filename',largeimgurl='$new_large_img_filename',large_img_desc='$large_img_desc',small_desc='$small_desc',description='$description' where id = $id"))
           $message .= 'The impact was updated successfully.';
       }
 
@@ -152,6 +157,7 @@
         $heading=stripslashes($_POST['heading']);
 		$small_desc = stripslashes($_POST['small_desc']);
         $description = stripslashes($_POST['description']);
+		$large_img_desc = stripslashes($_POST['large_img_desc']);
         $small_img_filename = '';
         $large_img_filename = '';
 		if($_FILES['smallimg']['name'] !== '') {
@@ -206,7 +212,7 @@
 			move_uploaded_file($_FILES['largeimg']['tmp_name'],$impact_img_dir.$large_img_filename);
 		  }
 		}
-		if(mysql_query("INSERT INTO impact VALUES (default,'$heading','$small_desc','$description','$small_img_filename','$large_img_filename',default);"))
+		if(mysql_query("INSERT INTO impact VALUES (default,'$heading','$small_desc','$description','$small_img_filename','$large_img_filename','$large_img_desc',default);"))
 			$message .= 'New impact created successfully.';
       }
       if($action == 4) {
@@ -215,6 +221,7 @@
 	<form action="impact.php" method="post" enctype="multipart/form-data">
 	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" /></p>
 	  <p><label for="id_small_desc">Short Description:</label> <input id="id_small_desc" type="text" name="small_desc" /></p>
+	  <p><label for="id_large_img_desc">Description for the large image:</label> <textarea name="large_img_desc" id="id_large_img_desc"></textarea></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"></textarea></p>
 	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
       <p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
@@ -235,6 +242,7 @@
 	  <p><label for="id_small_desc">Short Description:</label>
 		<input id="id_small_desc" type="text" name="small_desc" value="<?php echo $row['small_desc']; ?>"/>
 	  </p>
+	  <p><label for="id_large_img_desc">Description for the large image:</label> <textarea name="large_img_desc" id="id_large_img_desc"><?php echo $row['large_img_desc']; ?></textarea></p>
 	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea></p>
 	  <?php if($row['smallimgurl']!='') { ?>
 	  <p>Small Img File:
