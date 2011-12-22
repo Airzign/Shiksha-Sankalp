@@ -19,6 +19,8 @@ $entry_displayk="";
 		$large_desc = substr(nl2br($a['description']),0,300);
         $smallimg = $a['smallimgurl'];
 		$id = $a['id'];
+		$exploded_date = explode('-',$a['news_date']);
+		$news_date = date("M j, Y",mktime(0,0,0,$exploded_date[1],$exploded_date[2],$exploded_date[0]));
 		$entry_displayk .=<<<ENTRY_DISPLAYk
 		  <div class="news_item_list">
 		    <a href="news_expand.php?id=$id">
@@ -27,7 +29,7 @@ $entry_displayk="";
 		        <div>
 		          <div class="bold_heading">$heading</div>
 				  <div class="small">$description</div>
- 		          <div class="small news_item_list_largedesc">$large_desc</div>
+ 		          <div class="small news_item_list_largedesc">$news_date : $large_desc</div>
 		          <div style="clear:both"></div>
 		        </div>
               </div>
