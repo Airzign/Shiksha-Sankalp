@@ -347,8 +347,10 @@
 			<?php echo nl2br(stripslashes($a['small_desc'])); ?>
 		  </p>
 		</div>
-	  <p><a class="admin_delete" href="?action=2&id=<?php echo $id; ?>" onclick="return confirmDelete();">Delete</a></p>
-	</a>
+	  </a>
+	  <div class="admin_delete">
+	    <input type="button" value="Delete" onclick="javascript:if(confirmDelete())window.location='?action=2&id=<?php echo $id; ?>'"/>
+	  </div>
 	</div>
 	<?php
         }

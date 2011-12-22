@@ -46,6 +46,9 @@ th {
 	padding:0px 0px 5px;
 }
 
+.admin_link {
+	margin-left:20px;
+}
 .admin_label {
 	width:150px;
 	float:left;
@@ -70,7 +73,7 @@ th {
 	padding-bottom:0px;
 }
 .admin_delete {
-	color:RED;
+	padding:0px 0px 10px 10px;
 }
 .input_wide {
 	width:600px;
