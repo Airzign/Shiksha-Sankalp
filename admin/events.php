@@ -75,10 +75,10 @@
 	  <!--<input type="textarea" name="description" id="id_description"/>-->
 	  <textarea name="description" id="id_description" style="height:70px;"></textarea>
 	  <br />
-	  <input type="submit" value="Submit"/>
+	  <input type="submit" value="Add"/>
 	</form>
 	<?php if(mysql_num_rows($events)>0) {?>
-	  <h3>Delete an existing entry</h3>
+	  <h3>Edit an existing entry</h3>
 	  <form name="deletionform" method="post">
 		<input type="hidden" name="action" value="2"/>
 		<input type="hidden" name="id" value="0" id="id"/>

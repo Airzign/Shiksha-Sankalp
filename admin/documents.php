@@ -126,10 +126,10 @@
 		<option value="0">Newsletter</option>
 		<option value="1">Legal Document</option>
 	  </select>
-	  <input type="submit" value="Upload"/>
+	  <input type="submit" value="Add"/>
 	</form>
 	<?php if(mysql_num_rows($documents)>0) {?>
-	  <h3>Delete an existing entry</h3>
+	  <h3>Edit an existing entry</h3>
 	  <form name="deletionform">
 		<input type="hidden" name="action" value="2"/>
 		<input type="hidden" name="id" value="0" id="id"/>
