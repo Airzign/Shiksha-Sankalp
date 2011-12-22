@@ -44,6 +44,7 @@ ENTRY_DISPLAYk;
 	</div>
         <div id="extra_content">
 		<?php
+	    $news_count=0;
 		include "dynamic.php";
 		echo "</div>";
 		include "footer.php";

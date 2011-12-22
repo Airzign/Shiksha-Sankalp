@@ -41,6 +41,7 @@
   </div>
   <div id="extra_content">
 	<?php
+	   $impact_count = 0;
 	   include "dynamic.php";
 	?>
   </div>
