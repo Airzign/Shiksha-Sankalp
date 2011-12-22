@@ -20,7 +20,6 @@
 	<div class="admin_link">
 	  <a href="?action=4">Add a new entry</a>
 	</div>
-
     <div style="clear:both"></div>
 	<?php
 	  /*
@@ -219,12 +218,31 @@
 		/* Blank form */
     ?>
 	<form action="impact.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" /></p>
-	  <p><label for="id_small_desc">Short Description:</label> <input id="id_small_desc" type="text" name="small_desc" /></p>
-	  <p><label for="id_large_img_desc">Description for the large image:</label> <textarea name="large_img_desc" id="id_large_img_desc"></textarea></p>
-	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"></textarea></p>
-	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
-      <p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
+	  <p>
+		<div class="admin_label"><label for="id_heading">Heading:</label></div>
+		<input class="input_wide" id="id_heading" type="text" name="heading" />
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_small_desc">Short Description:</label></div>
+		<input class="input_wide" id="id_small_desc" type="text" name="small_desc" />
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_large_img_desc">Description for the large image:</label></div>
+		<textarea name="large_img_desc" id="id_large_img_desc"></textarea>
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_description">Description:</label></div>
+		<textarea name="description" id="id_description"></textarea>
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
+		<input type="file" name="smallimg" id="id_smallimg" />
+		Only jpg/gif images allowed, size &lt;2MB
+	  </p>
+      <p>
+		<div class="admin_label"><label for="id_largeimg">Large Img File:</label></div>
+		<input type="file" name="largeimg" id="id_largeimg" />
+	  </p>
 	  <input type="hidden" name="action" value="3" />
 	  <input type="submit" value="Upload" />
 	  <input type="button" value="Cancel" onclick="javascript:window.location='?';" />
@@ -238,12 +256,22 @@
         $row = mysql_fetch_assoc($result);
     ?>
 	<form action="impact.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>"/></p>
-	  <p><label for="id_small_desc">Short Description:</label>
-		<input id="id_small_desc" type="text" name="small_desc" value="<?php echo $row['small_desc']; ?>"/>
+	  <p>
+		<div class="admin_label"><label for="id_heading">Heading:</label></div>
+		<input class="input_wide" id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>"/>
 	  </p>
-	  <p><label for="id_large_img_desc">Description for the large image:</label> <textarea name="large_img_desc" id="id_large_img_desc"><?php echo $row['large_img_desc']; ?></textarea></p>
-	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea></p>
+	  <p>
+		<div class="admin_label"><label for="id_small_desc">Short Description:</label></div>
+		<input class="input_wide" id="id_small_desc" type="text" name="small_desc" value="<?php echo $row['small_desc']; ?>"/>
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_large_img_desc">Description for the large image:</label></div>
+		<textarea name="large_img_desc" id="id_large_img_desc"><?php echo $row['large_img_desc']; ?></textarea>
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_description">Description:</label></div>
+		<textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea>
+	  </p>
 	  <?php if($row['smallimgurl']!='') { ?>
 	  <p>Small Img File:
 		<a href="<?php echo $impact_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a>
@@ -251,7 +279,11 @@
 		<input type="file" name="smallimg"/>
 	  </p>
 	  <?php } else { ?>
-	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
+	  <p>
+		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
+		<input type="file" name="smallimg" id="id_smallimg" />
+		Only jpg/gif images allowed, size &lt;2MB
+	  </p>
 	  <?php } ?>
 
 	  <?php if($row['largeimgurl']!='') { ?>
@@ -261,7 +293,11 @@
 		<input type="file" name="largeimg"/>
 	  </p>
 	  <?php } else { ?>
-	  <p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" />Only jpg/gif images allowed, size &lt;2MB</p>
+	  <p>
+		<div class="admin_label"><label for="id_largeimg">Large Img File:</label></div>
+		<input type="file" name="largeimg" id="id_largeimg" />
+		Only jpg/gif images allowed, size &lt;2MB
+	  </p>
 	  <?php } ?>
 
 	  <input type="submit" value="Update" />

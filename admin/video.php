@@ -17,6 +17,9 @@
   <body>
 	<h1> Video Admin </h1>
 	<?php include('menu.php'); ?>
+	<div class="admin_link">
+	  <a href="?action=4">Add a new entry</a>
+	</div>
     <div style="clear:both"></div>
 	<?php
 	  /*
@@ -40,13 +43,6 @@
       }
       if($action == 1) {
 		/* Update */
-        /* $id = $_POST['id']; */
-        /* $heading = stripslashes($_POST['heading']); */
-        /* $description = stripslashes($_POST['description']); */
-		/* $link = stripslashes($_POST['link']); */
-        /* if(mysql_query("update video set heading='$heading', link='$link', description='$description' where id = $id")) */
-        /*   $message .= 'The video was updated successfully.'; */
-				/* Update */
 		$id = $_POST['id'];
         $heading = stripslashes($_POST['heading']);
         $description = stripslashes($_POST['description']);
@@ -148,10 +144,23 @@
 		/* Blank form */
     ?>
 	<form action="video.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" /></p>
-	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"></textarea></p>
-	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
-      <p><label for="id_link">Video link:</label> <input type="text" name="link" id="id_link" /></p>
+	  <p>
+		<div class="admin_label"><label for="id_heading">Heading:</label></div>
+		<input class="input_wide" id="id_heading" type="text" name="heading" />
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_description">Description:</label></div>
+		<textarea name="description" id="id_description"></textarea>
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
+		<input type="file" name="smallimg" id="id_smallimg" />
+		Only jpg/gif images allowed, size &lt;2MB
+	  </p>
+      <p>
+		<div class="admin_label"><label for="id_link">Video link:</label></div>
+		<input class="input_wide" type="text" name="link" id="id_link" />
+	  </p>
 	  <input type="hidden" name="action" value="3" />
 	  <input type="submit" value="Upload" />
 	  <input type="button" value="Cancel" onclick="javascript:window.location='?';" />
@@ -165,8 +174,14 @@
         $row = mysql_fetch_assoc($result);
     ?>
 	<form action="video.php" method="post" enctype="multipart/form-data">
-	  <p><label for="id_heading">Heading:</label> <input id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>"/></p>
-	  <p><label for="id_description">Description:</label> <textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea></p>
+	  <p>
+		<div class="admin_label"><label for="id_heading">Heading:</label></div>
+		<input class="input_wide" id="id_heading" type="text" name="heading" value="<?php echo $row['heading']; ?>"/>
+	  </p>
+	  <p>
+		<div class="admin_label"><label for="id_description">Description:</label></div>
+		<textarea name="description" id="id_description"><?php echo $row['description']; ?></textarea>
+	  </p>
 	  <?php if($row['smallimgurl']!='') { ?>
 	  <p>Small Img File:
 		<a href="<?php echo $video_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a>
@@ -174,11 +189,15 @@
 		<input type="file" name="smallimg"/>
 	  </p>
 	  <?php } else { ?>
-	  <p><label for="id_smallimg">Small Img File:</label> <input type="file" name="smallimg" id="id_smallimg" />Only jpg/gif images allowed, size &lt;2MB</p>
+	  <p>
+		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
+		<input type="file" name="smallimg" id="id_smallimg" />
+		Only jpg/gif images allowed, size &lt;2MB
+	  </p>
 	  <?php } ?>
 	  <p>
-		<label for="id_link">Video link:</label>
-		<input type="text" name="link" id="id_link" value="<?php echo $row['link']; ?>"/>
+		<div class="admin_label"><label for="id_link">Video link:</label></div>
+		<input style="width:500px;" type="text" name="link" id="id_link" value="<?php echo $row['link']; ?>"/>
 		<a href="<?php echo $row['link']; ?>">Existing link</a>
 	  </p>
 	  <input type="submit" value="Update" />

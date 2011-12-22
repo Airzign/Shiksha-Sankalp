@@ -45,3 +45,37 @@ th {
 	margin-bottom:30px;
 	padding:0px 0px 5px;
 }
+
+.admin_label {
+	width:150px;
+	float:left;
+}
+
+.admin_edit {
+	margin:10px;
+	/* padding:10px; */
+}
+.admin_edit:hover {
+	background-color:#8EE077;
+}
+.admin_edit h3 {
+	margin:0px;
+}
+.admin_edit a {
+	color:black;
+	text-decoration:none;
+}
+.admin_edit_inner {
+	padding:10px;
+	padding-bottom:0px;
+}
+.admin_delete {
+	color:RED;
+}
+.input_wide {
+	width:600px;
+}
+
+textarea {
+	width:600px;
+}
