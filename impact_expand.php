@@ -11,19 +11,34 @@
 		$description = nl2br(stripslashes($a['description']));
 		$image = stripslashes($a['largeimgurl']);
 		$timestamp = stripslashes($a['tm']);
+		$heading = $a['heading'];
+		$large_img_desc = $a['large_img_desc'];
 ?>
-			<div id="content">
+		    <div id="content">
 			  <div id="main_content">
-		        <?php if($image != '') {?>
-				  <div id="image_template">
-				    <img src="images/impact/<?php echo $image; ?>" />
-				  </div>
-		        <?php } ?>
+			    <div>
+			      <span>
+			        <a href="impact.php">
+			          <img src="images/impact.jpg" />
+			        </a>
+			      </span>
+			      <span style="float:right;">
+			        <a href="impact.php">
+			          <p align="right" class="expand_link">More Stories ....</p>
+			        </a>
+			      </span>
+			    </div>
 				<h2 class="innersubheading">
-				  <b><?php echo $small_desc; ?></b>
+				   <b><?php echo $heading; ?></b>
 				</h2>
+				<div class="image_template">
+			    <?php if($image != '') {?>
+				  <img src="images/impact/<?php echo $image; ?>"/>
+                <?php } ?>
+		          <div><?php echo $large_img_desc; ?></div>
+				</div>
 				<br />
-				  <p class="answer"><?php echo $description; ?></p>
+                <p class="answer"><?php echo $description ; ?></p>
 			  </div>
 <?php
 	}
