@@ -332,12 +332,19 @@
           while ( $a = mysql_fetch_assoc($r) ) {
             $id = stripslashes($a['id']);
     ?>
-    <h3><?php echo stripslashes($a['heading']); ?></h3>
-    <p>
-      <?php echo nl2br(stripslashes($a['description'])); ?>
-    </p>
-	<p><a href="?action=5&id=<?php echo $id; ?>">Edit</a></p>
-	<p><a href="?action=2&id=<?php echo $id; ?>" onclick="return confirmDelete();">Delete</a></p>
+	<div class="admin_edit">
+	  <a href="?action=5&id=<?php echo $id; ?>">
+		<div class="admin_edit_inner">
+		  <h3><?php echo stripslashes($a['heading']); ?></h3>
+		  <p>
+			<?php echo nl2br(stripslashes($a['small_desc'])); ?>
+		  </p>
+		</div>
+	  </a>
+	  <div class="admin_delete">
+		<input type="button" value="Delete" onclick="javascript:if(confirmDelete())window.location='?action=2&id=<?php echo $id; ?>'"/>
+	  </div>
+	</div>
 	<?php
         }
       }
