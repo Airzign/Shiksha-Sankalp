@@ -412,14 +412,21 @@ z-index: 100;
 }
 .event_item
 {
-	/* height:46px; */
+	padding-top:4px;
+	height:38px;
 	font-size:14px;
+	color:#0C45A5;
+}
+.event_item:hover
+{
+	background-color:#e8f7db;
 }
 .event_date
 {
 	float:left;
 	padding-left:5px;
 	width:90px;
+	font-weight:bold;
 }
 .event_desc
 {

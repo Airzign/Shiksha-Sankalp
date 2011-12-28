@@ -1,7 +1,11 @@
 <?php
   include "headerinner.php";
   include "admin/config.php";
+  $openid=-1;
+  if(array_key_exists('id',$_GET))
+	$openid = $_GET['id'];
 ?>
+  <script type="text/javascript" src="js/jquery.createFaq.js"></script>
   <div id="content">
   	<div id="main_content">
       <!-- the content goes here -->
@@ -16,20 +20,21 @@
 		      $exploded_date=explode('-',$a['event_date']);
 		      $event_date = date("M j, Y",mktime(0,0,0,$exploded_date[1],$exploded_date[2],$exploded_date[0]));
 		      $description= $a['description'];
-              $entry_displayk .=<<<ENTRY_DISPLAYk
+			  $title = $a['title'];
+			  $id = $a['id'];
+		?>
 					   <div class="event_big">
-						 <div class="event_date_big">
-						   $event_date
-						 </div>
-						 <div class="event_desc_big">
-						   $description
+						 <h3 class="question <?php if($openid == $id) echo 'initial_open_question'; ?>">
+						  <?php echo $event_date,'&nbsp;',$title;?>
+						 </h3>
+						  <div class="answer <?php if($openid == $id) echo 'initial_open_answer'; ?>">
+						  <?php echo $description; ?>
 						 </div>
 					   </div>
 					 <div style="clear:both"></div>
-ENTRY_DISPLAYk;
+		<?php
 			}
 	      }
-	      echo $entry_displayk;
 	    ?>
 	  </div>
 	</div>

@@ -19,7 +19,8 @@
     $id=$_POST['id'];
     $description=$_POST['description'];
     $event_date =$_POST['event_date'];
-    if(mysql_query("update event set description='$description', event_date='$event_date' where id=$id"))
+	$title=$_POST['title'];
+    if(mysql_query("update event set title='$title', description='$description', event_date='$event_date' where id=$id"))
       $message = 'The event is updated successfully.';
     else
       $message = 'An error accured while updating the event. Error code:SKRSS6.';
@@ -32,9 +33,10 @@
       $message = 'An error occured while deleting the event. Error code:SKRSS7.';
   }
   if($action == 3) {
+	$title=$_POST['title'];
     $description=$_POST['description'];
     $event_date =$_POST['event_date'];
-    if(mysql_query("insert into event(description,event_date) values('$description','$event_date')"))
+    if(mysql_query("insert into event(title,description,event_date) values('$title','$description','$event_date')"))
       $message = 'The event was added successfully.';
     else
       $message = 'An error occures while creating the new event. Error code:SKRSS8.';
@@ -68,11 +70,13 @@
 	<div style="clear:both"></div>
 	<form enctype="multipart/form-data" method="post">
 	  <input type="hidden" value="3" name="action"/>
-	  <label for="id_date">Date(YYYY-MM-DD):</label>
+	  <div class="admin_label"><label for="id_date">Date(YYYY-MM-DD):</label></div>
 	  <input type="text" name="event_date" id="id_date"/>
 	  <br/>
-	  <label for="id_description">Description:</label>
-	  <!--<input type="textarea" name="description" id="id_description"/>-->
+	  <div class="admin_label"><label for="id_title">Title:</label></div>
+	  <textarea name="title" id="id_title" style="height:50px;"></textarea>
+	  <br/>
+	  <div class="admin_label"><label for="id_description">Description:</label></div>
 	  <textarea name="description" id="id_description" style="height:70px;"></textarea>
 	  <br />
 	  <input type="submit" value="Add"/>
@@ -86,6 +90,7 @@
 	  <table>
 		<tr>
 		  <th>Date(YYYY-MM-DD)</th>
+		  <th>Title</th>
 		  <th>Description</th>
 		  <th>Update</th>
 		  <th>Delete</th>
@@ -97,7 +102,9 @@
 			  <input type="text" name="event_date" value="<?php echo $row['event_date']; ?>"/>
 			</td>
 			<td>
-			  <!--<input type="text" name="description" value="<?php echo $row['description']; ?>"/>-->
+			  <textarea name="title" style="width:200px;"><?php echo $row['title']; ?></textarea>
+			</td>
+			<td>
 			  <textarea name="description"><?php echo $row['description']; ?></textarea>
 			</td>
 			<td>

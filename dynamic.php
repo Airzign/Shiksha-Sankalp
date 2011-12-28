@@ -179,17 +179,20 @@ ENTRY_DISPLAY5;
 		while( $a = mysql_fetch_assoc($r)) {
 		  $exploded_date=explode('-',$a['event_date']);
 		  $event_date = date("M j, Y",mktime(0,0,0,$exploded_date[1],$exploded_date[2],$exploded_date[0]));
-		  $description= $a['description'];
+		  $title= $a['title'];
+		  $id = $a['id'];
 		  $entry_display2 .=<<<ENTRY_DISPLAY6
+			<a href="event.php?id=$id">
 			  <div class="event_item">
 			    <div class="event_date">
 			      $event_date
 			    </div>
 			    <div class="event_desc">
-			      $description
+			      $title
 			    </div>
+			  <div style="clear:both;"></div>
 			  </div>
-			  <div style="clear:both;height:10px;"></div>
+			</a>
 ENTRY_DISPLAY6;
 		}
 	  }
