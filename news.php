@@ -28,8 +28,8 @@ $entry_displayk="";
 		        <img src="images/news/$smallimg " class="more_news_img">
 		        <div>
 		          <div class="bold_heading">$heading</div>
-				  <div class="small">$description</div>
- 		          <div class="small news_item_list_largedesc">$news_date : $large_desc</div>
+				  <div class="small">$news_date : $description</div>
+ 		          <div class="small news_item_list_largedesc">$large_desc</div>
 		          <div style="clear:both"></div>
 		        </div>
               </div>
