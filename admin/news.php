@@ -13,6 +13,7 @@
         return window.confirm('Are you sure you want to delete this?');
 	  }
 	</script>
+	<script src="../js/jquery-1.6.4.min.js" type="text/javascript"></script>
   </head>
   <body>
 	<h1> News Admin </h1>
@@ -32,6 +33,7 @@
 	   */
 	  $action=0;
       $message='';
+      $is_message_error=false;
       $news_img_dir='../images/news/';
       $allowed_file_types=array('image/gif','image/jpeg','image/pjpeg','image/png');
       if(array_key_exists('action',$_GET)) {
@@ -59,6 +61,7 @@
 		if(array_key_exists('smallimg',$_FILES) && $_FILES['smallimg']['name'] !== '') {
 		  if($_FILES["smallimg"]["size"] > SMALL_IMG_FILE_SIZE) {
 		    $message .= 'The small image is larger than the maximum allowed size('.SMALL_IMG_FILE_SIZE/(1024*1024).'MB) so was not uploaded.<br/>';
+            $is_message_error = true;
 			$update_small_img = False;
 	      } else {
 			$allowed=false;
@@ -67,6 +70,7 @@
 				$allowed=true;
 			if(!$allowed) {
 				$message .= 'The small image file is not a valid image so was not uploaded.<br/>';
+                $is_message_error = true;
 				$update_small_img = False;
 			} else {
 			  if(!file_exists($news_img_dir.$_FILES['smallimg']['name'])) {
@@ -87,6 +91,7 @@
 		if(array_key_exists('largeimg',$_FILES) && $_FILES['largeimg']['name'] !== '') {
 		  if($_FILES["largeimg"]["size"] > LARGE_IMG_FILE_SIZE) {
 		    $message .= 'The large image is larger than the maximum allowed size('.LARGE_IMG_FILE_SIZE/(1024*1024).'MB) so was not uploaded.<br/>';
+            $is_message_error = true;
 			$update_large_img = False;
 	      } else {
 			$allowed=false;
@@ -95,6 +100,7 @@
 				$allowed=true;
 			if(!$allowed) {
 				$message .= 'The large image file is not a valid image so was not uploaded..<br/>';
+                $is_message_error = true;
 				$update_large_img = False;
 			} else {
 			  if(!file_exists($news_img_dir.$_FILES['largeimg']['name'])) {
@@ -162,6 +168,7 @@
 		if($_FILES['smallimg']['name'] !== '') {
 		  if($_FILES["smallimg"]["size"] > SMALL_IMG_FILE_SIZE) {
 		    $message .= 'The small image is larger than the maximum allowed size so was not uploaded.<br/>';
+            $is_message_error = true;
 	      } else {
 			$allowed=false;
 			foreach($allowed_file_types as $type)
@@ -169,6 +176,7 @@
 				$allowed=true;
 			if(!$allowed) {
 				$message .= 'The small image file is not a valid image so was not uploaded.<br/>';
+                $is_message_error = true;
 			} else {
 			  if(!file_exists($news_img_dir.$_FILES['smallimg']['name'])) {
 				$small_img_filename=$_FILES['smallimg']['name'];
@@ -188,6 +196,7 @@
 		if($_FILES['largeimg']['name'] !== '') {
 		  if($_FILES["largeimg"]["size"] > LARGE_IMG_FILE_SIZE) {
 		    $message .= 'The large image is larger than the maximum allowed size so was not uploaded.<br/>';
+            $is_message_error = true;
 	      } else {
 			$allowed=false;
 			foreach($allowed_file_types as $type)
@@ -195,6 +204,7 @@
 				$allowed=true;
 			if(!$allowed) {
 				$message .= 'The large image file is not a valid image so was not uploaded..<br/>';
+                $is_message_error = true;
 			} else {
 			  if(!file_exists($news_img_dir.$_FILES['largeimg']['name'])) {
 				$large_img_filename=$_FILES['largeimg']['name'];
@@ -217,7 +227,8 @@
       if($action == 4) {
 		/* Blank form */
     ?>
-	<form action="news.php" method="post" enctype="multipart/form-data">
+	<script type="text/javascript" src="../js/jquery.formValidation.js"></script>
+	<form action="news.php" method="post" enctype="multipart/form-data" onsubmit="return validate(this);">
 	  <p>
 		  <div class="admin_label"><label for="id_heading">Heading:</label></div>
 		  <input class="input_wide" id="id_heading" type="text" name="heading" maxlength="46"/>
@@ -228,7 +239,7 @@
 	  </p>
 	  <p>
 		<div class="admin_label"><label for="id_small_desc">Small Description:</label></div>
-		<input class="input_wide" id="id_small_desc" type="text" name="small_desc" maxlength="200"/>
+		<input class="input_wide small_desc" id="id_small_desc" type="text" name="small_desc" maxlength="200"/>
 	  </p>
 	  <p>
 		<div class="admin_label"><label for="id_large_img_desc">Description for the large image:</label></div>
@@ -241,11 +252,12 @@
 	  <p>
 		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
 		<input type="file" name="smallimg" id="id_smallimg" />
-		Only jpg/gif images allowed, size &lt;2MB
+		Only jpg/gif images of size less than <?php echo SMALL_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
       <p>
 		<div class="admin_label"><label for="id_largeimg">Large Img File:</label></div>
 		<input type="file" name="largeimg" id="id_largeimg" />
+		Only jpg/gif images of size less than <?php echo LARGE_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <input type="hidden" name="action" value="3" />
 	  <input type="submit" value="Upload" />
@@ -285,12 +297,13 @@
 		<a href="<?php echo $news_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a>
 		<input type="checkbox" name="delete_old_small_img" value="Yes" id="id_delete_old_small_img"/><label for="id_delete_old_small_img">Delete</label>
 		<input type="file" name="smallimg"/>
+		Only jpg/gif images of size less than <?php echo SMALL_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <?php } else { ?>
 	  <p>
 		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
 		<input type="file" name="smallimg" id="id_smallimg" />
-		Only jpg/gif images allowed, size &lt;2MB
+		Only jpg/gif images of size less than <?php echo SMALL_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <?php } ?>
 	  <?php if($row['largeimgurl']!='') { ?>
@@ -298,12 +311,13 @@
 		<a href="<?php echo $news_img_dir,$row['largeimgurl']; ?>"><?php echo $row['largeimgurl']; ?></a>
 		<input type="checkbox" name="delete_old_large_img" value="Yes" id="id_delete_old_large_img"/><label for="id_delete_old_large_img">Delete</label>
 		<input type="file" name="largeimg"/>
+		Only jpg/gif images of size less than <?php echo LARGE_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <?php } else { ?>
 	  <p>
 		<div class="admin_label"><label for="id_largeimg">Large Img File:</label></div>
 		<input type="file" name="largeimg" id="id_largeimg" />
-		Only jpg/gif images allowed, size &lt;2MB
+		Only jpg/gif images of size less than <?php echo LARGE_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <?php } ?>
 
@@ -318,7 +332,11 @@
       if($action != 4 && $action !=5) {
         $q = "SELECT * FROM news ORDER BY tm DESC";
         $r = mysql_query($q);
-        echo $message;
+		if($message != '')
+          if(!$is_message_error)
+		    echo '<div class="admin_message admin_success">',$message,'</div>';
+          else
+            echo '<div class="admin_message admin_error">',$message,'</div>';
         if ( $r == false || mysql_num_rows($r) == 0 ) {
     ?>
     <h4>No news to display</h4>

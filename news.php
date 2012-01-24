@@ -3,7 +3,7 @@ include "headerinner.php";
 include "admin/config.php";
 ?>
   <div id="content">
-  		<div id="main_content">
+  		<div id="main_content" style="min-height:470px;">
         	<!-- the content goes here -->
 <div class="news_segment">
         	<h1><img src="images/news.jpg" /></h1>
@@ -25,7 +25,7 @@ $entry_displayk="";
 		  <div class="news_item_list">
 		    <a href="news_expand.php?id=$id">
               <div class="news_item_list_inner">
-		        <img src="images/news/$smallimg " style="float:left;"/>
+		        <img src="images/news/$smallimg " class="more_news_img">
 		        <div>
 		          <div class="bold_heading">$heading</div>
 				  <div class="small">$description</div>

@@ -9,6 +9,7 @@
    */
   $action=0;
   $message='';
+  $is_message_error=false;
   if(array_key_exists('action',$_GET)) {
     $action=$_GET['action'];
   }
@@ -17,20 +18,24 @@
   }
   if($action == 1) {
     $id=$_POST['id'];
-    $description=$_POST['description'];
-    $event_date =$_POST['event_date'];
-	$title=$_POST['title'];
+    $description=mysql_real_escape_string($_POST['description']);
+    $event_date =mysql_real_escape_string($_POST['event_date']);
+	$title=mysql_real_escape_string($_POST['title']);
     if(mysql_query("update event set title='$title', description='$description', event_date='$event_date' where id=$id"))
       $message = 'The event is updated successfully.';
-    else
+    else {
       $message = 'An error accured while updating the event. Error code:SKRSS6.';
+      $is_message_error = true;
+    }
   }
   if($action == 2) {
     $id=$_POST['id'];
     if(mysql_query("delete from event where id=$id"))
       $message = 'The event is deleted successfully.';
-    else
+    else {
       $message = 'An error occured while deleting the event. Error code:SKRSS7.';
+      $is_message_error = true;
+    }
   }
   if($action == 3) {
 	$title=$_POST['title'];
@@ -38,8 +43,10 @@
     $event_date =$_POST['event_date'];
     if(mysql_query("insert into event(title,description,event_date) values('$title','$description','$event_date')"))
       $message = 'The event was added successfully.';
-    else
+    else {
       $message = 'An error occures while creating the new event. Error code:SKRSS8.';
+      $is_message_error = true;
+    }
   }
   $events = mysql_query("select * from event order by event_date desc, description asc");
   if($events == false) {
@@ -66,7 +73,13 @@
   <body>
 	<h1>Events Admin </h1>
     <?php include('menu.php'); ?>
-    <?php echo $message ?>
+    <?php
+	  if($message != '')
+        if(!$is_message_error)
+	      echo '<div class="admin_message admin_success" style="margin-bottom:20px;">',$message,'</div>';
+        else
+          echo '<div class="admin_message admin_error" style="margin-bottom:20px;">',$message,'</div>';
+    ?>
 	<div style="clear:both"></div>
 	<form enctype="multipart/form-data" method="post">
 	  <input type="hidden" value="3" name="action"/>

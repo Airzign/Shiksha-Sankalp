@@ -9,6 +9,7 @@
 	*/
    $action=0;
    $message='';
+   $is_message_error=false;
    $newsletter_dir='../files/newsletters/';
    if(array_key_exists('action',$_GET)) {
 	   $action=$_GET['action'];
@@ -28,6 +29,7 @@
 	   if($_FILES['doc']['name']!='') {
 	   if($_FILES['doc']['error']>0) {
 		   $message='There was an error in uploading the file.Error code:'.$_FILES['doc']['error'].'.Local error code:SKRSS3<br/>';
+           $is_message_error = true;
 	   } else {
 		   if(!file_exists($newsletter_dir.$_FILES['doc']['name'])) {
 			   $filename=$_FILES['doc']['name'];
@@ -65,6 +67,7 @@
 	   $doc_type=$_POST['doc_type'];
 	   if($_FILES['doc']['error']>0) {
 		   $message='There was an error in uploading the file.Error code:'.$_FILES['doc']['error'].'.Local error code:SKRSS3<br/>';
+           $is_message_error = true;
 	   } else {
 		   if(!file_exists($newsletter_dir.$_FILES['doc']['name'])) {
 			   $filename=$_FILES['doc']['name'];
@@ -84,6 +87,7 @@
 		   } else {
 			   unlink($newsletter_dir.$filename);
 			   $message = 'An error occured.Error code:SKRSS4<br/>';
+               $is_message_error = true;
 		   }
 	   }
    }
@@ -113,7 +117,13 @@
   <body>
 	<h1>Documents Admin </h1>
     <?php include('menu.php'); ?>
-    <?php echo $message ?>
+    <?php
+      if($message != '')
+        if(!$is_message_error)
+	      echo '<div class="admin_message admin_success" style="margin-bottom:20px;">',$message,'</div>';
+        else
+          echo '<div class="admin_message admin_error" style="margin-bottom:20px;">',$message,'</div>';
+    ?>
 	<div style="clear:both"></div>
 	<form enctype="multipart/form-data" method="post">
 	  <input type="hidden" value="3" name="action"/>

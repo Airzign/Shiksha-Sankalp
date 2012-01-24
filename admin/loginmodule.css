@@ -49,6 +49,19 @@ th {
 .admin_link {
 	margin-left:20px;
 }
+.admin_message {
+	border:1px solid BLACK;
+	color:BLACK;
+	line-height:2em;
+	margin:10px 60px 0;
+	text-align:center;
+}
+.admin_success {
+	background-color:#8EE077;
+}
+.admin_error {
+	background-color:#FE8383;
+}
 .admin_label {
 	width:150px;
 	float:left;

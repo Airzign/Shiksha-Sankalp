@@ -4,12 +4,11 @@
 ?>
 <div id="content">
   <div id="main_content">
-    <p> 
 	  <div class="innertitle">Donor Responsibilities</div>
-	  
+
 	  <h3 class="innersubheading">What are Shiksha Sankalp’s responsibilities towards donors?</h3>
 	  <p class="innertext">
-		Shiksha Sankalp is committed to creating a new paradigm in transparency and accountability to its donors, 
+		Shiksha Sankalp is committed to creating a new paradigm in transparency and accountability to its donors,
 		with regard to utilization of funds as well as demonstrating tangible outcomes. Our specific
 		responsibilities towards the donors are as follows:
 	  </p>
@@ -31,11 +30,11 @@
         <li class="answer">Encourage educated youth in poor areas to open tuition centers to teach others while earning by charging a fees.</li>
         <li class="answer">Empower mothers through opening bank accounts and transferring monthly reward amounts.</li>
       </ul>
-	  
+
 	  <h3 class="innersubheading">What is “Pardarshee”?</h3>
 	  <p class="innertext">
 		Pardarshee is an internet based tool for fostering transparency and accountability in the Learning Rewards model.
-		Shiksha Sankalp maintains records of all activities and transactions with documentary, photographic and videographic 
+		Shiksha Sankalp maintains records of all activities and transactions with documentary, photographic and videographic
 		evidence as appropriate. This information is uploaded to the Pardarshee system.  Donors are provided password
 		protected access to the Pardarshee system so that they can access information for the students being supported
 		with their funds.
@@ -63,7 +62,6 @@
           </ul>
 		</li>
 	  </ul>
-    </p>
   </div>
   <div id="extra_content">
 	<?php

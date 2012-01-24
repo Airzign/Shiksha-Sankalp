@@ -2,17 +2,16 @@
 include "headerinner.php";
 include "admin/config.php";
 ?>
-    
+
   <div id="content">
   		<div id="main_content">
         	<!-- the content goes here -->
-           <p> 
 <div class="innertitle">What is Shiksha Sankalp ?</div>
 
 <div id="bodyarea" style="width:400px">
 <!-- BEGIN bodycontent DO NOT REMOVE COMMENT PT -->
 <!--page was manually tagged: no-->
-<!-- start semaphore --> 
+<!-- start semaphore -->
 <!-- page headlines START -->
 <div class="innersubheading">Statistics</div>
 <!-- page headlines END -->
@@ -173,7 +172,7 @@ include "admin/config.php";
 
 
 
-  
+
 
 
 
@@ -339,7 +338,7 @@ include "admin/config.php";
 
 
 <!-- Paragraphs End -->
-<!-- POSSIBLE DELETION - PC Positions list Start 
+<!-- POSSIBLE DELETION - PC Positions list Start
 
 
 
@@ -351,8 +350,8 @@ Pages list End -->
 
 <!-- Media Agenda END -->
 
-<!-- DELETE - for UNICEF people/Cl/generic content page 
- 
+<!-- DELETE - for UNICEF people/Cl/generic content page
+
 -->
 <!-- only used in SOWC04, DELETE after migration -->
 
@@ -371,7 +370,7 @@ Pages list End -->
 
 -->
 
-<!-- DELETE after final check - for Module/Cl/Image and Text Page (level 2) START 
+<!-- DELETE after final check - for Module/Cl/Image and Text Page (level 2) START
 
 
 for Module/Cl/Image and Text Page (level 2) END -->
@@ -404,7 +403,7 @@ for Module/Cl/Image and Text Page (level 2) END -->
 
 -->
 <!-- e.g. Back to publications index page -->
-<!--  
+<!--
 
 -->
 <!-- e.g. Back to Video/Audio section -->
@@ -447,7 +446,7 @@ function createBlogBox(id) {
             "&lt;form&gt;\n"+
             "&lt;textarea class='text' rows='3' style='width:100%; overflow: -moz-scrollbars-none; resize: none;' onClick='this.select();' onFocus='this.select();' readonly='readonly' &gt;\n"+
             "&lt;div class='unicef_embed'&gt;\n"+
-            
+
             "&lt;h2&gt;&lt;a href='http://www.unicef.org'&gt;&lt;img src='http://www.unicef.org/infobycountry/images/unicefSmallBlue.png' width='83' height='20' alt='UNICEF' /&gt;&lt;/a&gt;&lt;/h2&gt;\n"+
             "&lt;h3&gt;&lt;a href='"+location.href+"'&gt;Statistics&lt;/a&gt;&lt;/h3&gt;\n"+
             "&lt;p class='embed_teaser'&gt;&lt;/p&gt;\n"+
@@ -470,7 +469,7 @@ function createBlogBox(id) {
             "&lt;br /&gt;\n"+
             "&lt;strong&gt;Preview :&lt;/strong&gt;\n"+
             "&lt;div class='unicef_embed'&gt;\n"+
-            
+
             "&lt;h2&gt;&lt;a href='http://www.unicef.org'&gt;&lt;img src='/infobycountry/images/unicefSmallBlue.png' width='83' height='20' alt='UNICEF' /&gt;&lt;/a&gt;&lt;/h2&gt;\n"+
             "&lt;h3&gt;&lt;a href='"+location.href+"'&gt;Statistics&lt;/a&gt;&lt;/h3&gt;\n"+
             "&lt;p class='embed_teaser'&gt;&lt;/p&gt;\n"+
@@ -613,12 +612,7 @@ UNICEFTIMESTAMP.write();
 
 
 <!-- the content ends here -->
-            
-            </p>
-  
         </div>
-        
-        
         <div id="extra_content">
 <?php
 		include "dynamic.php";

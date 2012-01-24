@@ -166,6 +166,8 @@ a
 	width:655px;
 	padding-left:15px;
 	float:left;
+	border-right: solid #649637 1px;
+	min-height:788px;
 }
 #main_content p
 {
@@ -194,7 +196,7 @@ a
 	padding-top:10px;
 	float:left;
 	width:285px;
-	border-left: solid #649637 1px;
+	/* border-left: solid #649637 1px; */
 }
 #extra_content h1
 {
@@ -361,7 +363,7 @@ p{
 }
 .innertext {
 	font-size:17px;
-	color:#9A9A9A;
+	color:#555;
 	line-height:26px;
 }
 
@@ -409,10 +411,19 @@ p{
 {
 	background-color:#e8f7db;
 }
-.news_item_list a div img
+.more_news_img
 {
 	margin-right:10px;
+	width:92px;
+	float:left;
 }
+.video_image
+{
+	margin-right:10px;
+	float:left;
+	width:157px;
+}
+
 .news_item_list_inner
 {
 	padding:10px 10px;
@@ -482,7 +493,7 @@ p{
 }
 .left {
 	font-size:17px;
-	color:#9A9A9A;
+	color:#555;
 	line-height:26px;
 }
 .statsnumber {
@@ -737,12 +748,15 @@ a .menu-right {
 
 /*css for faq page*/
 .answer{
-    font-size:17px;
     line-height:26px;
 	color:#9a9a9a;
 	padding:10px 0px 0px 38px;
 }
 
+.fixed_width {
+	width:100px;
+	float:left;
+}
 /* Css for research paper page and for similar results page*/
 .research{
     font-size:18px;
@@ -752,11 +766,11 @@ a .menu-right {
 .research a{
     text-decoration:none;
 	font-size:17px;
-	color:#9A9A9A;
+	color:#006699;
 	line-height:26px;
 }
 
 .research a:hover{
-    color:#006699;
+    color:#05A5C5;
 }
 /*Specific CSS ends here */

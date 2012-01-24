@@ -16,7 +16,6 @@
 ?>
 <div id="content">
   <div id="main_content">
-    <p> 
 	  <div class="innertitleshortened">Newsletters and Legal Documents</div>
 	  <div class="innersubheading"> Links related to : </div>
 	  <ul>
@@ -36,7 +35,6 @@
 		  </ul>
 		</li>
       </ul>
-    </p>
   </div>
   <div id="extra_content">
 	<?php
@@ -44,4 +42,4 @@
 	   echo "</div>";
 	   include "footer.php";
 	?>
-	
+

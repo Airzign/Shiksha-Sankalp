@@ -15,23 +15,14 @@
 	<img src="images/Rss_64.png" alt="rss" width="32" height="32" class="follow"/>
   </div>
   <div id="footer_right">
-	Feedback &nbsp; &nbsp; Sitemap &nbsp; &nbsp; Disclaimer &nbsp; &nbsp; Contact us
+   Feedback &nbsp; &nbsp; Sitemap &nbsp; &nbsp; Disclaimer &nbsp; &nbsp; <a href="contact.php">Contact us</a>
   </div>
 </div>
-<!--<script type="text/javascript" charset="utf-8">
-  $(document).ready(function(){
-  });
-</script>-->
-
 	<script type="text/javascript">
 	  $(document).ready(function(){
 	      $("div[rel^='prettyPhoto']").prettyPhoto();
-
-	  
 	  });
 	</script>
-
-
 </div>
 </body>
 </html>

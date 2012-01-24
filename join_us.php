@@ -5,10 +5,9 @@ include "admin/config.php";
   <div id="content">
   		<div id="main_content">
         	<!-- the content goes here -->
-           <p> 
 <div class="innertitle">Join Us</div>
 
-<p>1. <b>Donors</b> - Your contributions will provide direct cash incentives to economically weak families, based on demonstrated academic performance of their school going children. Shiksha Sankalp is committed to be a vehicle for delivering your assistance to eligible beneficiaries with highest standards of transparency and performance accountability. 
+<p>1. <b>Donors</b> - Your contributions will provide direct cash incentives to economically weak families, based on demonstrated academic performance of their school going children. Shiksha Sankalp is committed to be a vehicle for delivering your assistance to eligible beneficiaries with highest standards of transparency and performance accountability.
 Click <a href="donate.php">here</a> to Donate</p>
 
 <p>Want to understand responsibilities of Shiksha Sankalp towards its donors ? Click <a href="donor_resp.php">here</a> to find out</p>
@@ -21,24 +20,19 @@ Click <a href="donate.php">here</a> to Donate</p>
 
 <p>For enrolling as a Volunteer, please fill the registration form : </p>
 
-<form action="#" method="post" enctype="multipart/form-data">	
-	<p><label for="id_name">Name:</label> <input id="id_name" type="text" name="Name"/></p>
-	<p><label for="id_address">Address:</label> <input id="id_address" type="text" name="address" /></p>
-	<p><label for="id_city">City:</label><input id="id_city" type="text" name="city" /></p>
-	<p><label for="id_state">State:</label><input id="id_state" type="text" name="state" /></p>
-	<p><label for="id_country">Country:</label><input id="id_country" type="text" name="country" /></p>
-	<p><label for="id_pin">PIN/ZIP code:</label><input id="id_country" type="text" name="country" /></p>
-	<p><label for="id_largeimg">Large Img File:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
+<form action="#" method="post" enctype="multipart/form-data">
+	<p><label for="id_name" class="fixed_width">Name:</label> <input id="id_name" type="text" name="Name"/></p>
+	<p><label for="id_address" class="fixed_width">Address:</label> <input id="id_address" type="text" name="address" /></p>
+	<p><label for="id_city" class="fixed_width">City:</label><input id="id_city" type="text" name="city" /></p>
+	<p><label for="id_state" class="fixed_width">State:</label><input id="id_state" type="text" name="state" /></p>
+	<p><label for="id_country" class="fixed_width">Country:</label><input id="id_country" type="text" name="country" /></p>
+	<p><label for="id_pin" class="fixed_width">PIN/ZIP code:</label><input id="id_country" type="text" name="country" /></p>
+	<p><label for="id_largeimg" class="fixed_width">Your Image:</label> <input type="file" name="largeimg" id="id_largeimg" /></p>
 	<input type="submit" value="Upload" />
 	</form>
 <p>3. <b>Job Seekers</b> - If the cause inspires you and you would like to devote full time to Shiksha Sankalp, send us your resumes at jobs@shikshasankalp.org</p>
 <!-- the content ends here -->
-            
-            </p>
-  
         </div>
-        
-        
         <div id="extra_content">
 		<?php
 		include "dynamic.php";

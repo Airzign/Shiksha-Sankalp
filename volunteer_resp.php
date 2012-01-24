@@ -4,14 +4,13 @@
 ?>
 <div id="content">
   <div id="main_content">
-    <p> 
 	  <div class="innertitle">Volunteer Responsibilities</div>
 	  <h2 class="innersubheading">
 		<b>How can volunteers participate in the program? </b>
 	  </h2>
 	  <br />
 	  <p class="innertext">
-		Volunteers are an important pillar of the Learning Rewards Model. We leverage volunteer support in activities 
+		Volunteers are an important pillar of the Learning Rewards Model. We leverage volunteer support in activities
 		conducted directly by Shiksha Sankalp as well as those conducted by our partner NGOs, as explained below:
 	  </p>
 
@@ -38,7 +37,7 @@
 		</li>
 		<h5 class="innersubheading">B. Headquarter Activities </h5>
 		<p class="innertext">
-		  (These activities can be conducted remotely through internet. Volunteers are provided with password based access 
+		  (These activities can be conducted remotely through internet. Volunteers are provided with password based access
 		  to the internet based Pardarshee (Transparency) system for these activities.)
 		</p>
 		<li class="answer">
@@ -78,19 +77,19 @@
 		All partner NGO activities listed below are expected to be done in the target area itself. Volunteers living in the
 		vicinity would be better suited for these tasks.
 	  </p>
-	
+
 	  <h3 class="innersubheading">How can donors contribute to Shiksha Sankalp’s efforts?</h3>
   	  <p class="innertext">
 		Shiksha Sankalp encourages its donors to not just fund the program, but also maintain fiduciary oversight
-		and provide volunteer to support. The specific responsibilities of donors are as follows: 
+		and provide volunteer to support. The specific responsibilities of donors are as follows:
 	  </p>
 	  <ul>
 
 		<li class="answer">Target Area Survey</li>
 		<p class="innertext">
 		  Volunteers conduct a door-to-door survey of households in the proposed target area. Survey of schools,
-		  banks and other NGOs in the area are also carried out. Volunteers take photographs of the proposed target 
-		  area, including households, by-lanes, public toilets, dispensaries/medical centers, playgrounds, places of 
+		  banks and other NGOs in the area are also carried out. Volunteers take photographs of the proposed target
+		  area, including households, by-lanes, public toilets, dispensaries/medical centers, playgrounds, places of
 		  worship etc. Volunteers also take photos of schools, banks and other NGOs covered in the survey.
 		</p>
 
@@ -103,20 +102,20 @@
 		<li class="answer">Beneficiary Registration</li>
 		<p class="innertext">
 		  Volunteers conduct a drive in the target area to register beneficiaries. The drive involves explaining
-		  the Learning Rewards model, getting registration forms filled up, obtaining documentary evidence for 
-		  eligibility and taking photographs of the beneficiaries. All this information is uploaded to the SS MIS system. 
+		  the Learning Rewards model, getting registration forms filled up, obtaining documentary evidence for
+		  eligibility and taking photographs of the beneficiaries. All this information is uploaded to the SS MIS system.
 		</p>
 		<li class="answer">Regular Interaction with Beneficiaries</li>
 		<p class="innertext">
-		  Volunteers living in the vicinity of the target area maintain regular contact with the beneficiaries to 
+		  Volunteers living in the vicinity of the target area maintain regular contact with the beneficiaries to
 		  guide them on their efforts to obtain education and to facilitate the processing of various steps under
 		  the Learning Rewards model. Volunteers assist in registration of beneficiaries, information about SAP test,
-		  communication of SAP tests results, regular feedback on performance, collecting evidence of attendance/performance 
+		  communication of SAP tests results, regular feedback on performance, collecting evidence of attendance/performance
 		  at school and disbursement of Learning Rewards stipend cheques. Volunteers follow-up with drop-out families and
-		  guide them on how their concerns can be addressed. Volunteers also keep track of various initiatives being taken 
+		  guide them on how their concerns can be addressed. Volunteers also keep track of various initiatives being taken
 		  by beneficiary families to improve the education of their children.
 		</p>
-      
+
 		<li class="answer">Arrangements for SAP Test and Invigilation</li>
 		<p class="innertext">
 		  Volunteers make arrangements for conducting the SAP Test, including the test venue, facilities at the venue,
@@ -130,11 +129,10 @@
 		  banking processes and good banking practices to the mothers.
 		</p>
 
-	  </ul>  
-	</p>
+	  </ul>
   </div>
-  
-  
+
+
   <div id="extra_content">
 	<?php
 	   include "dynamic.php";

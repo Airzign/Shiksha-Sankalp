@@ -5,7 +5,6 @@
 <div id="content">
   <div id="main_content">
     <!-- the content goes here -->
-    <p> 
 	  <div class="innertitle">About Shiksha Sankalp</div>
       <div class="innersubheading">What is Shiksha Sankalp?</div>
 	  <p class="innertext">
@@ -30,7 +29,6 @@
 	    sharing of resources (including intellectual property), transfer of funds and implementation of programs.
 	    Each organization is free to partner with other NGOs for obtaining funds as well as for implementation of programs.
 	  </p>
-	</p>
   </div>
   <div id="extra_content">
   <?php

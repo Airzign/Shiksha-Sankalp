@@ -4,7 +4,6 @@
 ?>
 <div id="content">
   <div id="main_content">
-    <p> 
 	  <div class="innertitleshortened">Success Stories in Other Nations</div>
 	  <div class="innersubheading"> Links related to :</div>
 	  <br/>
@@ -30,8 +29,7 @@
 		  </ul>
 		</li>
 		<!-- the content ends here -->
-	  </ul>        
-    </p>
+	  </ul>
   </div>
   <div id="extra_content">
 	<?php

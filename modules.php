@@ -4,14 +4,13 @@
 ?>
 <div id="content">
   <div id="main_content">
-    <p> 
 	  <div class="innertitle">Rewards model</div>
 	  <div class="innersubheading">What are the key steps in the Learning Rewards model?</div>
 	  <br /><br />
 	  <div class="innertext">
 		1
 		Survey of Proposed Target Areas
-		Prospective Partner NGOs carry out survey of Proposed Target Areas using format provided by SS. 
+		Prospective Partner NGOs carry out survey of Proposed Target Areas using format provided by SS.
 		This includes gathering information about families, schools, banks and other NGOs.
 		<br /><br />
 		2
@@ -32,17 +31,17 @@
 		<br /><br />
 		5
 		Registration of Beneficiaries
-		Partner NGO staff register beneficiaries, obtain documentary evidence and take photographs. Information 
+		Partner NGO staff register beneficiaries, obtain documentary evidence and take photographs. Information
 		is uploaded by Partner NGO staff and verified by SS staff.
 		<br /><br />
 		6
 		Standardized Academic Performance (SAP) Test
-		Partner NGO conducts SAP Test of registered students. SS provides SAP test papers. SS staff/volunteers 
+		Partner NGO conducts SAP Test of registered students. SS provides SAP test papers. SS staff/volunteers
 		oversee the test, collect answer sheets and check/score them.
 		<br /><br />
 		7
 		Performance Incentive Vector and Rewards Calculation
-		Based on the performance of all students in the target area, Performance Incentive Vector is determined 
+		Based on the performance of all students in the target area, Performance Incentive Vector is determined
 		and thereafter reward amount for each child is calculated by the MIS system.
 		<br /><br />
 		8
@@ -59,12 +58,12 @@
 		<br /><br />
 		10
 		Verification by SS Staff
-		SS Staff/volunteers verify the information for each beneficiary, including identity particulars, income 
+		SS Staff/volunteers verify the information for each beneficiary, including identity particulars, income
 		eligibility, attendance/ performance at school, performance in ASAP test, mother’s bank account and rewards amount.
 		<br /><br />
 		11
 		Allocation of Students to Groups
-		The SS MIS system allocates Students to Groups which are mapped to Donors. The MIS provides information 
+		The SS MIS system allocates Students to Groups which are mapped to Donors. The MIS provides information
 		about the Students in the Group to the Donors who are funding them.
 		<br /><br />
 		12
@@ -85,7 +84,6 @@
 		Annual Financial Reporting and Impact Assessment
 		Partner NGO provides annual financial reports and impact assessment studies to SS.
 	  </div>
-    </p>
   </div>
   <div id="extra_content">
 	<?php

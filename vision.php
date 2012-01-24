@@ -5,36 +5,35 @@ include "admin/config.php";
   <div id="content">
   		<div id="main_content">
         	<!-- the content goes here -->
-           <p> 
 <div class="innertitle">Vision</div>
 
 
 <br />
 <div class="innertext">
-Shiksha Sankalp's vision is that India attains universal school education by 2020, enabling her to emerge as a more responsible and just society, a more prosperous economy, a healthier people and a stronger democracy.  
+Shiksha Sankalp's vision is that India attains universal school education by 2020, enabling her to emerge as a more responsible and just society, a more prosperous economy, a healthier people and a stronger democracy.
 </div>
-<br /> 
+<br />
  <br />
 <div class="innersubheading">Mission Statement</div>
 <br />
 <div class="innertext">
-To provide outcome based assistance to economically weak families in India based on demonstrated academic performance of their school-going children, by leveraging support from Indians all over the world, based on trust emanating from high degree of transparency and accountability, with the ultimate aim of alleviating poverty and achieving universal education in India within the foreseeable future. 
+To provide outcome based assistance to economically weak families in India based on demonstrated academic performance of their school-going children, by leveraging support from Indians all over the world, based on trust emanating from high degree of transparency and accountability, with the ultimate aim of alleviating poverty and achieving universal education in India within the foreseeable future.
  <br /><br />
 </div>
- 
+
 
 <div class="innersubheading">Core Values</div>
 <br />
 <div class="innertext">
-Shiksha Sankalp's three core values are Trust, Transparency and Accountability, as defined below:  
+Shiksha Sankalp's three core values are Trust, Transparency and Accountability, as defined below:
 </div>
 <br />
 <div class="innertext">
-<div><u>Trust:</u></div> Shiksha Sankalp would strive to earn the trust of all stakeholders including beneficiaries, donors, volunteers, employees and the society at large, as a core value guiding all its policies and efforts.  
+<div><u>Trust:</u></div> Shiksha Sankalp would strive to earn the trust of all stakeholders including beneficiaries, donors, volunteers, employees and the society at large, as a core value guiding all its policies and efforts.
 </div>
 <br />
 <div class="innertext">
-<div ><u>Transparency:</u></div>Shiksha Sankalp would adhere to highest standards of transparency by allowing access to all information to all relevant stakeholders including beneficiaries, donors, volunteers, employees and society at large.  
+<div ><u>Transparency:</u></div>Shiksha Sankalp would adhere to highest standards of transparency by allowing access to all information to all relevant stakeholders including beneficiaries, donors, volunteers, employees and society at large.
 </div>
 <br />
 <div class="innertext">
@@ -42,12 +41,7 @@ Shiksha Sankalp's three core values are Trust, Transparency and Accountability, 
 </div>
 <!-- the content ends here -->
 <br />
-            
-            </p>
-  
         </div>
-        
-        
         <div id="extra_content">
 		<?php
 		include "dynamic.php";

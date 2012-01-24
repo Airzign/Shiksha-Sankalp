@@ -32,6 +32,7 @@
 	   */
 	  $action=0;
       $message='';
+      $is_message_error=false;
       $video_img_dir='../images/video/';
       $allowed_file_types=array('image/gif','image/jpeg','image/pjpeg','image/png');
       if(array_key_exists('action',$_GET)) {
@@ -54,6 +55,7 @@
 		if(array_key_exists('smallimg',$_FILES) && $_FILES['smallimg']['name'] !== '') {
 		  if($_FILES["smallimg"]["size"] > SMALL_IMG_FILE_SIZE) {
 		    $message .= 'The small image is larger than the maximum allowed size('.SMALL_IMG_FILE_SIZE/(1024*1024).'MB) so was not uploaded.<br/>';
+            $is_message_error = true;
 			$update_small_img = False;
 	      } else {
 			$allowed=false;
@@ -62,6 +64,7 @@
 				$allowed=true;
 			if(!$allowed) {
 				$message .= 'The small image file is not a valid image so was not uploaded.<br/>';
+                $is_message_error = true;
 				$update_small_img = False;
 			} else {
 			  if(!file_exists($video_img_dir.$_FILES['smallimg']['name'])) {
@@ -113,6 +116,7 @@
 		if($_FILES['smallimg']['name'] !== '') {
 		  if($_FILES["smallimg"]["size"] > SMALL_IMG_FILE_SIZE) {
 		    $message .= 'The small image is larger than the maximum allowed size so was not uploaded.<br/>';
+            $is_message_error = true;
 	      } else {
 			$allowed=false;
 			foreach($allowed_file_types as $type)
@@ -120,6 +124,7 @@
 				$allowed=true;
 			if(!$allowed) {
 				$message .= 'The small image file is not a valid image so was not uploaded.<br/>';
+                $is_message_error = true;
 			} else {
 			  if(!file_exists($video_img_dir.$_FILES['smallimg']['name'])) {
 				$small_img_filename=$_FILES['smallimg']['name'];
@@ -154,7 +159,7 @@
 	  <p>
 		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
 		<input type="file" name="smallimg" id="id_smallimg" />
-		Only jpg/gif images allowed, size &lt;2MB
+		Only jpg/gif images of size less than <?php echo SMALL_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
       <p>
 		<div class="admin_label"><label for="id_link">Video link:</label></div>
@@ -186,12 +191,13 @@
 		<a href="<?php echo $video_img_dir,$row['smallimgurl']; ?>"><?php echo $row['smallimgurl']; ?></a>
 		<input type="checkbox" name="delete_old_small_img" value="Yes" id="id_delete_old_small_img"/><label for="id_delete_old_small_img">Delete</label>
 		<input type="file" name="smallimg"/>
+		Only jpg/gif images of size less than <?php echo SMALL_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <?php } else { ?>
 	  <p>
 		<div class="admin_label"><label for="id_smallimg">Small Img File:</label></div>
 		<input type="file" name="smallimg" id="id_smallimg" />
-		Only jpg/gif images allowed, size &lt;2MB
+		Only jpg/gif images of size less than <?php echo SMALL_IMG_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <?php } ?>
 	  <p>
@@ -210,7 +216,11 @@
       if($action != 4 && $action !=5) {
         $q = "SELECT * FROM video ORDER BY tm DESC";
         $r = mysql_query($q);
-        echo $message;
+   	    if($message != '')
+          if(!$is_message_error)
+		    echo '<div class="admin_message admin_success">',$message,'</div>';
+          else
+            echo '<div class="admin_message admin_error">',$message,'</div>';
         if ( $r == false || mysql_num_rows($r) == 0 ) {
     ?>
     <h4>No videos to display</h4>

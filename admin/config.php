@@ -4,7 +4,7 @@
     define('DB_PASSWORD', 'kyamazaak');
     define('DB_DATABASE', 'shiksha_sankalpdb');
     define('SMALL_IMG_FILE_SIZE',1048576);
-    define('LARGE_IMG_FILE_SIZE',1048576);
+    define('LARGE_IMG_FILE_SIZE',2097152);
     	//Connect to mysql server
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if(!$link) {

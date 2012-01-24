@@ -22,7 +22,7 @@
 				  <div class="news_item_list" title="$heading" href="$link" rel="prettyPhoto">
 					<a>
 					  <div class="news_item_list_inner">
-						<img src="images/video/$smallimg" style="float:left;" />
+						<img src="images/video/$smallimg" class="video_image" />
 				        <div>
 						  <div class="bold_heading">$heading</div>
 						  <div class="small">$description</div>

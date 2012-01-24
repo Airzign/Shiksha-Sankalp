@@ -3,7 +3,7 @@
    include "admin/config.php";
 ?>
 <div id="content">
-  <div id="main_content">
+  <div id="main_content" style="min-height:470px;">
 	<div class="news_segment">
       <h1>
 		<img src="images/impact.jpg" />
@@ -23,7 +23,7 @@
 	   <div class="news_item_list">
 		 <a href="impact_expand.php?id=<?php echo $id; ?>">
 		   <div class="news_item_list_inner">
-		     <img src="images/impact/<?php echo $smallimg; ?>" style="float:left" />
+		     <img src="images/impact/<?php echo $smallimg; ?>" class="more_news_img"/>
 		     <div>
 	           <div class="bold_heading"><?php echo $heading ;?></div>
 			   <div class="small"><?php echo $small_desc; ?></div>
