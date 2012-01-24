@@ -25,6 +25,12 @@
 	</a>
   </div>
   <div class="menuitem">
+	<a href="board_meeting.php">
+	  Board Meetings
+	</a>
+  </div>
+
+  <div class="menuitem">
 	<a href="logout.php">
 	  Logout
 	</a>
