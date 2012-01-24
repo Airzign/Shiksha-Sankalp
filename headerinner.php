@@ -7,7 +7,7 @@
 <META content="Shiksha Sankalp" name=title>
 <META http-equiv="keywords" content="Shiksha, Sansthan ">
 <META name="description" content=" Please write the description here">
-<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW"> 
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
 <META NAME="DC.Title" CONTENT="Shiksha Sankalp Index">
 <META NAME="DC.Creator" CONTENT="AirZign">
 <META NAME="DC.Creator.Address" CONTENT="email id here">
@@ -34,11 +34,11 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-  
+
   $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
-  
+
   $("ul.topnav li span").click(function() { //When trigger is clicked...
-  
+
 		//Following events are applied to the subnav itself (moving subnav up and down)
 		$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
 
@@ -76,7 +76,7 @@
 		<div style="clear:both;"></div>
         <div class="nav">
 				<ul id="navigation">
-                    
+
                     <li class="">
 						<a href="index.php">
 							<span class="menu-left"></span>
@@ -96,6 +96,24 @@
 									<a href="about.php">About Shiksha Sankalp</a>
 								</li>
 			   					<li>
+									<a href="learning_rewards_model.php">Learning Rewards Model</a>
+								</li>
+			   					<li>
+									<a href="design_principles.php">Design Principles</a>
+								</li>
+			   					<li>
+								  <a href="vision.php">Vision, Mission and Values</a>
+								</li>
+			   					<li>
+									<a href="team.php">The Team</a>
+								</li>
+			   					<li>
+									<a href="newsletters.php">Legal Documents</a>
+								</li>
+			   					<li>
+									<a href="about.php">Board Meeting</a>
+								</li>
+			   					<!--<li>
 									<a href="vision.php">Vision</a>
 								</li>
 			   					<li>
@@ -106,7 +124,7 @@
 								</li>
                                 <li>
 									<a href="moas.pdf">MoAs</a>
-								</li>
+								</li>-->
 			   				</ul>
 			   				<div class="btm-bg"></div>
 			   			</div>
