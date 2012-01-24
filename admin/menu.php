@@ -29,7 +29,11 @@
 	  Board Meetings
 	</a>
   </div>
-
+  <div class="menuitem">
+	<a href="team.php">
+	  Team
+	</a>
+  </div>
   <div class="menuitem">
 	<a href="logout.php">
 	  Logout
