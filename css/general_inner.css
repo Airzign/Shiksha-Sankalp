@@ -456,6 +456,12 @@ p{
 	background-color:#e8f7db;
 }
 
+.team_img
+{
+	width:100px;
+	float:left;
+	margin:10px 10px 10px;
+}
 
 .impact_item_img
 {
