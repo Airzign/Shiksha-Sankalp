@@ -19,9 +19,10 @@
 	   $action=$_POST['action'];
    }
    if($action==1) {
-       $id = $_POST['id'];
-   	   $new_title=$_POST['title'];
-   	   $doc_type =$_POST['doc_type'];
+       $id = mysql_real_escape_string($_POST['id']);
+   	   $new_title=mysql_real_escape_string($_POST['title']);
+   	   $country =mysql_real_escape_string($_POST['country']);
+	   $date = mysql_real_escape_string($_POST['date']);
 	   $result = mysql_query("select filename from documents where id = '$id'");
 	   $assoc = mysql_fetch_assoc($result);
 	   $old_filename = $assoc['filename'];
@@ -49,12 +50,12 @@
 	   }
 	   }
 
-   	   if(mysql_query("update documents set title='$new_title',doc_type=$doc_type,filename='$new_filename' where id=$id")) {
+   	   if(mysql_query("update documents set title='$new_title',country=$country,filename='$new_filename',doc_date='$date' where id=$id")) {
    	   	   $message='The document was updated successfully.';
    	   }
    }
    if($action==2) {
-	   $id = $_GET['id'];
+       $id = mysql_real_escape_string($_GET['id']);
 	   $query=mysql_query('select filename from documents where id='.$id);
 	   $filename=mysql_fetch_assoc($query);
 	   unlink($newsletter_dir.$filename['filename']);
@@ -63,8 +64,9 @@
 	   }
    }
    if($action==3) {
-	   $title=$_POST['title'];
-	   $doc_type=$_POST['doc_type'];
+       $title=mysql_real_escape_string($_POST['title']);
+       $country=mysql_real_escape_string($_POST['country']);
+	   $date = mysql_real_escape_string($_POST['date']);
 	   if($_FILES['doc']['error']>0) {
 		   $message='There was an error in uploading the file.Error code:'.$_FILES['doc']['error'].'.Local error code:SKRSS3<br/>';
            $is_message_error = true;
@@ -82,7 +84,7 @@
 		   }
 		   move_uploaded_file($_FILES['doc']['tmp_name'],$newsletter_dir.$filename);
 		   /* the id field of documents is AUTO_INCREMENTing */
-		   if(mysql_query("insert into documents(filename,doc_type,title) values('$filename',$doc_type,'$title')")) {
+		   if(mysql_query("insert into documents(filename,country,title,doc_date) values('$filename',$country,'$title','$date')")) {
 			   $message = 'The document with title \''.$title.'\' was uploaded successfully.';
 		   } else {
 			   unlink($newsletter_dir.$filename);
@@ -126,16 +128,34 @@
     ?>
 	<div style="clear:both"></div>
 	<form enctype="multipart/form-data" method="post">
+	  <style type="text/css">
+		.doc_label { width:60px;float:left; }
+		.doc_input { width:300px; float:left;}
+	  </style>
 	  <input type="hidden" value="3" name="action"/>
-	  <label for="id_title">Title</label>
+	  <div class="doc_label">
+	  <label for="id_title">Title:</label>
+	  </div>
+	  <div class="doc_input">
 	  <input type="text" name="title" id="id_title"/>
-	  <label for="id_file">File</label>
+	  </div>
+	  <label for="id_date">Date(YYYY-MM-DD):</label>
+	  <input type="text" name="date" id="id_date"/>
+	  <br/>
+	  <div class="doc_label">
+	  <label for="id_file">File:</label>
+	  </div>
+	  <div class="doc_input">
 	  <input type="file" name="doc" id="id_file"/>
-	  <label for="id_doc_type">Document Type</label>
-	  <select name="doc_type" name="id_doc_type">
-		<option value="0">Newsletter</option>
-		<option value="1">Legal Document</option>
+	  </div>
+	  <div style="width:120px;float:left;">
+	  <label for="id_country">Country:</label>
+	  </div>
+	  <select name="country" name="id_country" style="width:143px;">
+		<option value="0">USA</option>
+		<option value="1">India</option>
 	  </select>
+	  <br/><br/>
 	  <input type="submit" value="Add"/>
 	</form>
 	<?php if(mysql_num_rows($documents)>0) {?>
@@ -147,8 +167,9 @@
 	  <table>
 		<tr>
 		  <th>Document</th>
+		  <th>Date(YYYY-MM-DD)</th>
 		  <th>Replace Document with</th>
-		  <th>Type</th>
+		  <th>Country</th>
 		  <th>Title</th>
 		  <th>Update</th>
 		  <th>Delete</th>
@@ -160,12 +181,15 @@
 			</td>
 			<form enctype="multipart/form-data" method="POST">
 			<td>
+			  <input type="text" name="date" value="<?php echo $row['doc_date']; ?>"/>
+			</td>
+			<td>
 			  <input type="file" name="doc"/>
 			</td>
 			<td>
-			  <select name="doc_type">
-				<option value="0" <?php if($row['doc_type']==0) echo 'selected=selected'; ?> >Newsletter</option>
-				<option value="1" <?php if($row['doc_type']==1) echo 'selected=selected'; ?> >Legal Document</option>
+			  <select name="country">
+				<option value="0" <?php if($row['country']==0) echo 'selected=selected'; ?> >USA</option>
+				<option value="1" <?php if($row['country']==1) echo 'selected=selected'; ?> >India</option>
 			  </select>
 			</td>
 			<td>
