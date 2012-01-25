@@ -228,7 +228,7 @@
 	  </p>
 	  <p>
 		<div class="admin_label"><label for="id_position">Position:</label></div>
-		<input class="input_wide" id="id_position" type="text" name="position" value="<?php echo $row['position']; ?>"/>
+		<input id="id_position" type="text" name="position" value="<?php echo $row['position']; ?>"/>
 		Position at which this member will be displayed
 	  </p>
 

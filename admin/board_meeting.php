@@ -35,7 +35,6 @@
       $message='';
       $is_message_error=false;
       $board_meeting_file_dir='../files/board_meetings/';
-      $allowed_file_types=array('image/gif','image/jpeg','image/pjpeg','image/png');
       if(array_key_exists('action',$_GET)) {
         $action=mysql_real_escape_string($_GET['action']);
       }
@@ -59,10 +58,7 @@
             $is_message_error = true;
 			$update_meeting_file = False;
 	      } else {
-			$allowed=false;
-			foreach($allowed_file_types as $type)
-			  if($_FILES['file_link']['type'] == $type)
-				$allowed=true;
+			$allowed=true;
 			if(!$allowed) {
 				$message .= 'The meeting file is not valid. So was not uploaded..<br/>';
                 $is_message_error = true;
@@ -119,10 +115,7 @@
 		    $message .= 'The meeting file is larger than the maximum allowed size so was not uploaded.<br/>';
             $is_message_error = true;
 	      } else {
-			$allowed=false;
-			foreach($allowed_file_types as $type)
-			  if($_FILES['file_link']['type'] == $type)
-				$allowed=true;
+			$allowed=true;
 			if(!$allowed) {
 				$message .= 'The large image file is not valid. So was not uploaded..<br/>';
                 $is_message_error = true;
@@ -167,7 +160,7 @@
       <p>
 		<div class="admin_label"><label for="id_file_link">Meeting File:</label></div>
 		<input type="file" name="file_link" id="id_file_link" />
-		Only jpg/gif images of size less than <?php echo MEETING_FILE_SIZE/(1024*1024); ?>MB.
+		File of size less than <?php echo MEETING_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <input type="hidden" name="action" value="3" />
 	  <input type="submit" value="Upload" />
@@ -203,7 +196,7 @@
 		<a href="<?php echo $board_meeting_file_dir,$row['file_link']; ?>">File link</a>
 		<input type="checkbox" name="delete_old_file_link" value="Yes" id="id_delete_old_file_link"/><label for="id_delete_old_file_link">Delete</label>
 		<input type="file" name="file_link"/>
-		Only jpg/gif images of size less than <?php echo MEETING_FILE_SIZE/(1024*1024); ?>MB.
+		File of size less than <?php echo MEETING_FILE_SIZE/(1024*1024); ?>MB.
 	  </p>
 	  <?php } else { ?>
 	  <p>
