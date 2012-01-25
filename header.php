@@ -108,7 +108,7 @@
 									<a href="team.php">The Team</a>
 								</li>
 			   					<li>
-									<a href="newsletters.php">Legal Documents</a>
+									<a href="documents.php">Legal Documents</a>
 								</li>
 			   					<li>
 									<a href="board_meeting.php">Board Meeting</a>
@@ -145,9 +145,6 @@
 								</li>
 			   					<li>
 									<a href="similar_projects.php">Similar Projects</a>
-								</li>
-                                <li>
-									<a href="newsletters.php">Newsletter &amp;<br />Legal Documents</a>
 								</li>
 			   				</ul>
 			   				<div class="btm-bg"></div>

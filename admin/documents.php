@@ -10,7 +10,7 @@
    $action=0;
    $message='';
    $is_message_error=false;
-   $newsletter_dir='../files/newsletters/';
+   $documents_dir='../files/documents/';
    if(array_key_exists('action',$_GET)) {
 	   $action=$_GET['action'];
 
@@ -32,21 +32,21 @@
 		   $message='There was an error in uploading the file.Error code:'.$_FILES['doc']['error'].'.Local error code:SKRSS3<br/>';
            $is_message_error = true;
 	   } else {
-		   if(!file_exists($newsletter_dir.$_FILES['doc']['name'])) {
+		   if(!file_exists($documents_dir.$_FILES['doc']['name'])) {
 			   $filename=$_FILES['doc']['name'];
 		   } else {
 			   $fileparts=explode('.',$_FILES['doc']['name']);
 			   $extension='.'.array_pop($fileparts);
 			   $name=implode('.',$fileparts).'_';
 			   $filecount=0;
-			   while(file_exists($newsletter_dir.$name.$filecount.$extension))
+			   while(file_exists($documents_dir.$name.$filecount.$extension))
 					 $filecount=$filecount+1;
 			   $filename=$name.$filecount.$extension;
 		   }
-		   move_uploaded_file($_FILES['doc']['tmp_name'],$newsletter_dir.$filename);
+		   move_uploaded_file($_FILES['doc']['tmp_name'],$documents_dir.$filename);
 		   $new_filename = $filename;
-		   if(file_exists($newsletter_dir.$old_filename))
-			   unlink($newsletter_dir.$old_filename);
+		   if(file_exists($documents_dir.$old_filename))
+			   unlink($documents_dir.$old_filename);
 	   }
 	   }
 
@@ -58,7 +58,7 @@
        $id = mysql_real_escape_string($_GET['id']);
 	   $query=mysql_query('select filename from documents where id='.$id);
 	   $filename=mysql_fetch_assoc($query);
-	   unlink($newsletter_dir.$filename['filename']);
+	   unlink($documents_dir.$filename['filename']);
 	   if(mysql_query('delete from documents where id='.$id)) {
 		   $message='The document was deleted successfully.';
 	   }
@@ -71,23 +71,23 @@
 		   $message='There was an error in uploading the file.Error code:'.$_FILES['doc']['error'].'.Local error code:SKRSS3<br/>';
            $is_message_error = true;
 	   } else {
-		   if(!file_exists($newsletter_dir.$_FILES['doc']['name'])) {
+		   if(!file_exists($documents_dir.$_FILES['doc']['name'])) {
 			   $filename=$_FILES['doc']['name'];
 		   } else {
 			   $fileparts=explode('.',$_FILES['doc']['name']);
 			   $extension='.'.array_pop($fileparts);
 			   $name=implode('.',$fileparts).'_';
 			   $filecount=0;
-			   while(file_exists($newsletter_dir.$name.$filecount.$extension))
+			   while(file_exists($documents_dir.$name.$filecount.$extension))
 					 $filecount=$filecount+1;
 			   $filename=$name.$filecount.$extension;
 		   }
-		   move_uploaded_file($_FILES['doc']['tmp_name'],$newsletter_dir.$filename);
+		   move_uploaded_file($_FILES['doc']['tmp_name'],$documents_dir.$filename);
 		   /* the id field of documents is AUTO_INCREMENTing */
 		   if(mysql_query("insert into documents(filename,country,title,doc_date) values('$filename',$country,'$title','$date')")) {
 			   $message = 'The document with title \''.$title.'\' was uploaded successfully.';
 		   } else {
-			   unlink($newsletter_dir.$filename);
+			   unlink($documents_dir.$filename);
 			   $message = 'An error occured.Error code:SKRSS4<br/>';
                $is_message_error = true;
 		   }
@@ -177,7 +177,7 @@
 		<?php while($row=mysql_fetch_assoc($documents)) { ?>
 		  <tr>
 			<td>
-			  <a href="<?php echo $newsletter_dir.$row['filename'] ?>"><?php echo $row['title'] ?></a>
+			  <a href="<?php echo $documents_dir.$row['filename'] ?>"><?php echo $row['title'] ?></a>
 			</td>
 			<form enctype="multipart/form-data" method="POST">
 			<td>
