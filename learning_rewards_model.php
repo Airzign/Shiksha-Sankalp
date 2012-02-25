@@ -5,7 +5,7 @@
 <div id="content">
   <div id="main_content">
     <!-- the content goes here -->
-	<div class="innertitle">LEARNING REWARDS MODEL</div>
+	<div class="innertitle">Learning Rewards Model</div>
 	<p class="innertext">
 	  Shiksha Sankalp has developed a unique approach called the
 	  <i>"Learning Rewards Model"</i>
