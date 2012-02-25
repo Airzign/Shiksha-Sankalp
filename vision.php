@@ -5,7 +5,7 @@
 <div id="content">
   <div id="main_content">
 	<!-- the content goes here -->
-	<div class="innertitle" style="font-size:50px;">VISION, MISSION AND VALUES</div>
+	<div class="innertitle" style="font-size:50px;">Vision, Mission and Values</div>
 	<div class="innersubheading">Vision</div>
 	<p class="innertext">
 	  Shiksha Sankalp's vision is that every economically underprivileged child
