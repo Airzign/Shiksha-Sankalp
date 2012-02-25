@@ -6,6 +6,7 @@
   <div id="main_content">
     <!-- the content goes here -->
 	<div class="innertitle">About Shiksha Sankalp</div>
+	<div style="padding-right:20px;">
 	<p class="innertext">
 	  "Shiksha Sankalp" in Sanskrit means "Resolve for Education".  As the name
 	  itself indicates, Shiksha Sankalp is an effort to ensure that every
@@ -53,6 +54,7 @@
 	  To learn more about the model developed by Shiksha Sankalp,
 	  <a href="">click here</a>.
 	</p>
+	</div>
   </div>
   <div id="extra_content">
 	<?php
