@@ -105,7 +105,7 @@
 								  <a href="vision.php">Vision Mission Values</a>
 								</li>
 			   					<li>
-									<a href="team.php">The Team</a>
+									<a href="team.php">Our Team</a>
 								</li>
 			   					<li>
 									<a href="documents.php">Legal Documents</a>
