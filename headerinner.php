@@ -135,7 +135,8 @@
 							<span class="menu-mid">Resources</span>
 							<span class="menu-right"></span>
 						</a>
-			   			<div class="sub">
+                                       <!--	old menu
+						<div class="sub">
 			   				<ul>
 			   					<li>
 									<a href="data_education.php">Data on Education</a>
@@ -148,7 +149,30 @@
 								</li>
 			   				</ul>
 			   				<div class="btm-bg"></div>
-			   			</div>
+			   			</div>-->
+       						<div class="sub">
+			   				<ul>
+			   					<li>
+									<a href="relevant_research.php">Relevant Papers</a>
+								</li>
+			   					<li>
+									<a href="internet_links.php">Internet Links</a>
+								</li>
+			   					<li>
+									<a href="communication_materials.php">Communication Materials</a>
+								</li>
+			   					<li>
+									<a href="operational_materials.php">Operational Materials</a>
+								</li>
+			   					<li>
+									<a href="testing_materials.php">Testing Materials</a>
+								</li>
+			   					<li>
+									<a href="newsletters.php">Newsletters</a>
+								</li>
+			   				</ul>
+			   				<div class="btm-bg"></div>
+						</div>
 			   		</li>
 			   		<li class="">
 						<a href="modules.php">
