@@ -111,7 +111,7 @@
 									<a href="documents.php">Legal Documents</a>
 								</li>
 			   					<li>
-									<a href="board_meeting.php">Board Meeting</a>
+									<a href="board_meeting.php">Board Meetings</a>
 								</li>
 <!--			   					<li>
 									<a href="vision.php">Vision</a>
