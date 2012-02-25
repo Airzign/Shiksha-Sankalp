@@ -5,7 +5,7 @@
 <div id="content">
   <div id="main_content">
     <!-- the content goes here -->
-	<div class="innertitle">The Team</div>
+	<div class="innertitle">Our Team</div>
 	<p class="innertext">
 	  The business and affairs of Shiksha Sankalp Incorporated are governed by
 	  its Board of Directors and office bearers.
