@@ -47,7 +47,7 @@
       </p>
       <p class="innertext">
 	To know more about the Learning Rewards model,
-	<a href="">click here</a>.
+	<a href="design_principles.php">click here</a>.
       </p>
     </div>
   </div>
