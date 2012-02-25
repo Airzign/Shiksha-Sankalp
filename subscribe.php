@@ -40,7 +40,7 @@
 		<input type="submit" value="Subscribe" />
 		</form>
 
-		<p>
+		<p style="margin:30px 0 30px 0;">
 		  <i>
 		    <b>Privacy policy</b>:
 		    The data requested above is needed to
