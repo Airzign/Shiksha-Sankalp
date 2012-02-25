@@ -183,7 +183,7 @@
 			   		<li class="">
 						<a href="FAQ.php">
 							<span class="menu-left"></span>
-							<span class="menu-mid">FAQ's</span>
+							<span class="menu-mid">FAQs</span>
 							<span class="menu-right"></span>
 						</a></li>
 			   		<li class="last">
