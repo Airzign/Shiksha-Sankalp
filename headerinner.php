@@ -234,6 +234,7 @@
 							<span class="menu-mid">Join Us</span>
 							<span class="menu-right"></span>
 						</a>
+						<!--
                         <div class="sub">
 			   				<ul>
 			   					<li>
@@ -242,6 +243,18 @@
 			   					<li>
 									<a href="volunteer_resp.php">Volunteer Responsibilities</a>
 								</li>
+                                </ul>
+                                <div class="btm-bg"></div>
+                                </div>
+			-->
+                        <div class="sub">
+			  <ul>
+			    <li>
+			      <a href="donor_resp.php">As a Donor</a>
+			    </li>
+			    <li>
+			      <a href="volunteer_resp.php">As a Volunteer</a>
+			    </li>
                                 </ul>
                                 <div class="btm-bg"></div>
                                 </div>
