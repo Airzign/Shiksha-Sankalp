@@ -5,7 +5,7 @@
 <div id="content">
   <div id="main_content">
     <!-- the content goes here -->
-    <div class="innertitle">DESIGN PRINCIPLES</div>
+    <div class="innertitle">Design Principles</div>
     <div style="padding-right:20px;">
       <p class="innertext">
 	The fundamental principles underlying the design of the Shiksha Sankalp
