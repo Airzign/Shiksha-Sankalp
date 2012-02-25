@@ -52,7 +52,7 @@
 	</p>
 	<p class="innertext">
 	  To learn more about the model developed by Shiksha Sankalp,
-	  <a href="">click here</a>.
+	  <a href="learning_rewards_model.php">click here</a>.
 	</p>
 	</div>
   </div>
