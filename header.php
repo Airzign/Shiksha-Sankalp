@@ -42,7 +42,7 @@
 	  $('#slides').slides({
 	  preload: true,
 	  preloadImage: 'images/loading.gif',
-	  play: 5000,
+	  play: 15000,
 	  pause: 10000,
 	  hoverPause: true
 	  });
