@@ -28,7 +28,11 @@
 ?>
 		<div class="innertitle">Subscribe Newsletter</div>
 
-		<p>Shiksha Sankalp sends out a quarterly newsletter to all it's members and interested subscribers. To subscribe to the newsletters please provide your name and email address in the form below:</p>
+		<p>
+		  Shiksha Sankalp sends out a quarterly newsletter to all it's
+		  members and interested subscribers. To subscribe please
+		  provide your name and email address in the form below:
+		</p>
 
 		<form action="subscribe.php?action=1" method="post" enctype="multipart/form-data">
 		<p><label for="id_name">Name:</label> <input id="id_name" type="text" name="Name"/></p>
