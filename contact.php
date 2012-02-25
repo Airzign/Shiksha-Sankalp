@@ -8,7 +8,7 @@
 	  <div class="innertitle">Contact us</div>
 		<img src="images/contact_us/SS USA Logo.jpg" style="float:left"/>
 	  <div style="width:500px;">
-		Shiksha Sankalp Incorporated
+		<b>Shiksha Sankalp Incorporated</b>
 		<br/>
 		10286 N Portal Avenue,
 		<br/>
@@ -22,7 +22,7 @@
 		<img src="images/contact_us/SS India Logo.jpg"/>
 	  </div>
 	  <div>
-		Shiksha Sankalp Foundation
+		<b>Shiksha Sankalp Foundation</b>
 		<br/>
 		A-160, Vikas Puri,
 		<br/>
