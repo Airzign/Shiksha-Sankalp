@@ -40,8 +40,16 @@
 		<input type="submit" value="Subscribe" />
 		</form>
 
-		<p>Privacy policy: The data requested above is needed to service your subscription to Shiksha Sankalp newsletter only. Your email address will be kept completely confidential and Shiksha Sankalp will not share it with any third party.</p>
-
+		<p>
+		  <i>
+		    <b>Privacy policy</b>:
+		    The data requested above is needed to
+		    service your subscription to Shiksha Sankalp newsletter
+		    only. Your email address will be kept completely
+		    confidential and Shiksha Sankalp will not share it with
+		    any third party.
+		    </i>
+		</p>
 		<p>To unsubscribe at any time, please enter your email Id and click below.</p>
 
 		<form action="subscribe.php?action=2" method="post" enctype="multipart/form-data">
