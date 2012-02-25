@@ -28,7 +28,7 @@
 ?>
 		<div class="innertitle">Subscribe Newsletter</div>
 
-		<p>Shiksha Sankalp sends out a monthly newsletter to all it's members and interested subscribers. To subscribe to the newsletters please provide your name and email address in the form below:</p>
+		<p>Shiksha Sankalp sends out a quarterly newsletter to all it's members and interested subscribers. To subscribe to the newsletters please provide your name and email address in the form below:</p>
 
 		<form action="subscribe.php?action=1" method="post" enctype="multipart/form-data">
 		<p><label for="id_name">Name:</label> <input id="id_name" type="text" name="Name"/></p>
@@ -88,7 +88,7 @@
 				$to = $_POST['Email'];
 				$subject = "Newsletter subscription confirmation";
 				$name=$_POST['Name'];
-				$body = $name.",\n\nThank you for your interest in Shiksha Sankalp.\n\nWe plan to initiate Pilot Modules to test the Shiksha Sankalp  model in August 2010. We would keep you informed  about the progress being made at our end through our monthly newsletter.\n\nRegards,\nShiksha Sankalp Team ";
+				$body = $name.",\n\nThank you for your interest in Shiksha Sankalp.\n\nWe plan to initiate Pilot Modules to test the Shiksha Sankalp  model in August 2010. We would keep you informed  about the progress being made at our end through our quarterly newsletter.\n\nRegards,\nShiksha Sankalp Team ";
 				$headers = "From: shikshasankalp@gmail.com\r\nReply-To: shikshasankalp@gmail.com";
 				if (mail($to, $subject, $body, $headers))
 				{
