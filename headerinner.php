@@ -102,7 +102,7 @@
 									<a href="design_principles.php">Design Principles</a>
 								</li>
 			   					<li>
-								  <a href="vision.php">Vision, Mission and Values</a>
+								  <a href="vision.php">Vision Mission Values</a>
 								</li>
 			   					<li>
 									<a href="team.php">The Team</a>
