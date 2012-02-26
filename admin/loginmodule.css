@@ -96,3 +96,11 @@ th {
 textarea {
 	width:600px;
 }
+
+.admin-menu-heading {
+    color:#4f81bd;
+}
+
+.admin-menu-content {
+    padding-left:70px;
+}
