@@ -5,7 +5,7 @@
 <div id="content">
   <div id="main_content">
     <!-- the content goes here -->
-    <div class="innertitle" style="font-size:50px;">Vision, Mission and Values</div>
+    <div class="innertitle">Vision, Mission and Values</div>
     <div style="padding-right:20px;">
       <div class="innersubheading">Vision</div>
       <p class="innertext">

@@ -5,7 +5,7 @@
 <div id="content">
   <div id="main_content">
     <!-- the content goes here -->
-	<div class="innertitle" style="font-size:48px;">MINUTES OF BOARD MEETINGS</div>
+	<div class="innertitle">Minutes of Board Meetings</div>
 	<?php
 	   $countries = mysql_query("select distinct country from board_meeting order by country");
 	   $board_meeting_file_dir='../files/board_meetings/';

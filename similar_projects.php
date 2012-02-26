@@ -4,7 +4,7 @@
 ?>
 <div id="content">
   <div id="main_content">
-	  <div class="innertitleshortened">Success Stories in Other Nations</div>
+	  <div class="innertitle">Success Stories in Other Nations</div>
 	  <div class="innersubheading"> Links related to :</div>
 	  <br/>
 	  <ul>
