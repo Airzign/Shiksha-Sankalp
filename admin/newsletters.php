@@ -30,7 +30,7 @@
       $file = $msg['msg'];
       if(mysql_query("update newsletters set title='$title', date='$date', file='$file' where id=$id")) {
 	$message = 'The newsletter was updated successfully.';
-	if($old_file != '' && file_exists($upload_dir.$old_file))
+	if($old_file != '' && $old_file != $file && file_exists($upload_dir.$old_file))
 	  unlink($upload_dir.$old_file);
       }
       else {

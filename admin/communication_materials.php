@@ -30,7 +30,7 @@
       $file = $msg['msg'];
       if(mysql_query("update communication_materials set title='$title', date='$date', file='$file' where id=$id")) {
 	$message = 'The communication material was updated successfully.';
-	if($old_file != '' && file_exists($upload_dir.$old_file))
+	if($old_file != '' && $old_file != $file && file_exists($upload_dir.$old_file))
 	  unlink($upload_dir.$old_file);
       }
       else {
