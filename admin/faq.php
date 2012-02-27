@@ -56,9 +56,9 @@
       }
       if($action == 3) {
         /* Addition */
-        $question=stripslashes($_POST['question']);
-        $answer = stripslashes($_POST['answer']);
-        $position = stripslashes($_POST['position']);
+        $question=mysql_real_escape_string($_POST['question']);
+        $answer = mysql_real_escape_string($_POST['answer']);
+        $position = mysql_real_escape_string($_POST['position']);
         if(mysql_query("INSERT INTO faq(question,answer,position) VALUES ('$question','$answer','$position');"))
             $message .= 'New FAQ created successfully.';
       }
