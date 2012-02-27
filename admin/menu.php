@@ -37,7 +37,7 @@
       <td class="menu-link"><a href="research_papers.php">Research Papers</a></td>
       <td class="menu-link"><a href="internet_links.php">Internet Links</a></td>
       <td class="menu-link"><a href="communication_materials.php">Communication Materials</a></td>
-      <td class="menu-link"><a href="opetational_materials.php">Operational Materials</a></td>
+      <td class="menu-link"><a href="operational_materials.php">Operational Materials</a></td>
       <td class="menu-link"><a href="testing_materials.php">Testing Materials</a></td>
       <td class="menu-link"><a href="newsletters.php">Newsletters</a></td>
     </tr>
