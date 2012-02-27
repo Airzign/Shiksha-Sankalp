@@ -24,22 +24,22 @@ require_once('auth.php');
     <p class="admin-menu-content"><a href="team.php">Our Team</a></p>
 
     <p class="admin-menu-heading">Resources</p>
-    <p class="admin-menu-content"><a href=".php">Research Papers</a></p>
-    <p class="admin-menu-content"><a href=".php">Internet Links</a></p>
-    <p class="admin-menu-content"><a href=".php">Communication Materials</a></p>
-    <p class="admin-menu-content"><a href=".php">Operational Materials</a></p>
-    <p class="admin-menu-content"><a href=".php">Testing Materials</a></p>
-    <p class="admin-menu-content"><a href=".php">Newsletters</a></p>
+    <p class="admin-menu-content"><a href="research_papers.php">Research Papers</a></p>
+    <p class="admin-menu-content"><a href="internet_links.php">Internet Links</a></p>
+    <p class="admin-menu-content"><a href="communication_materials.php">Communication Materials</a></p>
+    <p class="admin-menu-content"><a href="operational_materials.php">Operational Materials</a></p>
+    <p class="admin-menu-content"><a href="testing_materials.php">Testing Materials</a></p>
+    <p class="admin-menu-content"><a href="newsletters.php">Newsletters</a></p>
 
     <p class="admin-menu-heading">Accountability</p>
-    <p class="admin-menu-content"><a href=".php">Summary Statistics</a></p>
-    <p class="admin-menu-content"><a href=".php">Annual Reports</a></p>
-    <p class="admin-menu-content"><a href=".php">Tax Returns</a></p>
+    <p class="admin-menu-content"><a href="summary_statistics.php">Summary Statistics</a></p>
+    <p class="admin-menu-content"><a href="annual_reports.php">Annual Reports</a></p>
+    <p class="admin-menu-content"><a href="tax_returns.php">Tax Returns</a></p>
 
     <p class="admin-menu-heading">Others</p>
     <p class="admin-menu-content"><a href=".php">Modules</a></p>
-    <p class="admin-menu-content"><a href=".php">FAQs</a></p>
-    <p class="admin-menu-content"><a href=".php">Newsletter Subscribers</a></p>
+    <p class="admin-menu-content"><a href="faq.php">FAQs</a></p>
+    <p class="admin-menu-content"><a href="newsletter_subscribers.php">Newsletter Subscribers</a></p>
 
     <p class="admin-menu-heading"><a href="logout.php">Logout</a></p>
 
