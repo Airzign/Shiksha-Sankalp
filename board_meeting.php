@@ -8,7 +8,7 @@
 	<div class="innertitle">Minutes of Board Meetings</div>
 	<?php
 	   $countries = mysql_query("select distinct country from board_meeting order by country");
-	   $board_meeting_file_dir='../files/board_meetings/';
+	   $board_meeting_file_dir='files/board_meetings/';
 	   while($country = mysql_fetch_assoc($countries)) {
 	     $country = $country['country'];
 	     if ($country == 0) {?>
