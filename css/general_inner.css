@@ -812,3 +812,13 @@ a .menu-right {
 .internet-links-title {
     font-style:italic;
 }
+.info_table th {
+    font-weight:bold;
+    border-bottom:2px solid #666;
+}
+.info_table td {
+    color:#555;
+}
+.info_table {
+    padding-right:20px;
+}
