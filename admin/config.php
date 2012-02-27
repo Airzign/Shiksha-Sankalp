@@ -9,6 +9,7 @@
     define('COMMUNICATION_MATERIALS_FILE_SIZE',2097152);
     define('OPERATIONAL_MATERIALS_FILE_SIZE',2097152);
     define('TESTING_MATERIALS_FILE_SIZE',2097152);
+    define('NEWSLETTERS_FILE_SIZE',2097152);
     define('LARGE_IMG_FILE_SIZE',2097152);
     	//Connect to mysql server
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
