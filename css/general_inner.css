@@ -786,3 +786,14 @@ a .menu-right {
     color:#05A5C5;
 }
 /*Specific CSS ends here */
+
+.research_title {
+    font-style:italic;
+    color:#4f81bd;
+    font-size:16px;
+    margin-top:20px;
+}
+.research_desc {
+    padding-left:40px;
+    font-size:14px;
+}

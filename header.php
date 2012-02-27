@@ -153,7 +153,7 @@
        						<div class="sub">
 			   				<ul>
 			   					<li>
-									<a href="relevant_research.php">Relevant Papers</a>
+									<a href="research_papers.php">Research Papers</a>
 								</li>
 			   					<li>
 									<a href="internet_links.php">Internet Links</a>
