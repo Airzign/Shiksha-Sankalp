@@ -13,7 +13,7 @@ function upload_file_to_dir($_FILES, $directory, $file_name, $size, $allowed_fil
   if(array_key_exists($file_name,$_FILES) && $_FILES[$file_name]['name'] !== '') {
     if($_FILES[$file_name]["size"] > $size) {
       $ret['msg'] = 'The file is larger than the maximum allowed size('.$size/(1024*1024).'MB) so was not uploaded.';
-      $ret['value'] = false;
+      $ret['value'] = 0;
       return $ret;
     }
     if($allowed_file_types != false) {
@@ -23,7 +23,7 @@ function upload_file_to_dir($_FILES, $directory, $file_name, $size, $allowed_fil
 	  $allowed=true;
       if(!$allowed) {
 	$ret['msg'] = 'The file is not of valid extension so was not uploaded.';
-	$ret['value'] = false;
+	$ret['value'] = 0;
 	return $ret;
       }
     }
@@ -40,10 +40,10 @@ function upload_file_to_dir($_FILES, $directory, $file_name, $size, $allowed_fil
     }
     move_uploaded_file($_FILES[$file_name]['tmp_name'],$directory.$new_filename);
     $ret['msg'] = $new_filename;
-    $ret['value'] = true;
+    $ret['value'] = 1;
     return $ret;
   }
-  $ret['value'] = 4;
+  $ret['value'] = 2;
   return $ret;
 }
 

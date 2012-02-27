@@ -23,7 +23,7 @@
     $description=mysql_real_escape_string($_POST['description']);
     $title=mysql_real_escape_string($_POST['title']);
     $msg = upload_file_to_dir($_FILES,$upload_dir,'doc',RESEARCH_PAPERS_FILE_SIZE);
-    if($msg['value'] == true) {
+    if($msg['value'] == 1) {
       $old_file = mysql_query("select file from research_papers where id = '$id'");
       $assoc = mysql_fetch_assoc($old_file);
       $old_file = $assoc['file'];
@@ -39,7 +39,7 @@
       }
     }
     else {
-      if($msg['value'] != false) {
+      if($msg['value'] == 0) {
 	$message = $msg['msg'];
 	$is_message_error = true;
       }
@@ -70,7 +70,7 @@
     $title=$_POST['title'];
     $description=$_POST['description'];
     $msg = upload_file_to_dir($_FILES,$upload_dir,'doc',RESEARCH_PAPERS_FILE_SIZE);
-    $file = $_FILES['doc']['name'];
+    $file = $msg['msg'];
     if($msg['value'] == false) {
       $file = '';
       $message = 'Cannot upload the file. An error occured. Error code:SKRSSRR2';
