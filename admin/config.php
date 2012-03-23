@@ -5,7 +5,7 @@
     define('DB_DATABASE', 'shiksha_sankalpdb');
     define('SMALL_IMG_FILE_SIZE',1048576);
     define('MEETING_FILE_SIZE',2097152);
-    define('RESEARCH_PAPERS_FILE_SIZE',2097152);
+	define('RESEARCH_PAPERS_FILE_SIZE',2097152);
     define('COMMUNICATION_MATERIALS_FILE_SIZE',2097152);
     define('OPERATIONAL_MATERIALS_FILE_SIZE',2097152);
     define('TESTING_MATERIALS_FILE_SIZE',2097152);
@@ -18,7 +18,7 @@
 	if(!$link) {
 		die('Failed to connect to server: ' . mysql_error());
 	}
-
+	
 	//Select database
 	$db = mysql_select_db(DB_DATABASE);
 	if(!$db) {

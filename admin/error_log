@@ -1,0 +1,2 @@
+[10-Mar-2012 09:21:28] PHP Warning:  move_uploaded_file(../images/team/) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Is a directory in /home2/shiksha/public_html/new/admin/team.php on line 89
+[10-Mar-2012 09:21:28] PHP Warning:  move_uploaded_file() [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: Unable to move '/tmp/phpbfy2rg' to '../images/team/' in /home2/shiksha/public_html/new/admin/team.php on line 89
