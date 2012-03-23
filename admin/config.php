@@ -1,6 +1,6 @@
 <?php
 	define('DB_HOST', 'localhost');
-    define('DB_USER', 'root');
+    define('DB_USER', 'shiksha_airzign');
     define('DB_PASSWORD', 'kyamazaak');
     define('DB_DATABASE', 'shiksha_sankalpdb');
     define('SMALL_IMG_FILE_SIZE',1048576);
