@@ -27,11 +27,9 @@
 	}
   </style>
 </div>
-<div id="donate">&nbsp;</div>
-<!--
-   <div id="quote">
-	 <img src="images/Donation.png" />
-   </div> -->
+<a href="donate.php">
+  <div id="donate">&nbsp;</div>
+</a>
 <div style="clear:both;"></div>
 <div id="content">
   <?php
