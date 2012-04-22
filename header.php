@@ -42,8 +42,8 @@
 	  $('#slides').slides({
 	  preload: true,
 	  preloadImage: 'images/loading.gif',
-	  play: 15000,
-	  pause: 10000,
+	  play: 8000,
+	  pause: 5000,
 	  hoverPause: true
 	  });
 	  });
@@ -63,7 +63,7 @@
 			  <input type="text" class="width" />
 			  &nbsp; &nbsp; PASSWORD &nbsp;
 			  <input type="text" class="width" />
-              <input type="image" src="images/login.png" width="38px" align="top" />
+              <input type="image" src="images/login.png" width="53px" align="top" />
 			  <br />
 			  <br />
 			  <p align="right">
@@ -159,7 +159,7 @@
 									<a href="internet_links.php">Internet Links</a>
 								</li>
 			   					<li>
-									<a href="communication_materials.php">Communication Materials</a>
+									<a href="communication_materials.php">Communication&nbsp;Materials</a>
 								</li>
 			   					<li>
 									<a href="operational_materials.php">Operational Materials</a>

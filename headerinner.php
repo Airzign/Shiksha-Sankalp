@@ -69,7 +69,7 @@
 	<div id="header_right">
     	<div id="header_top">
         	<div id="header_top_logo">USERNAME &nbsp; <input type="text" class="width" /> &nbsp; &nbsp; PASSWORD &nbsp;<input type="text" class="width" />
-            	<input type="image" src="images/login.png" align="top" width="38px"/><br /><br /><p align="right"><a href="subscribe.php"><img src="images/subscribe.png" /></a></p>
+            	<input type="image" src="images/login.png" align="top" width="53px"/><br /><br /><p align="right"><a href="subscribe.php"><img src="images/subscribe.png" /></a></p>
             </div>
             <div id="header_top_login"></div>
         </div>
