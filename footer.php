@@ -5,7 +5,7 @@
 </div>
 <div id="footer">
   <div id="footer_left">
-	<a href="https://www.facebook.com/pages/Shiksha-Sankalp/413954349615" target="_blank">
+	<a href="http://www.facebook.com/ShikshaSankalp" target="_blank">
 	  <img src="images/Facebook_64.png" alt="rss" width="32" alt="facebook" class="follow"/>
 	</a>
 	<a href="http://twitter.com/shikshasankalp">
