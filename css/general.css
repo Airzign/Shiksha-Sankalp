@@ -595,13 +595,13 @@ a .menu-right {
 	top: 27px;
 	left: 6px;
 	background: url(../images/submenu_top.png) no-repeat;
-	width: 186px;
+	width: 200px;
 	padding-top: 9px;
 	color:#666;
 }
 .nav li ul {
 	background: url(../images/submenu_bg.png) repeat-y;
-	width: 162px;
+	width: 176px;
 	height: auto;
 	margin: 0;
 	padding: 0 12px 10px;
@@ -622,7 +622,7 @@ a .menu-right {
 	color: #666;
 	background: none !important;
 	line-height: normal;
-	width: 156px;
+	width: 170px;
 	padding: 8px 3px 3px;
 	text-indent: 1px;
 }
