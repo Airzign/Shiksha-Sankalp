@@ -11,17 +11,18 @@
         donate to Shiksha Sankalp Foundation, India.
       </p>
       <div class="donate_paypal">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="SG3NDNPSRBCFQ">
-          <input type="image"
-                 src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-                 border="0" name="submit" alt="PayPal - The safer, easier way to pay
-                                               online!">
-          <img alt="" border="0"
-               src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
-               height="1">
-        </form>
+        <div style="height:50px;"></div>
+        <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post"> -->
+        <!--   <input type="hidden" name="cmd" value="_s-xclick"> -->
+        <!--   <input type="hidden" name="hosted_button_id" value="SG3NDNPSRBCFQ"> -->
+        <!--   <input type="image" -->
+        <!--          src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" -->
+        <!--          border="0" name="submit" alt="PayPal - The safer, easier way to pay -->
+        <!--                                        online!"> -->
+        <!--   <img alt="" border="0" -->
+        <!--        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" -->
+        <!--        height="1"> -->
+        <!-- </form> -->
       </div>
       <p>
         Your donations to Shiksha Sankalp Foundation are tax exempt in India under
