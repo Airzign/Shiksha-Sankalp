@@ -11,7 +11,7 @@
         donate to Shiksha Sankalp Foundation, India.
       </p>
       <div class="donate_paypal">
-        <div style="height:50px;"></div>
+        <div style="height:51px;"></div>
         <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post"> -->
         <!--   <input type="hidden" name="cmd" value="_s-xclick"> -->
         <!--   <input type="hidden" name="hosted_button_id" value="SG3NDNPSRBCFQ"> -->
@@ -29,7 +29,7 @@
         section 80G.
       </p>
     </div>
-    <div class="donate_part">
+    <div class="donate_part" style="padding-right:0px;">
       <p>
         If you are not an Indian citizen or are currently located outside India,
         you can donate to Shiksha Sankalp Incorporated, USA.
