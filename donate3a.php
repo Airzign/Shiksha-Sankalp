@@ -1,16 +1,25 @@
 <?php
+   if(!array_key_exists("pan", $_POST))
+     header("Location: donate1.php?error=true");
    include "headerinner.php";
    include "admin/config.php";
    $pan = $_POST['pan'];
+   $students = intval($_POST['students']);
+   $years = intval($_POST['years']);
+   $amount = $students * $years * 6000;
 ?>
+<style type="text/css">
+  #main_content p { font-size:15px; }
+  #main_content { font-size:15px; }
+</style>
 <div id="content">
   <div id="main_content">
 	<div class="innertitle">Donate Now</div>
     <div class="donate_under">
-      STEP-2: Make Payment
+      STEP-3: Make Payment
     </div>
     <p>
-      You can make a payment through any of the following three channels:
+      You can make a payment through any of the following two channels:
     </p>
     <div class="donate_num">1.</div>
     <div class="donate_value">
@@ -85,12 +94,14 @@
       : ICIC0000827
     </div>
     <div style="clear:both"></div>
+    <!--
     <div class="donate_num">3.</div>
     <div class="donate_value">
       <span class="donate_under">Online Payment</span>
       by debit/credit card
     </div>
     <div style="clear:both"></div>
+    -->
   </div>
   <div id="extra_content">
 	<?php

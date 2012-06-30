@@ -1,8 +1,16 @@
 <?php
+   if(!array_key_exists("pan", $_POST))
+     header("Location: donate1.php?error=true");
    include "headerinner.php";
    include "admin/config.php";
    $pan = $_POST['pan'];
+   $name = $_POST['name'];
+   $email = $_POST['email'];
 ?>
+<style type="text/css">
+  #main_content p { font-size:15px; }
+  #main_content { font-size:15px; }
+</style>
 <div id="content">
   <div id="main_content">
     <div class="innertitle">Donate Now</div>
@@ -18,7 +26,9 @@
     </p>
     <div class="donate_submit">
       <form method="POST" action="donate2a.php">
-        <input type="hidden" value="<?php echo $pan; ?>"/>
+        <input type="hidden" name="pan" value="<?php echo $pan; ?>"/>
+        <input type="hidden" name="name" value="<?php echo $name; ?>"/>
+        <input type="hidden" name="email" value="<?php echo $email; ?>"/>
         <input type="submit" value="Next"/>
       </form>
     </div>

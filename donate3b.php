@@ -1,13 +1,22 @@
 <?php
+   if(!array_key_exists("pan", $_POST))
+     header("Location: donate1.php?error=true");
    include "headerinner.php";
    include "admin/config.php";
    $pan = $_POST['pan'];
+   $students = intval($_POST['students']);
+   $years = intval($_POST['years']);
+   $amount = $students * $years * 132;
 ?>
+<style type="text/css">
+  #main_content p { font-size:15px; }
+  #main_content { font-size:15px; }
+</style>
 <div id="content">
   <div id="main_content">
 	<div class="innertitle">Donate Now</div>
     <div class="donate_under">
-      STEP-2: Make Payment
+      STEP-3: Make Payment
     </div>
     <p>
       You can make a payment through any of the following three channels:
@@ -80,7 +89,7 @@
       by debit/credit card
     </div>
     <div style="clear:both"></div>
-    <div id="new_paypal_container">
+    <div class="donate_paypal" style="width:200px;margin:0 auto;">
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="SG3NDNPSRBCFQ">

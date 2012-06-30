@@ -515,8 +515,11 @@ p{
 }
 .width
 {
-	width:102px;
-	height:12px;
+	/*width:102px;
+	height:12px;*/
+	width:188px;
+	height:15px;
+	font-size:12px;
 }
 .center
 {
@@ -559,6 +562,7 @@ p{
 	background:none;
 	float: right;
 	z-index:+5;
+	margin-top:5px;
 }
 .nev-wrapper {
 	clear: both;
@@ -847,7 +851,7 @@ a .menu-right {
 
 .donate_ques {
     float:left;
-    height:35px;
+    height:30px;
     width:430px;
 }
 
@@ -858,6 +862,10 @@ a .menu-right {
 
 .donate_text {
     width:160px;
+}
+
+.donate_text_small {
+    width:27px;
 }
 
 .donate_submit {
@@ -896,4 +904,17 @@ a .menu-right {
 
 .donate_high {
     color:blue;
+}
+
+.contact_logo {
+    float:left;
+    height:130px;
+    width:115px;
+}
+
+.contact_details {
+    width:500px;
+    padding-left:140px;
+    padding-top:5px;
+    line-height:23px;
 }
