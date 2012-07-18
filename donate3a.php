@@ -1,17 +1,17 @@
 <?php
    if(!array_key_exists("pan", $_POST))
-     header("Location: donate1.php?error=true");
+     header("Location: donate1.php?error=true&page=donate3a.php");
    include "headerinner.php";
    include "admin/config.php";
    $pan = $_POST['pan'];
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $account = $_POST['account'];
+   $citizen = $_POST['citizen'];
    $students = intval($_POST['students']);
    $years = intval($_POST['years']);
    $amount = $students * $years * 6000;
 ?>
-<style type="text/css">
-  #main_content p { font-size:15px; }
-  #main_content { font-size:15px; }
-</style>
 <div id="content">
   <div id="main_content">
 	<div class="innertitle">Donate Now</div>
@@ -94,6 +94,18 @@
       : ICIC0000827
     </div>
     <div style="clear:both"></div>
+    <form method="POST" action="donate2a.php">
+      <input type="hidden" name="pan" value="<?php echo $pan; ?>" />
+      <input type="hidden" name="name" value="<?php echo $name; ?>" />
+      <input type="hidden" name="email" value="<?php echo $email; ?>" />
+      <input type="hidden" name="account" value="<?php echo $account; ?>" />
+      <input type="hidden" name="citizen" value="<?php echo $citizen; ?>" />
+      <input type="hidden" name="students" value="<?php echo $students; ?>" />
+      <input type="hidden" name="years" value="<?php echo $years; ?>" />
+      <span class="donate_prev">
+        <input type="submit" id="back" value="Back"/>
+      </span>
+    </form>
     <!--
     <div class="donate_num">3.</div>
     <div class="donate_value">

@@ -868,8 +868,17 @@ a .menu-right {
     width:27px;
 }
 
-.donate_submit {
-    margin-left:435px;
+.donate_next {
+    margin-right:50px;
+    float:right;
+}
+
+.donate_prev {
+    margin-left:50px;
+}
+
+.donate_next input, .donate_prev input {
+    font-size:14px;
 }
 
 #donate_form {
