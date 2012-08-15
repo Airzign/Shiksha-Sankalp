@@ -1,6 +1,6 @@
 <?php
    if(!array_key_exists("pan", $_POST))
-     header("Location: donate1.php?error=true&page=donate3b.php");
+     header("Location: donate.php?error=true&page=donate3b.php");
    include "headerinner.php";
    include "admin/config.php";
    $pan = $_POST['pan'];

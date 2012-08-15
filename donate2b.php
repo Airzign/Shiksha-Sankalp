@@ -1,6 +1,6 @@
 <?php
    if(!array_key_exists("pan", $_POST))
-     header("Location: donate1.php?error=true&page=donate2b.php");
+     header("Location: donate.php?error=true&page=donate2b.php");
    include "headerinner.php";
    include "admin/config.php";
    $pan = $_POST['pan'];
@@ -59,7 +59,7 @@
   </div>
   <script type="text/javascript">
     $("#back").click(function() {
-      $("form").attr("action", "donate1.php");
+      $("form").attr("action", "donate.php");
       $("form").submit();
     });
 
@@ -85,7 +85,7 @@
     $("[name=students]").keyup(changed);
     $("[name=years]").keyup(changed);
     $("form").submit(function() {
-      if($("form").attr("action") == "donate1.php")
+      if($("form").attr("action") == "donate.php")
         return true;
       var studs = $("[name=students]").val();
       var years = $("[name=years]").val();
