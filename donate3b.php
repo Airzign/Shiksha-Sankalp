@@ -97,7 +97,7 @@
       <input type="hidden" name="citizen" value="<?php echo $citizen; ?>" />
       <input type="hidden" name="students" value="<?php echo $students; ?>" />
       <input type="hidden" name="years" value="<?php echo $years; ?>" />
-      <span class="donate_prev" style="position:relative;top:40px;">
+      <span class="donate_prev" style="position:relative;top:110px;">
         <input type="submit" id="back" value="Back"/>
       </span>
     </form>
