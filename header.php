@@ -194,9 +194,6 @@
 						<div class="sub">
 			   				<ul>
 			   					<li>
-									<a href="summary_statistics.php">Summary Statistics</a>
-								</li>
-			   					<li>
 									<a href="annual_reports.php">Annual Reports</a>
 								</li>
 								<li>
