@@ -35,7 +35,7 @@
 		<td><?php echo $meeting_date; ?></td>
 		<td style="padding-right:20px;"><?php echo $row['key_decisions']; ?></td>
 		<td>
-		   <a href="<?php echo $board_meeting_file_dir,$row['file_link']; ?>">Click Here</a>
+		   <a href="<?php echo $board_meeting_file_dir,$row['file_link']; ?>" target="_blank">Click Here</a>
 		</td>
 	  </tr>
 	  <?php

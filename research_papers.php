@@ -13,7 +13,7 @@
       else while($row = mysql_fetch_assoc($results)) {
        ?>
     <div class="innertext research_title">
-      <a style="text-decoration:none;color:inherit;" href="<?php echo $upload_dir.$row['file'];?>">
+      <a style="text-decoration:none;color:inherit;" href="<?php echo $upload_dir.$row['file'];?>" target="_blank">
         <?php echo $row['title'];?>
       </a>
     </div>

@@ -28,7 +28,7 @@
 		<?php echo $row['title']; ?>
 	  </div>
 	  <div style="float:left;width:100px;">
-		<a href="<?php echo $documents_dir,$row['filename']; ?>">Click Here</a>
+		<a href="<?php echo $documents_dir,$row['filename']; ?>" target="_blank">Click Here</a>
 	  </div>
 	  <div style="clear:both"></div>
 	</div>

@@ -20,7 +20,7 @@
 	<td class="internet-links-title">
 	  <?php echo $row['title'];?>
 	  Link :
-	  <a href="<?php echo $row['link'];?>">
+	  <a href="<?php echo $row['link'];?>" target="_blank">
 	    <?php echo $row['link'];?>
 	  </a>
 	</td>

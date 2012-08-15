@@ -23,7 +23,7 @@
         <td><?php echo $date; ?></td>
         <td style="padding-right:20px;"><?php echo $row['title']; ?></td>
         <td>
-           <a href="<?php echo $upload_dir,$row['file']; ?>">Click Here</a>
+           <a href="<?php echo $upload_dir,$row['file']; ?>" target="_blank">Click Here</a>
         </td>
       </tr>
       <?php
