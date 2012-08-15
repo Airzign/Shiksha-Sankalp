@@ -23,23 +23,7 @@
     </p>
     <div class="donate_num">1.</div>
     <div class="donate_value">
-      <span class="donate_under">By Cheque</span>
-      in favor of Shiksha Sankalp Incorporated.
-    </div>
-    <div style="clear:both"></div>
-    <div class="donate_num">&nbsp;</div>
-    <div class="donate_value">
-      Please send the cheque to 10286 N Portal Avenue, Cupertino, CA 95014, USA.
-    </div>
-    <div style="clear:both"></div>
-    <div class="donate_num">&nbsp;</div>
-    <div class="donate_value">
-      Our bank details are: Wells Fargo Bank, Routing # 121042882, Account # 2222862563.
-    </div>
-    <div style="clear:both"></div>
-    <div class="donate_num">2.</div>
-    <div class="donate_value">
-      <span class="donate_under">By Electronic Transfer</span>
+      <span class="donate_under">By Cheque or Electronic Transfer</span>
       based on the following details:
     </div>
     <div style="clear:both"></div>
@@ -83,7 +67,7 @@
       : 121042882
     </div>
     <div style="clear:both"></div>
-    <div class="donate_num">3.</div>
+    <div class="donate_num">2.</div>
     <div class="donate_value">
       <span class="donate_under">Online Payment</span>
       by debit/credit card
