@@ -168,12 +168,6 @@
 						</div>
 			   		</li>
 			   		<li class="">
-						<a href="modules.php">
-							<span class="menu-left"></span>
-							<span class="menu-mid">Modules</span>
-							<span class="menu-right"></span>
-						</a></li>
-			   		<li class="">
 						<a href="accountability.php">
 							<span class="menu-left"></span>
 							<span class="menu-mid">Accountability</span>
