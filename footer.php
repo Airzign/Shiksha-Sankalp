@@ -13,7 +13,7 @@
 	</a>
   </div>
   <div id="footer_right">
-   Feedback &nbsp; &nbsp; Sitemap &nbsp; &nbsp; Disclaimer &nbsp; &nbsp; <a href="contact.php">Contact us</a>
+   Feedback &nbsp; &nbsp; <a href="sitemap.php">Sitemap</a> &nbsp; &nbsp; Disclaimer &nbsp; &nbsp; <a href="contact.php">Contact us</a>
   </div>
 </div>
 	<script type="text/javascript">
