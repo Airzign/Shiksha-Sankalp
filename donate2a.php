@@ -53,7 +53,7 @@
         <input type="button" id="back" value="Back"/>
       </span>
       <span class="donate_next">
-        <input type="submit" value="Calculate Donation Amount"/>
+        <input type="submit" value="Next"/>
       </span>
     </form>
   </div>
