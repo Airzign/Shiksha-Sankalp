@@ -5,7 +5,7 @@
 <div id="content">
   <div id="main_content">
     <!-- the content goes here -->
-	<div class="innertitle">LEGAL DOCUMENTS</div>
+	<div class="innertitle">Legal Documents</div>
 	<?php
 	   $titles = array('Shiksha Sankalp Incorporated, USA',
 	                  'Shiksha Sankalp Foundation, India');
