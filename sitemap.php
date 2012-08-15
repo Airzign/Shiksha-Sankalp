@@ -70,7 +70,7 @@
       <a href="newsletters.php">Newsletters</a>
     </div>
     <div class="sitemap1">
-      <a href="accountability.php">Accountability</a>
+      <a href="">Accountability</a>
     </div>
     <div class="sitemap2">
       <a href="annual_reports.php">Annual Reports</a>
