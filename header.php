@@ -208,9 +208,6 @@
 								<li>
 									<a href="tax_returns.php">Tax Returns</a>
 								</li>
-								<li>
-									<a href="list_of_donors.php">List of Donors</a>
-								</li>
 			   				</ul>
 			   				<div class="btm-bg"></div>
 						</div>

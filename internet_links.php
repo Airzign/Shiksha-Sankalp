@@ -4,7 +4,7 @@
    ?>
 <div id="content">
   <div id="main_content">
-    <div class="innertitle">Interner Links</div>
+    <div class="innertitle">Internet Links</div>
     <table id="internet-links-table">
       <tr>
 	<th>Title</th>
