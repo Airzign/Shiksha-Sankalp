@@ -52,11 +52,7 @@
 		<div id="header_right">
     	  <div id="header_top">
         	<div id="header_top_logo">
-			  USERNAME &nbsp;
-			  <input type="text" class="width" />
-			  &nbsp; &nbsp; PASSWORD &nbsp;
-			  <input type="text" class="width" />
-              <input type="image" src="images/login.png" width="53px" align="top" />
+              <a href="http://www.shikshasankalp.com" style="float:right;"><img src="images/login.png" width="53px" align="top" /></a>
 			  <br />
 			  <br />
 			  <p align="right">
