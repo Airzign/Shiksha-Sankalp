@@ -8,11 +8,9 @@
 	<a href="http://www.facebook.com/ShikshaSankalp" target="_blank">
 	  <img src="images/Facebook_64.png" alt="rss" width="32" alt="facebook" class="follow"/>
 	</a>
-	<a href="http://twitter.com/shikshasankalp">
+	<a href="http://twitter.com/shikshasankalp" target="_blank">
 	  <img src="images/Twitter_64.png" alt="twitter" alt="rss" width="32" class="follow"/>
 	</a>
-	<img src="images/Blogger_64.png" alt="blogger" class="follow" alt="rss" width="32" />
-	<img src="images/Rss_64.png" alt="rss" width="32" height="32" class="follow"/>
   </div>
   <div id="footer_right">
    Feedback &nbsp; &nbsp; Sitemap &nbsp; &nbsp; Disclaimer &nbsp; &nbsp; <a href="contact.php">Contact us</a>
