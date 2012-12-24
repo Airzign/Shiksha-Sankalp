@@ -52,7 +52,7 @@
 		<div id="header_right">
     	  <div id="header_top">
         	<div id="header_top_logo">
-              <a href="http://www.shikshasankalp.com" style="float:right;"><img src="images/login.png" align="top" /></a>
+              <a href="http://www.shikshasankalp.com" style="float:right;" target="_blank"><img src="images/login.png" align="top" /></a>
 			  <br />
 			  <br />
 			  <p align="right">

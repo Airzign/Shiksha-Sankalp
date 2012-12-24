@@ -6,14 +6,14 @@
 <div id="footer">
   <div id="footer_left">
 	<a href="http://www.facebook.com/ShikshaSankalp" target="_blank">
-	  <img src="images/Facebook_64.png" alt="rss" width="32" alt="facebook" class="follow"/>
+	  <img src="images/facebook.png" alt="rss" width="32" alt="facebook" class="follow"/>
 	</a>
 	<a href="http://twitter.com/shikshasankalp" target="_blank">
-	  <img src="images/Twitter_64.png" alt="twitter" alt="rss" width="32" class="follow"/>
+	  <img src="images/twitter.png" alt="twitter" alt="rss" width="32" class="follow"/>
 	</a>
   </div>
   <div id="footer_right">
-   Feedback &nbsp; &nbsp; <a href="sitemap.php">Sitemap</a> &nbsp; &nbsp; Disclaimer &nbsp; &nbsp; <a href="contact.php">Contact us</a>
+   <a href="sitemap.php">Sitemap</a> &nbsp; &nbsp; <a href="contact.php">Contact us</a>
   </div>
 </div>
 	<script type="text/javascript">
